@@ -21,7 +21,7 @@
 @import 	"partials/site-footer";
 
 // SELECTORS
-@import 	"type/setup-be-100/fontsize";
+//@import 	"type/setup-be-100/fontsize";
 @import 	"ui/setup-be-100/grid";
 @import 	"ui/setup-be-100/percent";
 @import 	"ui/setup-be-100/width";
@@ -50,15 +50,15 @@
 //@import 	"cor/fonts/250_cor/lato";
 
 // -------------------------------------------------------------------- VARIABLES | 2017-08-23
-//@import 	"cor/variables/230_cor/color";
-//@import 	"cor/variables/230_base/space";
-//@import 	"cor/variables/230_base/line";
+@import 	"cor/variables/230_cor/color";
+@import 	"cor/variables/230_base/space";
+@import 	"cor/variables/230_base/line";
 @import 	"cor/variables/250_setupbasic/fontfamily";
 @import 	"cor/variables/250_setupbasic/fontsize";
 @import 	"cor/variables/250_setupbasic/fontweight";
-//@import 	"cor/variables/230_cor/lineheight";
+@import 	"cor/variables/230_cor/lineheight";
 @import 	"cor/variables/250_cor/break";
-//@import 	"cor/variables/250_cor/width";
+@import 	"cor/variables/250_cor/width";
 
 // -------------------------------------------------------------------- RESPONSIVE | 2017-01-12
 @import 	"cor/responsive/230_base/range";
@@ -67,26 +67,26 @@
 //@import 	"cor/layout/250_cor/body";
 
 // -------------------------------------------------------------------- SELECTOR | 2017-07-19
-//@import 	"cor/selector/250_setup/boxsizing";
-//@import 	"cor/selector/250_setup/clear";
-//@import 	"cor/selector/250_setup/transition";
-//@import 	"cor/selector/230_base/selection";
-//@import 	"cor/selector/250_setup/display";
-//@import 	"cor/selector/250_setup/align";
-//@import 	"cor/selector/250_setup/overflow";
-//@import 	"cor/selector/250_setup/position";
+@import 	"cor/selector/250_setup/boxsizing";
+@import 	"cor/selector/250_setup/clear";
+@import 	"cor/selector/250_setup/transition";
+@import 	"cor/selector/230_base/selection";
+@import 	"cor/selector/250_setup/display";
+@import 	"cor/selector/250_setup/align";
+@import 	"cor/selector/250_setup/overflow";
+@import 	"cor/selector/250_setup/position";
 
 // -------------------------------------------------------------------- COLOR | 2017-07-19
 //@import 	"cor/color/250_setup/color";
 //@import 	"cor/color/250_setup/bgcolor";
 
 // -------------------------------------------------------------------- SPACING | 2017-07-19
-//@import 	"cor/spacing/250_setup/space";
-//@import 	"cor/spacing/250_setup/pad";
+@import 	"cor/spacing/250_setup/space";
+@import 	"cor/spacing/250_setup/pad";
 
 // -------------------------------------------------------------------- LINE | 2017-07-19
-//@import 	"cor/line/250_setup/border";
-//@import 	"cor/line/250_setup/divider";
+@import 	"cor/line/250_setup/border";
+@import 	"cor/line/250_setup/divider";
 
 // -------------------------------------------------------------------- LIST | 2017-07-19
 //@import 	"cor/list/250_setup/list";
@@ -94,16 +94,16 @@
 //@import 	"cor/list/250_setup/orderedlist";
 
 // -------------------------------------------------------------------- TYPE | 2017-07-19
-//@import 	"cor/type/250_setup/family";
-//@import 	"cor/type/250_setup/size";
-//@import 	"cor/type/250_setup/weight";
-//@import 	"cor/type/250_setup/height";
+@import 	"cor/type/250_setup/family";
+@import 	"cor/type/250_setup/size";
+@import 	"cor/type/250_setup/weight";
+@import 	"cor/type/250_setup/height";
 
 // NEEDS CONSOLIDATING
 // -------------------------------------------------------------------- FORM | 2016-08-05
-//@import 	"cor/form/230_base/button";
-//@import 	"cor/form/230_cor/input";
-//@import 	"cor/form/230_base/table";
+@import 	"cor/form/230_base/button";
+@import 	"cor/form/230_cor/input";
+@import 	"cor/form/230_base/table";
 
 // CLEARED - MAIN SOURCE
 // -------------------------------------------------------------------- CONTENT | 2017-05-23
@@ -124,8 +124,8 @@
 // CLEARED - MAIN SOURCE
 // -------------------------------------------------------------------- GUI | 2017-07-28
 //@import 	"cor/gui/230_cor/button";
-//@import 	"cor/gui/230_base/media";
-//@import 	"cor/gui/250_setup/aspectratio";
+@import 	"cor/gui/230_base/media";
+@import 	"cor/gui/250_setup/aspectratio";
 
 // -------------------------------------------------------------------- GRID | 2017-08-23
 //@import 	"cor/grid/250_setupbasic/column";
@@ -259,31 +259,31 @@
 //@import 	"cor/module/227_cormain/important";
 
 // -------------------------------------------------------------------- PLUGINS | 2018-07-27
-//@import 	"cor/plugin/262_cor/swp-socialtoolbar";
-//@import 	"cor/plugin/250_cor/swp-soliloquyslider";
-//@import 	"cor/plugin/230_cor/spk-youtubeembeds";
-//@import 	"cor/plugin/227_cormain/spk-accordion";
+@import 	"cor/plugin/262_cor/swp-socialtoolbar";
+@import 	"cor/plugin/250_cor/swp-soliloquyslider";
+@import 	"cor/plugin/230_cor/spk-youtubeembeds";
+@import 	"cor/plugin/227_cormain/spk-accordion";
 
 // -------------------------------------------------------------------- PANEL | 2016-07-05
-//@import 	"cor/panel/227_cormain/panel-ctacontent";
+@import 	"cor/panel/227_cormain/panel-ctacontent";
 
 // -------------------------------------------------------------------- ITEM | 2018-03-03
-//@import 	"cor/item/250_cor/item-transfer";
-//@import 	"cor/item/250_cor/item-subscribe";
-//@import 	"cor/item/250_cor/item-adsense";
-//@import 	"cor/item/default_2124/item-content";
-//@import 	"cor/item/250_cor/item-titlebar";
-//@import 	"cor/item/default_2124/item-box";
-//@import 	"cor/item/227_cormain/item-audio";
-//@import 	"cor/item/227_cormain/item-product";
-//@import 	"cor/item/default_2124/item-tabs";
-//@import 	"cor/item/227_cormain/item-hideshow";
+@import 	"cor/item/250_cor/item-transfer";
+@import 	"cor/item/250_cor/item-subscribe";
+@import 	"cor/item/250_cor/item-adsense";
+@import 	"cor/item/default_2124/item-content";
+@import 	"cor/item/250_cor/item-titlebar";
+@import 	"cor/item/default_2124/item-box";
+@import 	"cor/item/227_cormain/item-audio";
+@import 	"cor/item/227_cormain/item-product";
+@import 	"cor/item/default_2124/item-tabs";
+@import 	"cor/item/227_cormain/item-hideshow";
 @import 	"cor/item/2801_cor/item-cta-2020";
-//@import 	"cor/item/227_cormain/item-icon";
-//@import 	"cor/item/227_cormain/item-ctacontent";
-//@import 	"cor/item/230_cor/item-instagram";
-//@import 	"cor/item/230_cor/item-focus";
-//@import 	"cor/item/250_cor/item-members";
+@import 	"cor/item/227_cormain/item-icon";
+@import 	"cor/item/227_cormain/item-ctacontent";
+@import 	"cor/item/230_cor/item-instagram";
+@import 	"cor/item/230_cor/item-focus";
+@import 	"cor/item/250_cor/item-members";
 
 // -------------------------------------------------------------------- RESPONSIVE ITEMS | 2019-03-04
-//@import 	"cor/responsive/2801_cor/item-cta";
+@import 	"cor/responsive/2801_cor/item-cta";
