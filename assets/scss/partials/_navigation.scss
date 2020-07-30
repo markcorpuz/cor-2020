@@ -1,3 +1,4 @@
+/* COR | 1.0.1 | 200720 | assets/scss/partials/navigation.scss
 /* Navigation
 ---------------------------------------------------------------------------------------------------- */
 
@@ -54,6 +55,9 @@
 	}
 
 	.nav-secondary {
+
+		background-color: #3768A0;
+
 		.menu-item.search {
 			@include media("<=mobile_menu") {
 				padding: 4px 16px 16px;
@@ -72,6 +76,8 @@
 
 	.nav-primary {
 
+		background-color: #234367;
+
 		.menu-item.search {
 			line-height: 0;
 
@@ -86,15 +92,16 @@
 	}
 
 	@include media(">mobile_menu") {
-		float: right;
-		width: calc( 100% - #{$menu_width} );
-		display: flex;
-		flex-flow: column-reverse nowrap;
+		//float: right;
+		//width: calc( 100% - #{$menu_width} );
+		width: 100%;
+		//display: flex;
+		//flex-flow: column-reverse nowrap;
 
 		.nav-primary,
 		.nav-secondary {
-			display: flex;
-			justify-content: flex-end;
+			//display: flex;
+			//justify-content: flex-end;
 		}
 
 		.nav-primary + .nav-secondary {

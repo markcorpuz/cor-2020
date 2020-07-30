@@ -1,14 +1,12 @@
-/* SETUP-BE | 1.0.0 | 200326 | assets/scss/partials/site-inner.scss
+/* COR | 1.0.0 | 200326 | assets/scss/partials/site-inner.scss
+// SETUP-BE | 1.0.0 | 200326 | assets/scss/partials/site-inner.scss
 ---------------------------------------------------------------------------------------------------- */
 
 .site-inner {
 
-	padding: 2rem 0;
-
-	@include media(">=tablet") {
-		padding: 4rem 0;
+	.wrap {
+		background-color: white;
+		padding: 2rem;
 	}
-
-	.wrap {}
 
 }

@@ -76,7 +76,7 @@ add_action( 'enqueue_block_editor_assets', 'ea_gutenberg_scripts' );
  */
 function setup_be_theme_fonts_url() {
 	//return false;
-	wp_enqueue_style( 'setup_be_google-font', '//fonts.googleapis.com/css?family=Rubik:300,400,500,700,900', array(), genesis_get_theme_version() );
+	wp_enqueue_style( 'setup_be_google-font', '//fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Lato:300,400,500,700,900', array(), genesis_get_theme_version() );
 }
 
 /**
@@ -99,12 +99,14 @@ function ea_child_theme_setup() {
 	include_once( get_stylesheet_directory() . '/inc/markup.php' );
 	include_once( get_stylesheet_directory() . '/inc/helper-functions.php' );
 	include_once( get_stylesheet_directory() . '/inc/layouts.php' );
-	include_once( get_stylesheet_directory() . '/inc/navigation.php' );
+	include_once( get_stylesheet_directory() . '/inc/navigation-cor.php' );
 	include_once( get_stylesheet_directory() . '/inc/loop.php' );
 	include_once( get_stylesheet_directory() . '/inc/author-box.php' );
 	include_once( get_stylesheet_directory() . '/inc/template-tags.php' );
 	include_once( get_stylesheet_directory() . '/inc/items.php' );
 	include_once( get_stylesheet_directory() . '/inc/site-footer-swp.php' );
+
+	include_once( get_stylesheet_directory() . '/inc/widgets-cor.php' );
 
 	// Editor
 	include_once( get_stylesheet_directory() . '/inc/disable-editor.php' );
@@ -120,6 +122,9 @@ function ea_child_theme_setup() {
 	include_once( get_stylesheet_directory() . '/inc/amp.php' );
 	include_once( get_stylesheet_directory() . '/inc/shared-counts.php' );
 	include_once( get_stylesheet_directory() . '/inc/wpforms.php' );
+
+	// ADS
+	include_once( get_stylesheet_directory() . '/inc/custom-ads-cor.php' );
 
 	// Editor Styles
 	add_theme_support( 'editor-styles' );

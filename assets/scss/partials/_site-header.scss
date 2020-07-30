@@ -1,33 +1,46 @@
-/* SETUP-BE | 1.0.0 | 200326 | assets/scss/partials/site-header.scss
+/* COR | 1.0.0 | 200719 | assets/scss/partials/site-header.scss
+// SETUP-BE | 1.0.0 | 200326 | assets/scss/partials/site-header.scss
 ---------------------------------------------------------------------------------------------------- */
 
 /* Site Header
 ---------------------------------------------------------------------------------------------------- */
 
 .site-header {
-	padding-top: 1rem;
-	padding-bottom: 1rem;
 	background: $white;
 	position: relative;
 	min-height: 49px;
+	background-color: #3768A0;
+
+	.wrap {
+		background-image: url(../images/siteheader2x.jpg);
+		background-size: 1200px;
+		background-position: top;
+		background-color: black;
+		min-height: 199px;
+	}
+
 }
 
 .title-area {
-	float: left;
-	width: 100%;
-	max-width: $logo_width;
-	text-align: left;
-	margin: 0 auto;
+	//float: left;
+	//text-align: center;
 
 	h1.site-title,
 	p.site-title {
-		margin: 0;
+		background: url(../images/sprites2x.png) no-repeat -20px -18px;
+		background-size: 1000px;
 		font-size: 1.5rem;
 		line-height: 1.875rem;
 		font-weight: 700;
+		width: 291px;
+		height: 75px;
+		display: block;
 
 		a {
-			color: $base-color;
+			width: 291px;
+			height: 75px;
+			display: block;
+			color: transparent;
 			text-decoration: none;
 		}
 	}

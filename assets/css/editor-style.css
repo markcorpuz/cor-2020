@@ -1,4 +1,5 @@
-/* SETUP-BE | 1.0.1 | 200624 | assets/scss/partials/base.scss
+/* COR-2020 | 1.0.1 | 200729 | assets/scss/partials/base.scss
+// SETUP-BE | 1.0.1 | 200624 | assets/scss/partials/base.scss
 ---------------------------------------------------------------------------------------------------- */
 /**
  * Brand Color
@@ -68,7 +69,7 @@ a svg, a {
 --------------------------------------------- */
 body {
   color: #424242;
-  font-family: "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-family: "Lato", "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.55;
@@ -226,7 +227,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-family: "Lato", "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-weight: 400;
   line-height: 1.2;
   margin: 0 0 16px;
@@ -1017,7 +1018,7 @@ div.wpforms-container.one-line:after {
 
 body, p {
   color: #424242;
-  font-family: "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-family: "Lato", "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.55;

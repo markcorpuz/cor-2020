@@ -1,4 +1,5 @@
-/* SETUP-BE | 1.0.0 | 200326 | assets/scss/partials/layout.scss
+/* COR | 1.0.0 | 200719 | assets/scss/partials/layout.scss
+// SETUP-BE | 1.0.0 | 200326 | assets/scss/partials/layout.scss
 ---------------------------------------------------------------------------------------------------- */
 
 /* Box Sizing
@@ -34,6 +35,8 @@ input[type="search"] {
 	.singular.content & > .wrap {
 		max-width: map-get( $breakpoints, 'content-width' );
 	}
+
+	background-color: #3768A0;
 }
 
 /* Screen Reader Text
@@ -76,7 +79,7 @@ input[type="search"] {
 @include media("<medium") {
 
 	.sidebar-primary {
-		display: none;
+		//display: none;
 	}
 }
 
@@ -87,17 +90,19 @@ input[type="search"] {
 		.site-main {
 			float: left;
 			width: 768px / 1168px * 100%;
+			//background-color: #f9f9f9;
 		}
 
 		.sidebar-primary {
 			float: right;
 			width: 335px / 1168px * 100%;
+			//background-color: #f9f9f9;
 		}
 
 		@supports( display: $grid ) {
 			.content-area {
 				display: grid;
-				grid-template-columns: 1fr 368px;
+				grid-template-columns: 1fr 336px;
 				grid-column-gap: $grid-gap;
 			}
 

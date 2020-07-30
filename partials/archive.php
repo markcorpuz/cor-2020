@@ -46,7 +46,7 @@ echo '<article class="module post-summary">';
 		//setup_be_dateauthor_nolink();
 
 		// EXCERPT
-		setup_be_excerpt();
+		//setup_be_excerpt();
 		//setup_be_excerpt_maxwords();
 
 		// ADMIN

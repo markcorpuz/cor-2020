@@ -1,6 +1,8 @@
-/* SETUP-BE | 1.0.1 | 200702 | assets/scss/main.scss
+/* COR-2020 | 1.0.1 | 200720 | assets/scss/main.scss
+// SETUP-BE | 1.0.1 | 200702 | assets/scss/main.scss
 ---------------------------------------------------------------------------------------------------- */
-/* SETUP-BE | 1.0.1 | 200624 | assets/scss/partials/base.scss
+/* COR-2020 | 1.0.1 | 200729 | assets/scss/partials/base.scss
+// SETUP-BE | 1.0.1 | 200624 | assets/scss/partials/base.scss
 ---------------------------------------------------------------------------------------------------- */
 /**
  * Brand Color
@@ -396,7 +398,8 @@ template {
   display: none;
 }
 
-/* SETUP-BE | 1.0.0 | 200326 | assets/scss/partials/layout.scss
+/* COR | 1.0.0 | 200719 | assets/scss/partials/layout.scss
+// SETUP-BE | 1.0.0 | 200326 | assets/scss/partials/layout.scss
 ---------------------------------------------------------------------------------------------------- */
 /* Box Sizing
 --------------------------------------------- */
@@ -429,6 +432,9 @@ input[type=search] {
   }
 }
 
+.site-inner {
+  background-color: #3768A0;
+}
 .singular.content .site-inner > .wrap {
   max-width: 800px;
 }
@@ -469,11 +475,6 @@ input[type=search] {
 
 /* Sidebar Layouts
 --------------------------------------------- */
-@media (max-width: 991px) {
-  .sidebar-primary {
-    display: none;
-  }
-}
 @media (min-width: 992px) {
   .content-sidebar .site-main {
     float: left;
@@ -486,7 +487,7 @@ input[type=search] {
   @supports (display: grid) {
     .content-sidebar .content-area {
       display: grid;
-      grid-template-columns: 1fr 368px;
+      grid-template-columns: 1fr 336px;
       grid-column-gap: 32px;
     }
     .content-sidebar .site-main {
@@ -591,7 +592,7 @@ textarea:focus:-ms-input-placeholder {
 --------------------------------------------- */
 body {
   color: #424242;
-  font-family: "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-family: "Lato", "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.55;
@@ -749,7 +750,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-family: "Lato", "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-weight: 400;
   line-height: 1.2;
   margin: 0 0 16px;
@@ -1315,24 +1316,26 @@ div.wpforms-container.one-line:after {
   display: none;
 }
 
-/* SETUP-BE | 1.0.0 | 200326 | assets/scss/partials/site-header.scss
+/* COR | 1.0.0 | 200719 | assets/scss/partials/site-header.scss
+// SETUP-BE | 1.0.0 | 200326 | assets/scss/partials/site-header.scss
 ---------------------------------------------------------------------------------------------------- */
 /* Site Header
 ---------------------------------------------------------------------------------------------------- */
 .site-header {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
   background: #fff;
   position: relative;
   min-height: 49px;
+  background-color: #3768A0;
+}
+.site-header .wrap {
+  background-image: url(../images/siteheader2x.jpg);
+  background-size: 1200px;
+  background-position: top;
+  background-color: black;
+  min-height: 199px;
 }
 
 .title-area {
-  float: left;
-  width: 100%;
-  max-width: 300px;
-  text-align: left;
-  margin: 0 auto;
   /*
   	.site-title a {
   	  	background: url(../icons/logo.svg) no-repeat center;
@@ -1347,14 +1350,21 @@ div.wpforms-container.one-line:after {
 }
 .title-area h1.site-title,
 .title-area p.site-title {
-  margin: 0;
+  background: url(../images/sprites2x.png) no-repeat -20px -18px;
+  background-size: 1000px;
   font-size: 1.5rem;
   line-height: 1.875rem;
   font-weight: 700;
+  width: 291px;
+  height: 75px;
+  display: block;
 }
 .title-area h1.site-title a,
 .title-area p.site-title a {
-  color: #424242;
+  width: 291px;
+  height: 75px;
+  display: block;
+  color: transparent;
   text-decoration: none;
 }
 @media (max-width: 768px) {
@@ -1383,17 +1393,16 @@ div.wpforms-container.one-line:after {
 }
 /* Persistent Header
 --------------------------------------------- */
-/* SETUP-BE | 1.0.0 | 200326 | assets/scss/partials/site-inner.scss
+/* COR | 1.0.0 | 200326 | assets/scss/partials/site-inner.scss
+// SETUP-BE | 1.0.0 | 200326 | assets/scss/partials/site-inner.scss
 ---------------------------------------------------------------------------------------------------- */
-.site-inner {
-  padding: 2rem 0;
+.site-inner .wrap {
+  background-color: white;
+  padding: 2rem;
 }
-@media (min-width: 768px) {
-  .site-inner {
-    padding: 4rem 0;
-  }
-}
-/* SETUP-BE | 1.0.0 | 200326 | assets/scss/partials/widget.scss
+
+/* COR | 1.0.1 | 200729 | assets/scss/partials/widget.scss
+// SETUP-BE | 1.0.0 | 200326 | assets/scss/partials/widget.scss
 ---------------------------------------------------------------------------------------------------- */
 .widget {
   margin-top: 2rem;
@@ -1403,6 +1412,11 @@ div.wpforms-container.one-line:after {
     margin-top: 2rem;
   }
 }
+.sidebar-primary .widget {
+  padding: 1.5rem;
+  box-shadow: 1px 1px 2px 0px #bbbbbb;
+  background-color: #f9f9f9;
+}
 
 .sidebar .widget:first-child {
   margin-top: 0;
@@ -1411,7 +1425,17 @@ div.wpforms-container.one-line:after {
   font-size: 0.875rem;
   font-weight: 700;
   text-transform: uppercase;
+  color: #ffcc00;
+  background-color: #333;
+  padding: 5px 5px 5px 8px;
+  margin-bottom: 1rem;
 }
+.footer-widgets .widget-title {
+  background-color: transparent;
+  color: #1072b6;
+  padding: 0;
+}
+/* COR | 1.0.1 | 200720 | assets/scss/partials/navigation.scss
 /* Navigation
 ---------------------------------------------------------------------------------------------------- */
 .nav-menu > * {
@@ -1461,6 +1485,9 @@ div.wpforms-container.one-line:after {
 .nav-menu .submenu-expand svg {
   fill: #757575;
 }
+.nav-menu .nav-secondary {
+  background-color: #3768A0;
+}
 @media (max-width: 768px) {
   .nav-menu .nav-secondary .menu-item.search {
     padding: 4px 16px 16px;
@@ -1476,6 +1503,9 @@ div.wpforms-container.one-line:after {
     width: 268px;
   }
 }
+.nav-menu .nav-primary {
+  background-color: #234367;
+}
 .nav-menu .nav-primary .menu-item.search {
   line-height: 0;
 }
@@ -1489,15 +1519,7 @@ div.wpforms-container.one-line:after {
 }
 @media (min-width: 769px) {
   .nav-menu {
-    float: right;
-    width: calc( 100% - 332px );
-    display: flex;
-    flex-flow: column-reverse nowrap;
-  }
-  .nav-menu .nav-primary,
-.nav-menu .nav-secondary {
-    display: flex;
-    justify-content: flex-end;
+    width: 100%;
   }
   .nav-menu .nav-primary + .nav-secondary {
     margin-bottom: 16px;
@@ -3404,6 +3426,18 @@ ul.blocks-gallery-grid {
   padding-left: 0;
 }
 
+/* COR | 1.0.1 | 200720 | assets/scss/items/ads-urc.scss
+---------------------------------------------------------------------------------------------------- */
+.item.ads.below-header,
+.item.ads.above-footer {
+  background-color: #3768A0;
+}
+.item.ads.below-header .wrap,
+.item.ads.above-footer .wrap {
+  background-color: #f9f9f9;
+  padding: 1rem;
+}
+
 /* SETUP-LOG | 1.0.3 | 200702 | setup-be/block-custom/setup-log-103/log.scss
 ---------------------------------------------------------------------------------------------------- */
 .module.guide.guide-titleshadow > .item.label, .module.guide.summary-bg-darkgray .item.summary, .module.guide.summary-bg-gray .item.summary, .module.guide.summary-bg-lightgray .item.summary, .module.guide.summary-bg-blue .item.summary, .module.guide.summary-bg-red .item.summary, .module.guide.summary-bg-orange .item.summary, .module.guide.summary-bg-yellow .item.summary, .module.guide.summary-bg-green .item.summary, .module.guide.label-bg-darkgray .item.label, .module.guide.label-bg-gray .item.label, .module.guide.label-bg-lightgray .item.label, .module.guide.label-bg-blue .item.label, .module.guide.label-bg-red .item.label, .module.guide.label-bg-orange .item.label, .module.guide.label-bg-yellow .item.label, .module.guide.label-bg-green .item.label, .module.guide.module-bg-darkgray, .module.guide.module-bg-gray, .module.guide.module-bg-lightgray, .module.guide.module-bg-blue, .module.guide.module-bg-red, .module.guide.module-bg-orange, .module.guide.module-bg-yellow, .module.guide.module-bg-green, .module.log.module-bg-darkgray, .module.log.module-bg-gray, .module.log.module-bg-lightgray, .module.log.module-bg-blue, .module.log.module-bg-red, .module.log.module-bg-orange, .module.log.module-bg-yellow, .module.log.module-bg-green, .module.log.module-bg-darkgray .item.label, .module.log.module-bg-gray .item.label, .module.log.module-bg-lightgray .item.label, .module.log.module-bg-blue .item.label, .module.log.module-bg-red .item.label, .module.log.module-bg-orange .item.label, .module.log.module-bg-yellow .item.label, .module.log.module-bg-green .item.label,
@@ -3578,4 +3612,209 @@ ul.blocks-gallery-grid {
 }
 .module.guide.guide-titleshadow > .item.label {
   padding: 4px 8px;
+}
+/* SETUP | VARIABLES | 250_SETUPBASIC | FONTFAMILY - 2018-08-31 */
+/* SETUP | VARIABLES | 250_SETUPBASIC | FONTSIZE - 2018-08-31 */
+/* SETUP | VARIABLES | 250_SETUPBASIC | FONTWEIGHT - 2018-08-17 */
+/* BASE_230 | VARIABLES | 250_COR | BREAK - 2017-06-27 */
+/* BASE_230 | RESPONSIVE | 230_BASE | RANGE - 2017-01-12 */
+/* BASE_230 | ITEM | 2801_COR | ITEM-CTA - 2019-02-01 */
+.cta-teespring, .cta-lulu, .cta-kindle, .cta-itunes, .cta-ibooks, .cta-audible-large, .cta-audible, .cta-paypal, .cta-amazon-large, .cta-amazon, .cta-donate-paypalbutton, .cta-buy-paypalbutton, .cta-donate-icon, .cta-donate, .cta-bookuniversal, .cta-bookcombined, .cta-merchandise, .cta-bookaudio-amazon, .cta-bookaudio-icon, .cta-book2audio, .cta-bookaudio, .cta-bookebook-amazon, .cta-bookebook-icon, .cta-book2ebook, .cta-bookebook, .cta-bookpaperback-amazon, .cta-bookpaperback-icon, .cta-book2paperback, .cta-bookpaperback, .cta-coachingemail-icon, .cta-coachingemail, .cta-coachingphone-icon, .cta-coachingphone, .cta-box {
+  background-image: url(../images/sprites.png);
+  background-repeat: no-repeat;
+  display: block;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .cta-teespring, .cta-lulu, .cta-kindle, .cta-itunes, .cta-ibooks, .cta-audible-large, .cta-audible, .cta-paypal, .cta-amazon-large, .cta-amazon, .cta-donate-paypalbutton, .cta-buy-paypalbutton, .cta-donate-icon, .cta-donate, .cta-bookuniversal, .cta-bookcombined, .cta-merchandise, .cta-bookaudio-amazon, .cta-bookaudio-icon, .cta-book2audio, .cta-bookaudio, .cta-bookebook-amazon, .cta-bookebook-icon, .cta-book2ebook, .cta-bookebook, .cta-bookpaperback-amazon, .cta-bookpaperback-icon, .cta-book2paperback, .cta-bookpaperback, .cta-coachingemail-icon, .cta-coachingemail, .cta-coachingphone-icon, .cta-coachingphone, .cta-box {
+    background-image: url(../images/sprites2x.png);
+    background-size: 1000px;
+  }
+}
+
+.cta-donate, .cta-bookuniversal, .cta-bookcombined, .cta-merchandise, .cta-book2audio, .cta-bookaudio, .cta-book2ebook, .cta-bookebook, .cta-book2paperback, .cta-bookpaperback, .cta-coachingemail, .cta-coachingphone, .cta-box {
+  width: 100px;
+  height: 100px;
+}
+
+.cta-donate-icon, .cta-bookaudio-icon, .cta-bookebook-icon, .cta-bookpaperback-icon, .cta-coachingemail-icon, .cta-coachingphone-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.cta-box-width {
+  max-width: 100px;
+}
+
+.cta-coachingphone {
+  background-position: -675px -140px;
+}
+
+.cta-coachingphone-icon {
+  background-position: -275px -353px;
+}
+
+.cta-coachingemail {
+  background-position: -675px -15px;
+}
+
+.cta-coachingemail-icon {
+  background-position: -320px -353px;
+}
+
+.cta-bookpaperback {
+  background-position: -675px -265px;
+}
+
+.cta-book2paperback {
+  background-position: -895px -265px;
+}
+
+.cta-bookpaperback-icon {
+  background-position: -230px -303px;
+}
+
+.cta-bookpaperback-amazon {
+  background-position: -357px -463px;
+  width: 120px;
+  height: 241px;
+}
+
+.cta-bookebook {
+  background-position: -675px -390px;
+}
+
+.cta-book2ebook {
+  background-position: -895px -390px;
+}
+
+.cta-bookebook-icon {
+  background-position: -275px -303px;
+}
+
+.cta-bookebook-amazon {
+  background-position: -228px -463px;
+  width: 120px;
+  height: 241px;
+}
+
+.cta-bookaudio {
+  background-position: -675px -515px;
+}
+
+.cta-book2audio {
+  background-position: -895px -515px;
+}
+
+.cta-bookaudio-icon {
+  background-position: -320px -303px;
+}
+
+.cta-bookaudio-amazon {
+  background-position: -486px -463px;
+  width: 120px;
+  height: 241px;
+}
+
+.cta-merchandise {
+  background-position: -895px -140px;
+}
+
+.cta-bookcombined {
+  background-position: -785px -265px;
+}
+
+.cta-bookuniversal {
+  background-position: -785px -390px;
+}
+
+.cta-donate {
+  background-position: -675px -640px;
+}
+
+.cta-donate-icon {
+  background-position: -230px -353px;
+}
+
+.cta-buy-paypalbutton {
+  background-position: -464px -177px;
+  width: 174px;
+  height: 101px;
+}
+
+.cta-donate-paypalbutton {
+  background-position: -464px -284px;
+  width: 174px;
+  height: 101px;
+}
+
+.cta-amazon {
+  background-position: -676px -749px;
+  width: 84px;
+  height: 40px;
+}
+
+.cta-amazon-large {
+  background-position: -501px -722px;
+  width: 125px;
+  height: 59px;
+}
+
+.cta-paypal {
+  background-position: -465px -94px;
+  width: 98px;
+  height: 25px;
+}
+
+.cta-audible {
+  background-position: -386px -727px;
+  width: 100px;
+  height: 41px;
+}
+
+.cta-audible-large {
+  background-position: -228px -718px;
+  width: 150px;
+  height: 62px;
+}
+
+.cta-ibooks {
+  background-position: -20px -496px;
+  width: 114px;
+  height: 40px;
+}
+
+.cta-itunes {
+  background-position: -21px -545px;
+  width: 110px;
+  height: 41px;
+}
+
+.cta-kindle {
+  background-position: -228px -425px;
+  width: 120px;
+  height: 26px;
+}
+
+.cta-lulu {
+  background-position: -151px -499px;
+  width: 50px;
+  height: 35px;
+}
+
+.cta-teespring {
+  background-position: -796px -99px;
+  width: 121px;
+  height: 19px;
+}
+
+.cta-triangle {
+  width: 0;
+  height: 0;
+  border-top: 2px solid transparent;
+  border-left: 4px solid red;
+  border-bottom: 2px solid transparent;
+}
+
+.cta-kindle.height-40 {
+  margin-bottom: 14px;
 }
