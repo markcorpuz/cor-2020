@@ -95,14 +95,14 @@ input[type="search"] {
 
 		.sidebar-primary {
 			float: right;
-			width: 335px / 1168px * 100%;
+			width: 384px / 1168px * 100%;
 			//background-color: #f9f9f9;
 		}
 
 		@supports( display: $grid ) {
 			.content-area {
 				display: grid;
-				grid-template-columns: 1fr 336px;
+				grid-template-columns: 1fr 384px;
 				grid-column-gap: $grid-gap;
 			}
 

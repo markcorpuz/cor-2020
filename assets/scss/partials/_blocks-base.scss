@@ -140,7 +140,7 @@ h6 {
 	font-family: $sans-serif;
 	font-weight: 400;
 	line-height: 1.2;
-	margin: 0 0 16px;
+	margin: 0;
 
 	a {
 
@@ -175,11 +175,13 @@ h4 {
 }
 
 h5 {
-	@include font-sizes( 1rem, 1.125rem );
+	@include font-sizes( 1rem );
+	//@include font-sizes( 1rem, 1.125rem );
 	//@include font-sizes( 16px, 18px );
 }
 
 h6 {
-	@include font-sizes( 0.875rem, 1rem );
+	@include font-sizes( 0.875rem );
+	//@include font-sizes( 0.875rem, 1rem );
 	//@include font-sizes( 14px, 16px );
 }

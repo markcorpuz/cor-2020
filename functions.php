@@ -76,7 +76,7 @@ add_action( 'enqueue_block_editor_assets', 'ea_gutenberg_scripts' );
  */
 function setup_be_theme_fonts_url() {
 	//return false;
-	wp_enqueue_style( 'setup_be_google-font', '//fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Lato:300,400,500,700,900', array(), genesis_get_theme_version() );
+	wp_enqueue_style( 'setup_be_google-font', '//fonts.googleapis.com/css?family=Rubik:300,400,500,700,900|Roboto:300,400,500,700,900|Lato:300,400,500,700,900', array(), genesis_get_theme_version() );
 }
 
 /**
@@ -124,7 +124,7 @@ function ea_child_theme_setup() {
 	include_once( get_stylesheet_directory() . '/inc/wpforms.php' );
 
 	// ADS
-	include_once( get_stylesheet_directory() . '/inc/custom-ads-cor.php' );
+	//include_once( get_stylesheet_directory() . '/inc/custom-ads-cor.php' );
 
 	// Editor Styles
 	add_theme_support( 'editor-styles' );

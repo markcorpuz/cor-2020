@@ -5,13 +5,13 @@
 // -------------------------------------
 
 	%icon-image {
-		background-image: url("images/sprites.png");
+		background-image: url(../images/sprites.png);
 		background-repeat: no-repeat;
 		display: block;
 
 		@media (-webkit-min-device-pixel-ratio: 2),
 		(min-resolution: 192dpi) {
-			background-image: url("images/sprites2x.png");
+			background-image: url(../images/sprites2x.png);
 			background-size: 1000px;
 		}
 	}

@@ -39,10 +39,11 @@ $border-color: $grey_4;
 
 // Fonts
 $serif: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
-$sans-serif: "Roboto", "Lato", "Rubik", -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+$sans-serif: "Rubik", "Roboto", "Lato", -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
 
 // Content
-$content-width: 768px;
+$content-width: 720px;
+//$content-width: 768px;
 $block-margin: 16px;
 
 // Space

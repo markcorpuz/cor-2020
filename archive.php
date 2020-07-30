@@ -9,8 +9,8 @@
 **/
 
 // Full Width
-add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_full_width_content' );
-//add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_content_sidebar' );
+//add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_full_width_content' );
+add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_content_sidebar' );
 
 /**
  * Blog Archive Body Class

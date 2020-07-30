@@ -100,12 +100,12 @@
 	}
 
 	.item-subscribe .photo {
-		background-image: url("images/pic-subscribe.png");
+		background-image: url(../images/pic-subscribe.png);
 		background-repeat: no-repeat;
 
 		// BASEUP
 		@include responsive-range(baseup) {
-			background-image: url("images/pic-subscribe-324.png");
+			background-image: url(../images/pic-subscribe-324.png);
 			background-size: auto;
 		}
 		// BASEDOWN
