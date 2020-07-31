@@ -4,7 +4,7 @@
  *
  * @package      SETUP-BE
  * @author       Mark Corpuz
- * @since        1.0.1
+ * @since        1.0.0
  * @license      GPL-2.0+
 **/
 
@@ -13,21 +13,16 @@ echo '<article class="module post-summary">';
 	// FEATURED IMAGE
 	setup_be_image();
 	//setup_be_image_nolink();
-	//setup_be_bgimage();
-	//setup_be_bgimage_nolink();
-	//setup_be_bgimage_wtitle();
-	//setup_be_bgimage_wtitle_nolink();
 
 	echo '<div class="items info">';
 
 		// OVERLINE
-		setup_be_overline();
+		//setup_be_overline();
 		//setup_be_overline_nolink();
 		
 		// TITLE
 		setup_be_title();
 		//setup_be_title_nolink();
-		//setup_be_title_only();
 
 		// AUTHOR
 		//setup_be_author();
@@ -49,12 +44,11 @@ echo '<article class="module post-summary">';
 		//setup_be_dateauthor_nolink();
 
 		// EXCERPT
-		//setup_be_excerpt();
+		setup_be_excerpt();
 		//setup_be_excerpt_maxwords();
 
 		// ADMIN
-		//setup_be_edit();
-		setup_be_edit_date_modified();
+		setup_be_edit();
 
 	echo '</div>';
 

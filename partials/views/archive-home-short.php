@@ -4,7 +4,7 @@
  *
  * @package      SETUP-BE
  * @author       Mark Corpuz
- * @since        1.0.1
+ * @since        1.0.0
  * @license      GPL-2.0+
 **/
 
@@ -21,7 +21,7 @@ echo '<article class="module post-summary">';
 	echo '<div class="items info">';
 
 		// OVERLINE
-		setup_be_overline();
+		//setup_be_overline();
 		//setup_be_overline_nolink();
 		
 		// TITLE
@@ -53,9 +53,17 @@ echo '<article class="module post-summary">';
 		//setup_be_excerpt_maxwords();
 
 		// ADMIN
-		//setup_be_edit();
-		setup_be_edit_date_modified();
+		setup_be_edit();
+		//setup_be_edit_date_modified();
 
 	echo '</div>';
 
 echo '</article>';
+
+/*
+	Examples:
+	setup_be_image('large');
+	setup_be_bgimage_wtitle( null, 'Custom Text Inputed');
+	setup_be_bgimage_wtitle( null, setup_be_excerpt() );
+	setup_be_bgimage_wtitle( 'thumbnail' , setup_be_title_only() );
+ */

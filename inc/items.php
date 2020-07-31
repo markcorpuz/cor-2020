@@ -148,6 +148,28 @@ function setup_be_bgimage_wtitle_nolink( $size = 'medium' , $text = '' ) {
 		<?php
 	}
 }
+/**
+ * BGIMAGE
+ * + TITLE
+ * _LINK
+ * _NOLINK
+ * 
+ */
+function cor_bgimage_wtitle_main( $size = 'medium' , $text = '' ) {
+	$pid = get_the_ID();
+	// Native WP
+	$img_bg = get_the_post_thumbnail_url( $pid, $size );
+	// Custom Field (ACF) - replace with actual field label
+	$field = 'customfield_bgimage';
+	//$img_bg = wp_get_attachment_image_url( get_post_meta( $pid, $field, TRUE ), $size );
+
+	// check if variable has content
+	if( !empty( $img_bg ) ) {
+		?>
+		<a class="item bgimage link" href="<?php get_permalink() ?>" tabindex="-1" aria-hidden="true"  style="background-image:url(<?php echo $img_bg; ?>);"><?php echo $text; ?></a>
+		<?php
+	}
+}
 
 
 /**
@@ -197,7 +219,7 @@ function setup_be_title_nolink() {
 	echo '<' . $tag . ' class="item title nolink">' . get_the_title() . '</' . $tag . '>';
 }
 function setup_be_title_only() {
-	return get_the_title();
+	return '<span>' . get_the_title() . '</span>';
 }
 
 
