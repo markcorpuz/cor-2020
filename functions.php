@@ -106,8 +106,6 @@ function ea_child_theme_setup() {
 	include_once( get_stylesheet_directory() . '/inc/items.php' );
 	include_once( get_stylesheet_directory() . '/inc/site-footer-swp.php' );
 
-	include_once( get_stylesheet_directory() . '/inc/widgets-cor.php' );
-
 	// Editor
 	include_once( get_stylesheet_directory() . '/inc/disable-editor.php' );
 	include_once( get_stylesheet_directory() . '/inc/tinymce.php' );
