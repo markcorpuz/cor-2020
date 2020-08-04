@@ -1,4 +1,4 @@
-/* COR | 1.0.1 | 200720 | assets/scss/partials/navigation.scss
+/* COR | 1.0.1 | 200804 | assets/scss/partials/navigation.scss
 /* Navigation
 ---------------------------------------------------------------------------------------------------- */
 
@@ -20,17 +20,21 @@
 	.menu-item {
 		list-style: none;
 		position: relative;
+		font-size: 1rem;
+		font-weight: 500;
+		line-height: 22px;
 
 		a {
 			border: none;
 			color: white;
 			display: block;
-			font-size: 16px;
-			font-weight: 500;
-			line-height: 22px;
-			padding: 0.5rem 1rem;
+			padding: 0.5rem;
 			position: relative;
 			text-decoration: none;
+		}
+
+		.sub-menu .menu-item a {
+			color: #666;
 		}
 
 		&:hover > a {
@@ -61,6 +65,10 @@
 		background-color: #22558e;
 		//background-color: #3768A0;
 		text-align: center;
+
+		.menu-item {
+			font-size: 0.85rem;
+		}
 
 		.menu-item.search {
 			@include media("<=mobile_menu") {
@@ -101,7 +109,7 @@
 		width: calc( 100% - #{$menu_width} );
 		width: 100%;
 		display: flex;
-		flex-flow: column-reverse nowrap;
+		flex-flow: column nowrap;
 
 		.nav-primary,
 		.nav-secondary {
@@ -143,6 +151,7 @@
 				float: none;
 
 				&:hover > a {
+					color: #333;
 					background: $grey_3;
 				}
 			}

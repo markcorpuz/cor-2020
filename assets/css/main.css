@@ -1,4 +1,4 @@
-/* COR-2020 | 1.0.1 | 200720 | assets/scss/main.scss
+/* COR-2020 | 1.0.1 | 200804 | assets/scss/main.scss
 // SETUP-BE | 1.0.1 | 200702 | assets/scss/main.scss
 ---------------------------------------------------------------------------------------------------- */
 /* COR-2020 | 1.0.1 | 200729 | assets/scss/partials/base.scss
@@ -1445,7 +1445,7 @@ div.wpforms-container.one-line:after {
   color: #1072b6;
   padding: 0;
 }
-/* COR | 1.0.1 | 200720 | assets/scss/partials/navigation.scss
+/* COR | 1.0.1 | 200804 | assets/scss/partials/navigation.scss
 /* Navigation
 ---------------------------------------------------------------------------------------------------- */
 .nav-menu {
@@ -1463,17 +1463,20 @@ div.wpforms-container.one-line:after {
 .nav-menu .menu-item {
   list-style: none;
   position: relative;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 22px;
 }
 .nav-menu .menu-item a {
   border: none;
   color: white;
   display: block;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 22px;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem;
   position: relative;
   text-decoration: none;
+}
+.nav-menu .menu-item .sub-menu .menu-item a {
+  color: #666;
 }
 .nav-menu .menu-item:hover > a {
   background: #ffcc00;
@@ -1498,6 +1501,9 @@ div.wpforms-container.one-line:after {
 .nav-menu .nav-secondary {
   background-color: #22558e;
   text-align: center;
+}
+.nav-menu .nav-secondary .menu-item {
+  font-size: 0.85rem;
 }
 @media (max-width: 768px) {
   .nav-menu .nav-secondary .menu-item.search {
@@ -1534,7 +1540,7 @@ div.wpforms-container.one-line:after {
     width: calc( 100% - 332px );
     width: 100%;
     display: flex;
-    flex-flow: column-reverse nowrap;
+    flex-flow: column nowrap;
   }
   .nav-menu .menu {
     display: inline-block;
@@ -1559,6 +1565,7 @@ div.wpforms-container.one-line:after {
     float: none;
   }
   .nav-menu .sub-menu .menu-item:hover > a {
+    color: #333;
     background: #EEEEEE;
   }
   .nav-menu .sub-menu .sub-menu {
@@ -2646,7 +2653,7 @@ div.wpforms-container.one-line:after {
   align-self: center;
 }
 
-/* SETUP-BE | 1.0.0 | 200428 | setup-be/ui/setup-be-100/grid.scss
+/* SETUP-BE | 1.0.1 | 200824 | setup-be/ui/setup-be-101/grid.scss
 ---------------------------------------------------------------------------------------------------- */
 .wp-block-group.group--grid-2columns > .wp-block-group__inner-container, .grid-2columns, .wp-block-group.group--grid-3columns > .wp-block-group__inner-container, .grid-3columns, .wp-block-group.group--grid-4columns > .wp-block-group__inner-container, .grid-4columns, .wp-block-group.group--grid-5columns > .wp-block-group__inner-container, .grid-5columns, .wp-block-group.group--grid-sidebar-content > .wp-block-group__inner-container, .grid-sidebar-content, .wp-block-group.group--grid-content-sidebar > .wp-block-group__inner-container, .grid-content-sidebar {
   display: grid;
@@ -2722,6 +2729,12 @@ div.wpforms-container.one-line:after {
 @media (max-width: 425px) {
   .wp-block-group.group--grid-3columns > .wp-block-group__inner-container, .grid-3columns {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 425px) {
+  .wp-block-group.group--grid-3columns-2columns > .wp-block-group__inner-container, .grid-3columns.grid-3columns-2columns {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
