@@ -133,7 +133,7 @@
     box-sizing: border-box;
 }
 .st_desktop_donate_pop .item-pic {
-	background-image: url("images/sprites.png");
+	background-image: url(../images/sprites.png);
 	background-position: -236px -157px;
 	background-repeat: no-repeat;
 	width: 200px;
@@ -142,7 +142,7 @@
 
 	@media (-webkit-min-device-pixel-ratio: 2),
 	(min-resolution: 192dpi) {
-		background-image: url("images/sprites2x.png");
+		background-image: url(../images/sprites2x.png);
 		background-size: 1000px;
 	}
 }
@@ -150,11 +150,11 @@
 .st-desktop-cta-donate,
 .st-desktop-cta-book,
 .st-desktop-cta-product {
-    background-image: url("images/sprites.png");
+    background-image: url(../images/sprites.png);
 
 	@media (-webkit-min-device-pixel-ratio: 2),
 	(min-resolution: 192dpi) {
-		background-image: url("images/sprites2x.png");
+		background-image: url(../images/sprites2x.png);
 		background-size: 1000px;
 	}
 }
@@ -314,7 +314,7 @@
 }
 
 .item-pic.pic-paypal {
-	background-image: url("images/sprites.png");
+	background-image: url(../images/sprites.png);
 	background-position: -238px -154px;
 	background-repeat: no-repeat;
 	width: 197px;
@@ -323,12 +323,12 @@
 
 	@media (-webkit-min-device-pixel-ratio: 2),
 	(min-resolution: 192dpi) {
-		background-image: url("images/sprites2x.png");
+		background-image: url(../images/sprites2x.png);
 		background-size: 1000px;
 	}
 }
 .item-pic.pic-ebook {
-	background-image: url("images/sprites.png");
+	background-image: url(../images/sprites.png);
 	background-position: -22px -699px;
 	background-repeat: no-repeat;
 	width: 102px;
@@ -337,7 +337,7 @@
 
 	@media (-webkit-min-device-pixel-ratio: 2),
 	(min-resolution: 192dpi) {
-		background-image: url("images/sprites2x.png");
+		background-image: url(../images/sprites2x.png);
 		background-size: 1000px;
 	}
 
@@ -347,7 +347,7 @@
 
 }
 .item-icon {
-	background-image: url("images/sprites.png");
+	background-image: url(../images/sprites.png);
 	background-repeat: no-repeat;
 	width: 32px;
 	height: 32px;
@@ -355,7 +355,7 @@
 
 	@media (-webkit-min-device-pixel-ratio: 2),
 	(min-resolution: 192dpi) {
-		background-image: url("images/sprites2x.png");
+		background-image: url(../images/sprites2x.png);
 		background-size: 1000px;
 	}	
 }
@@ -403,13 +403,13 @@
 }
 
 .item-icon-bar {
-	background-image: url("images/sprites.png");
+	background-image: url(../images/sprites.png);
 	background-repeat: no-repeat;
 	display: block;
 
 	@media (-webkit-min-device-pixel-ratio: 2),
 	(min-resolution: 192dpi) {
-		background-image: url("images/sprites2x.png");
+		background-image: url(../images/sprites2x.png);
 		background-size: 1000px;
 	}	
 }

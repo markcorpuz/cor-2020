@@ -4676,7 +4676,7 @@ ul.twelve-grid, ul.eight-grid, ul.sixth-grid, ul.fifth-grid, ul.fourth-grid, ul.
 }
 
 .st_desktop_donate_pop .item-pic {
-  background-image: url("images/sprites.png");
+  background-image: url(../images/sprites.png);
   background-position: -236px -157px;
   background-repeat: no-repeat;
   width: 200px;
@@ -4685,7 +4685,7 @@ ul.twelve-grid, ul.eight-grid, ul.sixth-grid, ul.fifth-grid, ul.fourth-grid, ul.
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .st_desktop_donate_pop .item-pic {
-    background-image: url("images/sprites2x.png");
+    background-image: url(../images/sprites2x.png);
     background-size: 1000px;
   }
 }
@@ -4693,13 +4693,13 @@ ul.twelve-grid, ul.eight-grid, ul.sixth-grid, ul.fifth-grid, ul.fourth-grid, ul.
 .st-desktop-cta-donate,
 .st-desktop-cta-book,
 .st-desktop-cta-product {
-  background-image: url("images/sprites.png");
+  background-image: url(../images/sprites.png);
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .st-desktop-cta-donate,
 .st-desktop-cta-book,
 .st-desktop-cta-product {
-    background-image: url("images/sprites2x.png");
+    background-image: url(../images/sprites2x.png);
     background-size: 1000px;
   }
 }
@@ -4868,7 +4868,7 @@ ul.twelve-grid, ul.eight-grid, ul.sixth-grid, ul.fifth-grid, ul.fourth-grid, ul.
 }
 
 .item-pic.pic-paypal {
-  background-image: url("images/sprites.png");
+  background-image: url(../images/sprites.png);
   background-position: -238px -154px;
   background-repeat: no-repeat;
   width: 197px;
@@ -4877,13 +4877,13 @@ ul.twelve-grid, ul.eight-grid, ul.sixth-grid, ul.fifth-grid, ul.fourth-grid, ul.
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .item-pic.pic-paypal {
-    background-image: url("images/sprites2x.png");
+    background-image: url(../images/sprites2x.png);
     background-size: 1000px;
   }
 }
 
 .item-pic.pic-ebook {
-  background-image: url("images/sprites.png");
+  background-image: url(../images/sprites.png);
   background-position: -22px -699px;
   background-repeat: no-repeat;
   width: 102px;
@@ -4892,7 +4892,7 @@ ul.twelve-grid, ul.eight-grid, ul.sixth-grid, ul.fifth-grid, ul.fourth-grid, ul.
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .item-pic.pic-ebook {
-    background-image: url("images/sprites2x.png");
+    background-image: url(../images/sprites2x.png);
     background-size: 1000px;
   }
 }
@@ -4903,7 +4903,7 @@ ul.twelve-grid, ul.eight-grid, ul.sixth-grid, ul.fifth-grid, ul.fourth-grid, ul.
 }
 
 .item-icon {
-  background-image: url("images/sprites.png");
+  background-image: url(../images/sprites.png);
   background-repeat: no-repeat;
   width: 32px;
   height: 32px;
@@ -4911,7 +4911,7 @@ ul.twelve-grid, ul.eight-grid, ul.sixth-grid, ul.fifth-grid, ul.fourth-grid, ul.
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .item-icon {
-    background-image: url("images/sprites2x.png");
+    background-image: url(../images/sprites2x.png);
     background-size: 1000px;
   }
 }
@@ -4973,13 +4973,13 @@ ul.twelve-grid, ul.eight-grid, ul.sixth-grid, ul.fifth-grid, ul.fourth-grid, ul.
 }
 
 .item-icon-bar {
-  background-image: url("images/sprites.png");
+  background-image: url(../images/sprites.png);
   background-repeat: no-repeat;
   display: block;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .item-icon-bar {
-    background-image: url("images/sprites2x.png");
+    background-image: url(../images/sprites2x.png);
     background-size: 1000px;
   }
 }
@@ -5038,7 +5038,7 @@ body .soliloquy-fc-slider .soliloquy-caption-inside .soliloquy-fc-title-link {
   position: absolute;
   top: 40%;
   left: 40%;
-  background-image: url("images/YouTube-icon-full_color.png");
+  background-image: url(../images/YouTube-icon-full_color.png);
   background-position: 0;
   background-repeat: no-repeat;
   background-size: contain;
@@ -5077,7 +5077,7 @@ body .soliloquy-fc-slider .soliloquy-caption-inside .soliloquy-fc-title-link {
 }
 
 .ui-icon-triangle-1-e, .ui-icon-triangle-1-s {
-  background-image: url("images/sprites.png");
+  background-image: url(../images/sprites.png);
   background-repeat: no-repeat;
   display: inline-block;
   margin-right: 5px;
