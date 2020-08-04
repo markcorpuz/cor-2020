@@ -4,6 +4,8 @@
 
 .nav-menu {
 
+	margin-top: 84px;
+
 	& > * {
 		line-height: 0;
 	}
@@ -21,23 +23,23 @@
 
 		a {
 			border: none;
-			color: $base-color;
+			color: white;
 			display: block;
 			font-size: 16px;
-			font-weight: 400;
+			font-weight: 500;
 			line-height: 22px;
-			padding: 13px 18px;
+			padding: 0.5rem 1rem;
 			position: relative;
 			text-decoration: none;
 		}
 
 		&:hover > a {
-			background: $grey_2;
+			background: #ffcc00;
 		}
 
 		&.current-menu-item > a,
 		&.current-menu-ancestor > a {
-			color: $highlight;
+			//color: $highlight;
 		}
 	}
 
@@ -56,7 +58,9 @@
 
 	.nav-secondary {
 
-		background-color: #3768A0;
+		background-color: #22558e;
+		//background-color: #3768A0;
+		text-align: center;
 
 		.menu-item.search {
 			@include media("<=mobile_menu") {
@@ -77,6 +81,7 @@
 	.nav-primary {
 
 		background-color: #234367;
+		text-align: center;
 
 		.menu-item.search {
 			line-height: 0;
@@ -93,10 +98,10 @@
 
 	@include media(">mobile_menu") {
 		//float: right;
-		//width: calc( 100% - #{$menu_width} );
+		width: calc( 100% - #{$menu_width} );
 		width: 100%;
-		//display: flex;
-		//flex-flow: column-reverse nowrap;
+		display: flex;
+		flex-flow: column-reverse nowrap;
 
 		.nav-primary,
 		.nav-secondary {
@@ -105,7 +110,7 @@
 		}
 
 		.nav-primary + .nav-secondary {
-			margin-bottom: 16px;
+			//margin-bottom: 16px;
 		}
 
 
@@ -201,6 +206,7 @@
 	@include button-reset;
 	line-height: 0;
 	text-align: center;
+	background-color: rgba(255, 255, 255, 0.85);
 
 	.close {
 		display: none;

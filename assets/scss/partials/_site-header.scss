@@ -1,4 +1,4 @@
-/* COR | 1.0.0 | 200719 | assets/scss/partials/site-header.scss
+/* COR | 1.0.1 | 200804 | assets/scss/partials/site-header.scss
 // SETUP-BE | 1.0.0 | 200326 | assets/scss/partials/site-header.scss
 ---------------------------------------------------------------------------------------------------- */
 
@@ -17,6 +17,10 @@
 		background-position: top;
 		background-color: black;
 		min-height: 199px;
+		padding-left: 0;
+		padding-right: 0;
+
+		@include media("<=mobile_menu") {}
 	}
 
 }
@@ -27,16 +31,26 @@
 
 	h1.site-title,
 	p.site-title {
-		background: url(../images/sprites2x.png) no-repeat -20px -18px;
-		background-size: 1000px;
 		font-size: 1.5rem;
 		line-height: 1.875rem;
 		font-weight: 700;
-		width: 291px;
-		height: 75px;
 		display: block;
+		margin-top: 40px;
+		margin-left: 32px;
+
+		@include media("<=mobile_menu") {
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 1rem;
+			padding: 1rem;
+			//background-color: rgba(255, 255, 255, 0.5);
+			width: 323px;
+			height: 107px;
+		}
 
 		a {
+			background: url(../images/sprites2x.png) no-repeat -20px -18px;
+			background-size: 1000px;
 			width: 291px;
 			height: 75px;
 			display: block;
