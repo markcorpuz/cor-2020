@@ -1,0 +1,30 @@
+/* COR | 1.0.1 | 200805 | assets/scss/items/mainfeature.scss
+---------------------------------------------------------------------------------------------------- */
+
+.module.mainfeature {
+	position: relative;
+	background-color: #000;
+
+	.item.title {
+		font-size: 3rem;
+		font-weight: 700;
+		line-height: 1;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+	}
+	a.item.title {
+		//width: 100%;
+		text-decoration: none;
+		padding: 0.5rem 1.5rem;
+		display: block;
+		color: white;
+		background-color: rgba(0, 0, 0, 0.5);
+
+		&:hover {
+			color: white;
+			background-color: rgba(0, 0, 0, 0.85);
+		}
+	}
+
+}

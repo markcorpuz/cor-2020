@@ -166,7 +166,10 @@ function cor_bgimage_wtitle_main( $size = 'medium' , $text = '' ) {
 	// check if variable has content
 	if( !empty( $img_bg ) ) {
 		?>
-		<a class="item bgimage link" href="<?php get_permalink() ?>" tabindex="-1" aria-hidden="true"  style="background-image:url(<?php echo $img_bg; ?>);"><?php echo $text; ?></a>
+		<div class="module mainfeature">
+			<a class="item bgimage link" href="<?php get_permalink() ?>" tabindex="-1" aria-hidden="true"  style="background-image:url(<?php echo $img_bg; ?>);"></a>
+			<a class="item title link" href="<?php get_permalink() ?>"><?php echo $text; ?></a>
+		</div>
 		<?php
 	}
 }

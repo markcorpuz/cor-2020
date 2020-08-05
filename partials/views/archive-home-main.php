@@ -57,6 +57,6 @@ echo '<article class="module post-summary">';
 		//setup_be_edit();
 		//setup_be_edit_date_modified();
 
-	echo '</div>';
+	//echo '</div>';
 
 echo '</article>';

@@ -1,4 +1,4 @@
-/* COR-2020 | 1.0.1 | 200804 | assets/scss/main.scss
+/* COR-2020 | 1.0.1 | 200805 | assets/scss/main.scss
 // SETUP-BE | 1.0.1 | 200702 | assets/scss/main.scss
 ---------------------------------------------------------------------------------------------------- */
 /* COR-2020 | 1.0.1 | 200729 | assets/scss/partials/base.scss
@@ -1435,6 +1435,8 @@ div.wpforms-container.one-line:after {
   padding: 1.5rem;
   box-shadow: 1px 1px 2px 0px #bbbbbb;
   background-color: #f9f9f9;
+  border-top: 1px solid #eee;
+  border-left: 1px solid #eee;
 }
 
 .sidebar .widget:first-child {
@@ -3405,6 +3407,32 @@ ul.blocks-gallery-grid {
 .item.ads.above-footer .wrap {
   background-color: #f9f9f9;
   padding: 1rem;
+}
+
+/* COR | 1.0.1 | 200805 | assets/scss/items/mainfeature.scss
+---------------------------------------------------------------------------------------------------- */
+.module.mainfeature {
+  position: relative;
+  background-color: #000;
+}
+.module.mainfeature .item.title {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.module.mainfeature a.item.title {
+  text-decoration: none;
+  padding: 0.5rem 1.5rem;
+  display: block;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.module.mainfeature a.item.title:hover {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.85);
 }
 
 /* SETUP-LOG | 1.0.3 | 200702 | setup-be/block-custom/setup-log-103/log.scss
