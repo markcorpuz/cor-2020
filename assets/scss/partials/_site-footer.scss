@@ -1,4 +1,5 @@
-/* SETUP-BE | 1.0.0 | 200422 | assets/scss/partials/site-footer.scss
+/* COR-2020 | 1.0.1 | 200805 | assets/scss/partials/site-footer.scss
+// SETUP-BE | 1.0.0 | 200422 | assets/scss/partials/site-footer.scss
 ---------------------------------------------------------------------------------------------------- */
 
 /* Footer Widgets
@@ -81,6 +82,7 @@
 	}
 
 	.widget-title {
+		color: white;
 		text-transform: uppercase;
 	}
 
@@ -92,6 +94,17 @@
 		@include media(">small") {
 			@include columns(3);
 		}
+
+		&::before {
+			@include media(">smaller") {
+				grid-column: span 2;
+			}
+
+			@include media(">small") {
+				grid-column: span 3;
+			}			
+		}
+
 	}
 
 }
@@ -117,7 +130,7 @@
 
 	// SPACING
 	padding-top: 2rem;
-	padding-bottom: 2rem;
+	padding-bottom: 5rem;
 
 	// SHADOW
 	-webkit-box-shadow: inset 5px 15px 10px -15px rgba(0,0,0,0.15);

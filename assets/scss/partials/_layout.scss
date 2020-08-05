@@ -1,4 +1,4 @@
-/* COR | 1.0.0 | 200719 | assets/scss/partials/layout.scss
+/* COR | 1.0.1 | 200804 | assets/scss/partials/layout.scss
 // SETUP-BE | 1.0.0 | 200326 | assets/scss/partials/layout.scss
 ---------------------------------------------------------------------------------------------------- */
 
@@ -116,6 +116,10 @@ input[type="search"] {
 				float: none;
 				width: 100%;
 			}
+
+			.module.subscribe {
+				float: none;
+			}
 		}
 	}
 }
@@ -126,4 +130,10 @@ input[type="search"] {
 		margin-top: 0;
 	}
 
+}
+
+.module.subscribe {
+	padding: 1.5rem;
+	box-shadow: 1px 1px 2px 0px #bbbbbb;
+	background-color: #f9f9f9;
 }
