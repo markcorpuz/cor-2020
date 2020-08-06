@@ -16,7 +16,7 @@ echo '<article class="module post-summary">';
 	//setup_be_bgimage();
 	//setup_be_bgimage_nolink();
 	//setup_be_bgimage_wtitle();
-	cor_bgimage_wtitle_main( 'large' , setup_be_title_only() );
+	cor_bgimage_wtitle_main( 'large' );
 	//setup_be_bgimage_wtitle_nolink();
 
 	//echo '<div class="items info">';
