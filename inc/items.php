@@ -401,10 +401,17 @@ function setup_be_date() {
  * 
  */
 function setup_be_dateauthor() {
-	echo '<div class="item dateauthor">' . get_the_date( 'M j, Y' ) . ' by <a href="' . get_author_posts_url( get_the_ID() ) . '">' . get_the_author() . '</a></div>';
+	
+	$author_id = get_post_field( 'post_author', get_the_ID() );
+
+	echo '<div class="item dateauthor">' . get_the_date( 'M j, Y' ) . ' by <a href="' . get_author_posts_url( $author_id ) . '">' . get_the_author_meta( 'display_name' , $author_id ) . '</a></div>';
+
 }
 function setup_be_dateauthor_nolink() {
-	echo '<div class="item dateauthor nolink">' . get_the_date( 'M j, Y' ) . ' by ' . get_the_author() . '</div>';
+
+	$author_id = get_post_field( 'post_author', get_the_ID() );
+
+	echo '<div class="item dateauthor nolink">' . get_the_date( 'M j, Y' ) . ' by ' . get_the_author_meta( 'display_name' , $author_id ) . '</div>';
 }
 
 
