@@ -185,6 +185,23 @@ function cor_bgimage_wtitle_main( $size = 'medium' , $text = NULL ) {
 		<?php
 	}
 
+	// Excerpt
+	$excerpt = get_the_excerpt( $pid );
+	if( !empty( $excerpt ) ) {
+
+		// not trimmed
+		?><div class="item excerpt"><?php
+			echo $excerpt;
+		?><span> <a class="item link" href="<?php echo get_permalink(); ?>">Read Full Article</a></span></div><?php
+
+		// trimmed
+		/*$max_words = 20;
+		?><div class="item exceprt"><?php
+			echo wp_trim_words( $excerpt, $max_words );
+		?></div><?php
+		*/
+	}
+
 }
 /**
  * IMAGE
@@ -222,6 +239,23 @@ function cor_image_wtitle_main( $size = 'medium' , $text = NULL ) {
 			<a class="item title link" href="<?php echo get_permalink(); ?>"><?php echo $text; ?></a>
 		</div>
 		<?php
+	}
+
+	// Excerpt
+	$excerpt = get_the_excerpt( $pid );
+	if( !empty( $excerpt ) ) {
+
+		// not trimmed
+		?><div class="item excerpt"><?php
+			echo $excerpt;
+		?><span> <a class="item link" href="<?php echo get_permalink(); ?>">Read Full Article</a></span></div><?php
+
+		// trimmed
+		/*$max_words = 20;
+		?><div class="item exceprt"><?php
+			echo wp_trim_words( $excerpt, $max_words );
+		?></div><?php
+		*/
 	}
 
 }

@@ -3421,7 +3421,7 @@ ul.blocks-gallery-grid {
   line-height: 1;
   position: absolute;
   bottom: 0;
-  right: 0;
+  left: 0;
 }
 .module.mainfeature a.item.title {
   text-decoration: none;
