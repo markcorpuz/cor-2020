@@ -1,4 +1,4 @@
-/* COR-2020 | 1.0.1 | 200805 | assets/scss/main.scss
+/* COR-2020 | 1.0.1 | 200806 | assets/scss/main.scss
 // SETUP-BE | 1.0.1 | 200702 | assets/scss/main.scss
 ---------------------------------------------------------------------------------------------------- */
 /* COR-2020 | 1.0.1 | 200729 | assets/scss/partials/base.scss
@@ -482,7 +482,7 @@ input[type=search] {
 
 /* Sidebar Layouts
 --------------------------------------------- */
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .content-sidebar .site-main {
     float: left;
     width: 65.7534246575%;
@@ -848,7 +848,8 @@ h6 {
   font-size: 0.875rem;
 }
 
-/* SETUP-BE | 1.0.0 | 200505 | assets/scss/partials/blocks-core.scss
+/* COR-2020 | 1.0.1 | 200808 | assets/scss/partials/blocks-core.scss
+// SETUP-BE | 1.0.0 | 200505 | assets/scss/partials/blocks-core.scss
 ---------------------------------------------------------------------------------------------------- */
 /* Button
 --------------------------------------------- */
@@ -1041,6 +1042,10 @@ img.aligncenter {
   text-align: left;
   font-size: 14px;
   font-style: normal;
+}
+
+.wp-caption-text {
+  font-size: 0.875rem;
 }
 
 /* Tables
@@ -1424,19 +1429,19 @@ div.wpforms-container.one-line:after {
 // SETUP-BE | 1.0.0 | 200326 | assets/scss/partials/widget.scss
 ---------------------------------------------------------------------------------------------------- */
 .widget {
-  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 @media (min-width: 768px) {
   .widget {
-    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
 }
 .sidebar-primary .widget {
   padding: 1.5rem;
-  box-shadow: 1px 1px 2px 0px #bbbbbb;
-  background-color: #f9f9f9;
-  border-top: 1px solid #eee;
-  border-left: 1px solid #eee;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 2px 0px #bbbbbb;
+  margin-bottom: 1.5rem;
 }
 
 .sidebar .widget:first-child {
@@ -1490,7 +1495,7 @@ div.wpforms-container.one-line:after {
   color: #666;
 }
 .nav-menu .menu-item:hover > a {
-  background: #ffcc00;
+  color: #ffcc00;
 }
 .nav-menu .submenu-expand {
   background: transparent;
@@ -1704,7 +1709,8 @@ div.wpforms-container.one-line:after {
   display: none;
 }
 
-/* SETUP-BE | 1.0.1 | 200626 | assets/scss/partials/post-summary.scss
+/* COR-2020 | 1.0.1 | 200808 | assets/scss/partials/post-summary.scss
+// SETUP-BE | 1.0.1 | 200626 | assets/scss/partials/post-summary.scss
 ---------------------------------------------------------------------------------------------------- */
 .module.post-summary .item.image {
   display: block;
@@ -1833,8 +1839,9 @@ div.wpforms-container.one-line:after {
 .module.post-summary .item.author,
 .module.post-summary .item.date,
 .module.post-summary .item.dateauthor {
-  margin-top: 1rem;
-  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
 }
 .module.post-summary .item.author a,
 .module.post-summary .item.date a,
@@ -2335,6 +2342,11 @@ div.wpforms-container.one-line:after {
   left: 0;
 }
 
+.item.dateauthor {
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
 /* Single Post
 --------------------------------------------- */
 .singular .entry-header {
@@ -2676,7 +2688,57 @@ div.wpforms-container.one-line:after {
   align-self: center;
 }
 
-/* SETUP-BE | 1.0.1 | 200824 | setup-be/ui/setup-be-101/grid.scss
+/* COR-2020 | 1.0.1 | 200808 | assets/scss/partials/items.scss
+---------------------------------------------------------------------------------------------------- */
+/* COR-2020 | 1.0.1 | 200809 | assets/scss/partials/modules.scss
+---------------------------------------------------------------------------------------------------- */
+.grid-2columns-featurehome,
+.wp-block-group.group--grid-2columns-featurehome > .wp-block-group__inner-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 1.5rem;
+}
+@media (max-width: 992px) {
+  .grid-2columns-featurehome,
+.wp-block-group.group--grid-2columns-featurehome > .wp-block-group__inner-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.module.featurehome {
+  display: grid;
+  grid-column-gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #ddd;
+  grid-template-columns: 150px 1fr;
+}
+@media (max-width: 992px) {
+  .module.featurehome {
+    grid-template-columns: 100px 1fr;
+  }
+}
+@media (max-width: 768px) {
+  .module.featurehome {
+    grid-template-columns: 60px 1fr;
+  }
+}
+
+.module.featurehome.small {
+  grid-template-columns: 60px 1fr;
+}
+@media (max-width: 992px) {
+  .module.featurehome.small {
+    grid-template-columns: 100px 1fr;
+  }
+}
+@media (max-width: 768px) {
+  .module.featurehome.small {
+    grid-template-columns: 60px 1fr;
+  }
+}
+
+/* SETUP-BE | 1.0.1 | 200809 | setup-be/ui/setup-be-101/grid.scss
 ---------------------------------------------------------------------------------------------------- */
 .wp-block-group.group--grid-2columns > .wp-block-group__inner-container, .grid-2columns, .wp-block-group.group--grid-3columns > .wp-block-group__inner-container, .grid-3columns, .wp-block-group.group--grid-4columns > .wp-block-group__inner-container, .grid-4columns, .wp-block-group.group--grid-5columns > .wp-block-group__inner-container, .grid-5columns, .wp-block-group.group--grid-sidebar-content > .wp-block-group__inner-container, .grid-sidebar-content, .wp-block-group.group--grid-content-sidebar > .wp-block-group__inner-container, .grid-content-sidebar {
   display: grid;
@@ -2778,6 +2840,12 @@ div.wpforms-container.one-line:after {
 }
 @media (max-width: 425px) {
   .wp-block-group.group--grid-2columns > .wp-block-group__inner-container, .grid-2columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 992px) {
+  .wp-block-group.group--grid-2columns-1column > .wp-block-group__inner-container, .grid-2columns.grid-2columns-1column {
     grid-template-columns: 1fr;
   }
 }
@@ -5808,12 +5876,14 @@ body .soliloquy-fc-slider .soliloquy-caption-inside .soliloquy-fc-title-link {
   background-position: -464px -177px;
   width: 174px;
   height: 101px;
+  border: 0;
 }
 
 .cta-donate-paypalbutton {
   background-position: -464px -284px;
   width: 174px;
   height: 101px;
+  border: 0;
 }
 
 .cta-amazon {
@@ -5832,6 +5902,7 @@ body .soliloquy-fc-slider .soliloquy-caption-inside .soliloquy-fc-title-link {
   background-position: -465px -94px;
   width: 98px;
   height: 25px;
+  border: 0;
 }
 
 .cta-audible {

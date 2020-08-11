@@ -1,0 +1,45 @@
+/* COR-2020 | 1.0.1 | 200809 | assets/scss/partials/modules.scss
+---------------------------------------------------------------------------------------------------- */
+
+.grid-2columns-featurehome,
+.wp-block-group.group--grid-2columns-featurehome > .wp-block-group__inner-container {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-column-gap: 1.5rem;
+
+	@include media("<=medium") {
+		grid-template-columns: 1fr;
+	}
+
+}
+
+.module.featurehome {
+	display: grid;
+	grid-column-gap: 1rem;
+	margin-bottom: 1.5rem;
+	padding-top: 1rem;
+	border-top: 1px solid #ddd;
+	grid-template-columns: 150px 1fr;
+
+	@include media("<=medium") {
+		grid-template-columns: 100px 1fr;
+	}
+
+	@include media("<=tablet") {
+		grid-template-columns: 60px 1fr;
+	}
+
+}
+
+.module.featurehome.small {
+	grid-template-columns: 60px 1fr;
+
+	@include media("<=medium") {
+		grid-template-columns: 100px 1fr;
+	}
+
+	@include media("<=tablet") {
+		grid-template-columns: 60px 1fr;
+	}
+
+}

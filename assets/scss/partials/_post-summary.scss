@@ -1,4 +1,5 @@
-/* SETUP-BE | 1.0.1 | 200626 | assets/scss/partials/post-summary.scss
+/* COR-2020 | 1.0.1 | 200808 | assets/scss/partials/post-summary.scss
+// SETUP-BE | 1.0.1 | 200626 | assets/scss/partials/post-summary.scss
 ---------------------------------------------------------------------------------------------------- */
 
 
@@ -139,8 +140,9 @@ a.item.bgimage.link {
 .item.dateauthor {
 
 	.module.post-summary & {
-		margin-top: 1rem;
-		font-size: 0.875rem;
+		margin-top: 0.5rem;
+		font-size: 0.75rem;
+		font-weight: 500;
 
 		a {
 			color: $grey_10;

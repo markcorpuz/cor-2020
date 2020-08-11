@@ -309,7 +309,8 @@ h6 {
   font-size: 0.875rem;
 }
 
-/* SETUP-BE | 1.0.0 | 200505 | assets/scss/partials/blocks-core.scss
+/* COR-2020 | 1.0.1 | 200808 | assets/scss/partials/blocks-core.scss
+// SETUP-BE | 1.0.0 | 200505 | assets/scss/partials/blocks-core.scss
 ---------------------------------------------------------------------------------------------------- */
 /* Button
 --------------------------------------------- */
@@ -502,6 +503,10 @@ img.aligncenter {
   text-align: left;
   font-size: 14px;
   font-style: normal;
+}
+
+.wp-caption-text {
+  font-size: 0.875rem;
 }
 
 /* Tables
@@ -784,7 +789,8 @@ div.wpforms-container.one-line:after {
   display: none;
 }
 
-/* SETUP-BE | 1.0.1 | 200626 | assets/scss/partials/post-summary.scss
+/* COR-2020 | 1.0.1 | 200808 | assets/scss/partials/post-summary.scss
+// SETUP-BE | 1.0.1 | 200626 | assets/scss/partials/post-summary.scss
 ---------------------------------------------------------------------------------------------------- */
 .module.post-summary .item.image {
   display: block;
@@ -913,8 +919,9 @@ div.wpforms-container.one-line:after {
 .module.post-summary .item.author,
 .module.post-summary .item.date,
 .module.post-summary .item.dateauthor {
-  margin-top: 1rem;
-  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
 }
 .module.post-summary .item.author a,
 .module.post-summary .item.date a,

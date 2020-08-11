@@ -83,7 +83,8 @@ input[type="search"] {
 	}
 }
 
-@include media(">=medium") {
+//@include media(">=medium") {
+@include media(">=tablet") {
 
 	.content-sidebar {
 

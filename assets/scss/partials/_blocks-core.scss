@@ -1,4 +1,5 @@
-/* SETUP-BE | 1.0.0 | 200505 | assets/scss/partials/blocks-core.scss
+/* COR-2020 | 1.0.1 | 200808 | assets/scss/partials/blocks-core.scss
+// SETUP-BE | 1.0.0 | 200505 | assets/scss/partials/blocks-core.scss
 ---------------------------------------------------------------------------------------------------- */
 
 /* Button
@@ -193,6 +194,10 @@ img {
 	text-align: left;
 	font-size: 14px;
 	font-style: normal;
+}
+
+.wp-caption-text {
+	font-size: 0.875rem;
 }
 
 /* Tables
