@@ -21,8 +21,8 @@ function ea_nav_menu_class( $open, $args ) {
 	$open = str_replace( $args['context'], $args['context'] . ' nav-menu', $open );
 	return $open;
 }
-add_filter( 'genesis_markup_nav-primary_open', 'ea_nav_menu_class', 10, 2 );
-add_filter( 'genesis_markup_nav-secondary_open', 'ea_nav_menu_class', 10, 2 );
+//add_filter( 'genesis_markup_nav-primary_open', 'ea_nav_menu_class', 10, 2 );
+//add_filter( 'genesis_markup_nav-secondary_open', 'ea_nav_menu_class', 10, 2 );
 
 /**
  * Change '.content-sidebar-wrap' to '.content-area'
