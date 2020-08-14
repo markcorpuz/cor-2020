@@ -421,6 +421,10 @@ input[type=search] {
 
 /* Wrap
 --------------------------------------------- */
+.site-container {
+  background-color: #3768A0;
+}
+
 .wrap {
   max-width: 1200px;
   margin: 0 auto;
@@ -2320,57 +2324,28 @@ div.wpforms-container.one-line:after {
 /* Footer Widgets
 ---------------------------------------------------------------------------------------------------- */
 .footer-widgets {
-  background: #616161;
-  color: #fff;
-  padding-top: 2rem;
-  padding-bottom: 1rem;
-  position: relative;
+  background-color: #3768A0;
+  margin-bottom: 2rem;
 }
-.footer-widgets a {
-  color: #fff;
-  text-decoration: none;
+.footer-widgets .wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding: 2rem;
+  background: #a8c3e1;
+  color: #1072b6;
 }
-.footer-widgets a:hover {
-  color: #0079bf;
-  text-decoration: underline;
+.footer-widgets .wrap:after {
+  content: "";
+  display: table;
+  clear: both;
 }
-.footer-widgets p > a {
-  text-decoration: underline;
-}
-.footer-widgets ul {
-  margin-bottom: 1rem;
-}
-.footer-widgets li {
-  list-style-type: none;
-}
-@media (max-width: 992px) {
-  .footer-widgets .footer-widgets-1 .widget:first-child {
-    margin-top: 0;
+@media (max-width: 1200px) {
+  .footer-widgets .wrap {
+    padding-left: 32px;
+    padding-right: 32px;
   }
-}
-@media (max-width: 512px) {
-  .footer-widgets .footer-widgets-2 .widget:first-child {
-    margin-top: 0;
-  }
-}
-@media (max-width: 425px) {
-  .footer-widgets .footer-widgets-2 .widget:first-child {
-    margin-top: 2rem;
-  }
-}
-@media (min-width: 513px) {
-  .footer-widgets .footer-widgets-1 .widget:first-child, .footer-widgets .footer-widgets-2 .widget:first-child, .footer-widgets .footer-widgets-3 .widget:first-child {
-    margin-top: 0;
-  }
-}
-@media (max-width: 992px) {
-  .footer-widgets .widget {
-    margin-top: 2rem;
-  }
-}
-.footer-widgets .widget-title {
-  color: white;
-  text-transform: uppercase;
 }
 @media (min-width: 426px) {
   .footer-widgets .wrap > article {
@@ -2431,6 +2406,51 @@ div.wpforms-container.one-line:after {
   .footer-widgets .wrap::before {
     grid-column: span 3;
   }
+}
+.footer-widgets a {
+  color: #1072b6;
+  text-decoration: none;
+}
+.footer-widgets a:hover {
+  text-decoration: underline;
+}
+.footer-widgets p > a {
+  text-decoration: underline;
+}
+.footer-widgets ul {
+  margin-bottom: 1rem;
+}
+.footer-widgets li {
+  list-style-type: none;
+}
+@media (max-width: 992px) {
+  .footer-widgets .footer-widgets-1 .widget:first-child {
+    margin-top: 0;
+  }
+}
+@media (max-width: 512px) {
+  .footer-widgets .footer-widgets-2 .widget:first-child {
+    margin-top: 0;
+  }
+}
+@media (max-width: 425px) {
+  .footer-widgets .footer-widgets-2 .widget:first-child {
+    margin-top: 2rem;
+  }
+}
+@media (min-width: 513px) {
+  .footer-widgets .footer-widgets-1 .widget:first-child, .footer-widgets .footer-widgets-2 .widget:first-child, .footer-widgets .footer-widgets-3 .widget:first-child {
+    margin-top: 0;
+  }
+}
+@media (max-width: 992px) {
+  .footer-widgets .widget {
+    margin-top: 2rem;
+  }
+}
+.footer-widgets .widget-title {
+  color: white;
+  text-transform: uppercase;
 }
 
 /* Site Footer

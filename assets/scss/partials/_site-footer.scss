@@ -7,24 +7,50 @@
 
 .footer-widgets {
 
-	// BACKGROUND
-	background: brand-color( 'darkgrey' );
+	background-color: #3768A0;
+	margin-bottom: 2rem;
 
-	// COLOR
-	color: $white;
+	.wrap {
+	    max-width: map-get( $breakpoints, 'desktop' );
+	    margin: 0 auto;
+		padding-left:  ($grid-gap / 2);
+		padding-right: ($grid-gap / 2);
+		@include clearfix;
 
-	// SPACING
-	padding-top: 2rem;
-	padding-bottom: 1rem;
+		padding: 2rem;
+		background: #a8c3e1;
+		color: #1072b6;
 
-	position: relative;
+		@include media("<=desktop") {
+			padding-left: $grid-gap;
+			padding-right: $grid-gap;
+		}
+
+		@include media(">smaller") {
+			@include columns(2);
+		}
+
+		@include media(">small") {
+			@include columns(3);
+		}
+
+		&::before {
+			@include media(">smaller") {
+				grid-column: span 2;
+			}
+
+			@include media(">small") {
+				grid-column: span 3;
+			}			
+		}
+
+	}
 
 	a {
-		color: $white;
+		color: #1072b6;
 		text-decoration: none;
 
 		&:hover {
-			color: brand-color( 'blue' );
 			text-decoration: underline;
 		}
 	}
@@ -84,27 +110,6 @@
 	.widget-title {
 		color: white;
 		text-transform: uppercase;
-	}
-
-	.wrap {
-		@include media(">smaller") {
-			@include columns(2);
-		}
-
-		@include media(">small") {
-			@include columns(3);
-		}
-
-		&::before {
-			@include media(">smaller") {
-				grid-column: span 2;
-			}
-
-			@include media(">small") {
-				grid-column: span 3;
-			}			
-		}
-
 	}
 
 }

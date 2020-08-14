@@ -17,6 +17,10 @@ input[type="search"] {
 /* Wrap
 --------------------------------------------- */
 
+.site-container {
+	background-color: #3768A0;
+}
+
 .wrap {
     max-width: map-get( $breakpoints, 'desktop' );
     margin: 0 auto;
