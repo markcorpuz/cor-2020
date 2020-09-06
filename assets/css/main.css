@@ -405,7 +405,7 @@ template {
   display: none;
 }
 
-/* COR | 1.0.1 | 200804 | assets/scss/partials/layout.scss
+/* COR | 1.0.1 | 200905 | assets/scss/partials/layout.scss
 // SETUP-BE | 1.0.0 | 200326 | assets/scss/partials/layout.scss
 ---------------------------------------------------------------------------------------------------- */
 /* Box Sizing
@@ -421,6 +421,12 @@ input[type=search] {
 
 /* Wrap
 --------------------------------------------- */
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 .site-container {
   background-color: #3768A0;
 }
@@ -3289,7 +3295,7 @@ ul.blocks-gallery-grid {
   padding: 1rem;
 }
 
-/* COR | 1.0.1 | 200805 | assets/scss/items/mainfeature.scss
+/* COR | 1.0.1 | 200905 | assets/scss/items/mainfeature.scss
 ---------------------------------------------------------------------------------------------------- */
 .module.mainfeature {
   position: relative;
@@ -3302,6 +3308,16 @@ ul.blocks-gallery-grid {
   position: absolute;
   bottom: 0;
   left: 0;
+}
+@media (max-width: 992px) {
+  .module.mainfeature .item.title {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 512px) {
+  .module.mainfeature .item.title {
+    font-size: 1.5rem;
+  }
 }
 .module.mainfeature a.item.title {
   text-decoration: none;

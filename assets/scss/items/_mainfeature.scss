@@ -1,4 +1,4 @@
-/* COR | 1.0.1 | 200805 | assets/scss/items/mainfeature.scss
+/* COR | 1.0.1 | 200905 | assets/scss/items/mainfeature.scss
 ---------------------------------------------------------------------------------------------------- */
 
 .module.mainfeature {
@@ -12,6 +12,15 @@
 		position: absolute;
 		bottom: 0;
 		left: 0;
+
+		@include media("<=medium") {
+			font-size: 2rem;
+		}
+
+		@include media("<=small") {
+			font-size: 1.5rem;
+		}
+
 	}
 	a.item.title {
 		//width: 100%;

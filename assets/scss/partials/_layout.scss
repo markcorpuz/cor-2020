@@ -1,4 +1,4 @@
-/* COR | 1.0.1 | 200804 | assets/scss/partials/layout.scss
+/* COR | 1.0.1 | 200905 | assets/scss/partials/layout.scss
 // SETUP-BE | 1.0.0 | 200326 | assets/scss/partials/layout.scss
 ---------------------------------------------------------------------------------------------------- */
 
@@ -16,6 +16,12 @@ input[type="search"] {
 
 /* Wrap
 --------------------------------------------- */
+
+html,
+body {
+	width: 100%;
+    overflow-x: hidden;
+}
 
 .site-container {
 	background-color: #3768A0;
