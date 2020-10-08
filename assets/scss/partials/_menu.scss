@@ -1,0 +1,36 @@
+/* SETUP-BE | 1.0.2 | 200821 | assets/scss/partials/site-footer.scss
+---------------------------------------------------------------------------------------------------- */
+
+.menu {
+
+	.sidebar-primary &,
+	.footer-widgets & {
+		//@extend %fontsize-smaller !optional;
+	}
+}
+ul.menu {
+
+	.sidebar-primary & {
+		list-style-type: none;
+	}
+}
+
+.menu-item {
+	&.menu-item-has-children {}
+}
+li.menu-item {}
+
+.sub-menu {
+
+	.sidebar-primary &,
+	.footer-widgets & {
+		margin-bottom: 0;
+		margin-left: 1rem;	}
+
+}
+ul.sub-menu {
+
+	.sidebar-primary & {
+		list-style-type: none;
+	}
+}

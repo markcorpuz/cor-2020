@@ -1,5 +1,5 @@
-/* COR-2020 | 1.0.1 | 200806 | assets/scss/main.scss
-// SETUP-BE | 1.0.1 | 200702 | assets/scss/main.scss
+/* COR-2020 | 1.0.2 | 201008 | assets/scss/main.scss
+/* SETUP-BE | 1.0.2 | 200821 | assets/scss/main.scss
 ---------------------------------------------------------------------------------------------------- */
 
 // MAIN
@@ -15,6 +15,7 @@
 @import 	"partials/site-inner";
 @import 	"partials/widget";
 @import 	"partials/navigation";
+@import 	"partials/menu";
 @import 	"partials/post-summary";
 @import 	"partials/archive";
 @import 	"partials/singular";

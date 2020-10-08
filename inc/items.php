@@ -400,17 +400,12 @@ function setup_be_date() {
  * Jan 1, 2020 by Author
  * 
  */
-function setup_be_dateauthor() {
-	
+function setup_be_dateauthor() {	
 	$author_id = get_post_field( 'post_author', get_the_ID() );
-
 	echo '<div class="item dateauthor">' . get_the_date( 'M j, Y' ) . ' by <a href="' . get_author_posts_url( $author_id ) . '">' . get_the_author_meta( 'display_name' , $author_id ) . '</a></div>';
-
 }
 function setup_be_dateauthor_nolink() {
-
 	$author_id = get_post_field( 'post_author', get_the_ID() );
-
 	echo '<div class="item dateauthor nolink">' . get_the_date( 'M j, Y' ) . ' by ' . get_the_author_meta( 'display_name' , $author_id ) . '</div>';
 }
 

@@ -1,5 +1,5 @@
-/* COR | 1.0.1 | 200905 | assets/scss/partials/layout.scss
-// SETUP-BE | 1.0.0 | 200326 | assets/scss/partials/layout.scss
+/* COR | 1.0.2 | 201008 | assets/scss/partials/layout.scss
+/* SETUP-BE | 1.0.2 | 200821 | assets/scss/partials/layout.scss
 ---------------------------------------------------------------------------------------------------- */
 
 /* Box Sizing
@@ -154,6 +154,31 @@ body {
 
 	section:first-of-type {
 		margin-top: 0;
+	}
+
+	// LINK
+	a {
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	// CONTENT
+	p {
+		> a {
+			text-decoration: underline;
+		}
+	}
+
+	ul {
+		margin-bottom: 1rem;
+	}
+
+	li {
+		list-style-type: none;
+		//margin-bottom: 0.875rem;
 	}
 
 }

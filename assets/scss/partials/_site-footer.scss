@@ -1,5 +1,5 @@
-/* COR-2020 | 1.0.1 | 200805 | assets/scss/partials/site-footer.scss
-// SETUP-BE | 1.0.0 | 200422 | assets/scss/partials/site-footer.scss
+/* COR-2020 | 1.0.2 | 201008 | assets/scss/partials/site-footer.scss
+// SETUP-BE | 1.0.2 | 200824 | assets/scss/partials/site-footer.scss
 ---------------------------------------------------------------------------------------------------- */
 
 /* Footer Widgets
@@ -55,6 +55,7 @@
 		}
 	}
 
+	// CONTENT
 	p {
 		> a {
 			text-decoration: underline;
@@ -152,6 +153,10 @@
 		justify-content: center;
 		flex-wrap: wrap;
 		flex-direction: column;
+
+		@include media("<=medium") {
+			text-align: center;
+		}
 
 		.info {
 			align-self: center;
