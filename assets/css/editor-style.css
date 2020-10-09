@@ -1,4 +1,4 @@
-/* COR-2020 | 1.0.1 | 200729 | assets/scss/partials/base.scss
+/* COR-2020 | 1.0.2 | 201008 | assets/scss/partials/base.scss
 // SETUP-BE | 1.0.1 | 200624 | assets/scss/partials/base.scss
 ---------------------------------------------------------------------------------------------------- */
 /**
@@ -309,8 +309,7 @@ h6 {
   font-size: 0.875rem;
 }
 
-/* COR-2020 | 1.0.1 | 200808 | assets/scss/partials/blocks-core.scss
-// SETUP-BE | 1.0.0 | 200505 | assets/scss/partials/blocks-core.scss
+/* SETUP-BE | 1.0.3 | 200923 | assets/scss/partials/blocks-core.scss
 ---------------------------------------------------------------------------------------------------- */
 /* Button
 --------------------------------------------- */
@@ -526,7 +525,9 @@ img.aligncenter {
   color: #0079bf;
 }
 
-.has-blue-background-color {
+.has-blue-background-color,
+.wp-block-cover-image.has-background-dim.has-blue-background-color,
+.wp-block-cover.has-background-dim.has-blue-background-color {
   background-color: #0079bf;
 }
 
@@ -534,7 +535,9 @@ img.aligncenter {
   color: #eb5a46;
 }
 
-.has-red-background-color {
+.has-red-background-color,
+.wp-block-cover-image.has-background-dim.has-red-background-color,
+.wp-block-cover.has-background-dim.has-red-background-color {
   background-color: #eb5a46;
 }
 
@@ -542,7 +545,9 @@ img.aligncenter {
   color: #ff9f1a;
 }
 
-.has-orange-background-color {
+.has-orange-background-color,
+.wp-block-cover-image.has-background-dim.has-orange-background-color,
+.wp-block-cover.has-background-dim.has-orange-background-color {
   background-color: #ff9f1a;
 }
 
@@ -550,7 +555,9 @@ img.aligncenter {
   color: #f2d600;
 }
 
-.has-yellow-background-color {
+.has-yellow-background-color,
+.wp-block-cover-image.has-background-dim.has-yellow-background-color,
+.wp-block-cover.has-background-dim.has-yellow-background-color {
   background-color: #f2d600;
 }
 
@@ -558,7 +565,9 @@ img.aligncenter {
   color: #61bd4f;
 }
 
-.has-green-background-color {
+.has-green-background-color,
+.wp-block-cover-image.has-background-dim.has-green-background-color,
+.wp-block-cover.has-background-dim.has-green-background-color {
   background-color: #61bd4f;
 }
 
@@ -566,7 +575,9 @@ img.aligncenter {
   color: #F5F5F5;
 }
 
-.has-lightgrey-background-color {
+.has-lightgrey-background-color,
+.wp-block-cover-image.has-background-dim.has-lightgrey-background-color,
+.wp-block-cover.has-background-dim.has-lightgrey-background-color {
   background-color: #F5F5F5;
 }
 
@@ -574,7 +585,9 @@ img.aligncenter {
   color: #BDBDBD;
 }
 
-.has-grey-background-color {
+.has-grey-background-color,
+.wp-block-cover-image.has-background-dim.has-grey-background-color,
+.wp-block-cover.has-background-dim.has-grey-background-color {
   background-color: #BDBDBD;
 }
 
@@ -582,7 +595,9 @@ img.aligncenter {
   color: #616161;
 }
 
-.has-darkgrey-background-color {
+.has-darkgrey-background-color,
+.wp-block-cover-image.has-background-dim.has-darkgrey-background-color,
+.wp-block-cover.has-background-dim.has-darkgrey-background-color {
   background-color: #616161;
 }
 
