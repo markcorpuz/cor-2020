@@ -2,6 +2,9 @@
 /* SETUP-BE | 1.0.2 | 200821 | assets/scss/main.scss
 ---------------------------------------------------------------------------------------------------- */
 
+// FONT-FAMILY
+@import 	"type/setup-be-103/fontfamily";
+
 // MAIN
 @import 	"partials/base";
 @import 	"partials/reset";
