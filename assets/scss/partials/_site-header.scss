@@ -11,16 +11,22 @@
 	min-height: 49px;
 	background-color: #3768A0;
 
+	@include media("<=mobile_menu") {
+		//background-color: #ffa500;
+	}
+
 	.wrap {
 		background-image: url(../images/siteheader2x.jpg);
 		background-size: 1200px;
 		background-position: top;
-		background-color: black;
 		min-height: 199px;
 		padding-left: 0;
 		padding-right: 0;
 
-		@include media("<=mobile_menu") {}
+		@include media("<=mobile_menu") {
+			background-image: none;
+			min-height: 0;
+		}
 	}
 
 }
@@ -31,21 +37,22 @@
 
 	h1.site-title,
 	p.site-title {
-		font-size: 1.5rem;
-		line-height: 1.875rem;
+		font-size: 1.25rem;
+		line-height: 1.25;
 		font-weight: 700;
 		display: block;
 		margin-top: 40px;
 		margin-left: 32px;
 
 		@include media("<=mobile_menu") {
+			margin-top: 0;
+			margin-bottom: 0;
 			margin-left: auto;
 			margin-right: auto;
-			margin-bottom: 1rem;
 			padding: 1rem;
 			//background-color: rgba(255, 255, 255, 0.5);
-			width: 323px;
-			height: 107px;
+			//width: 323px;
+			//height: 107px;
 		}
 
 		a {
@@ -56,6 +63,14 @@
 			display: block;
 			color: transparent;
 			text-decoration: none;
+
+			@include media("<=mobile_menu") {
+				width: 100%;
+				height: auto;
+				text-align: center;
+				background-image: none;
+				color: white;
+			}
 		}
 	}
 
