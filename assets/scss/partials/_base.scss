@@ -1,5 +1,5 @@
-/* COR-2020 | 1.0.2 | 201008 | assets/scss/partials/base.scss
-// SETUP-BE | 1.0.1 | 200624 | assets/scss/partials/base.scss
+/* COR-2020 | 1.0.3 | 201026 | assets/scss/partials/base.scss
+// SETUP-BE | 1.0.3 | 201016 | assets/scss/partials/base.scss
 ---------------------------------------------------------------------------------------------------- */
 
 // Colors
@@ -18,9 +18,11 @@ $black: #000;
 
 // Brand Colors
 $brand_colors: (
-  'blue'      : #0079bf,    // first color in array used for default button color
-  'red'       : #eb5a46,
-  'orange'    : #ff9f1a,
+  'purple'    : #660099,    // first color in array used for default button color
+  'blue'      : #0080ff,
+  'teal'      : #00ffff,
+  'red'       : #FF0000,
+  'orange'    : #ff7f00,
   'yellow'    : #f2d600,
   'green'     : #61bd4f,
   'lightgrey' : $grey_2,
@@ -51,8 +53,10 @@ $space-zero: 0;
 $space-px: 0.0625;     // 1px;
 $space-2px: 0.125;     // 2px;
 $space-tiny: 0.25;     // 4px;
-$space-small: 0.5;     // 8px;
-$space-normal: 1;      // 16px;
+$space-smaller: 0.5;   // 8px;
+$space-base: 1;        // 16px;
+$space-normal: 1.125;  // 18px;
+$space-small: 1.25;    // 20px;
 $space-medium: 1.5;    // 24px;
 $space-large: 2;       // 32px;
 $space-larger: 2.5;    // 40px;

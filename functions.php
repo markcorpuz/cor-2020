@@ -104,6 +104,7 @@ function ea_child_theme_setup() {
 	include_once( get_stylesheet_directory() . '/inc/author-box.php' );
 	include_once( get_stylesheet_directory() . '/inc/template-tags.php' );
 	include_once( get_stylesheet_directory() . '/inc/items.php' );
+	include_once( get_stylesheet_directory() . '/inc/items-log.php' );
 	include_once( get_stylesheet_directory() . '/inc/site-footer-swp.php' );
 
 	// Editor
@@ -200,29 +201,39 @@ function ea_child_theme_setup() {
 	// -- Editor Color Palette
 	add_theme_support( 'editor-color-palette', array(
 		array(
+			'name'  => __( 'Purple', 'ea_genesis_child' ),
+			'slug'  => 'purple',
+			'color'	=> '#660099',
+		),
+		array(
 			'name'  => __( 'Blue', 'ea_genesis_child' ),
 			'slug'  => 'blue',
-			'color'	=> '#56a5e5',
+			'color'	=> '#0080ff',
+		),
+		array(
+			'name'  => __( 'Teal', 'ea_genesis_child' ),
+			'slug'  => 'teal',
+			'color'	=> '#00ffff',
 		),
 		array(
 			'name'  => __( 'Red', 'ea_genesis_child' ),
 			'slug'  => 'red',
-			'color'	=> '#e5565b',
+			'color'	=> '#FF0000',
 		),
 		array(
 			'name'  => __( 'Orange', 'ea_genesis_child' ),
 			'slug'  => 'orange',
-			'color'	=> '#e59856',
+			'color'	=> '#ff7f00',
 		),
 		array(
 			'name'  => __( 'Yellow', 'ea_genesis_child' ),
 			'slug'  => 'yellow',
-			'color'	=> '#ffff00',
+			'color'	=> '#f2d600',
 		),
 		array(
 			'name'  => __( 'Green', 'ea_genesis_child' ),
 			'slug'  => 'green',
-			'color'	=> '#a2e556',
+			'color'	=> '#61bd4f',
 		),
 		array(
 			'name'  => __( 'Light Grey', 'ea_genesis_child' ),

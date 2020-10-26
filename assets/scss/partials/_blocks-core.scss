@@ -1,4 +1,4 @@
-/* SETUP-BE | 1.0.3 | 200923 | assets/scss/partials/blocks-core.scss
+/* SETUP-BE | 1.0.3 | 201026 | assets/scss/partials/blocks-core.scss
 ---------------------------------------------------------------------------------------------------- */
 
 /* Button
@@ -272,13 +272,11 @@ img {
 	.wp-block-embed-youtube.alignfull & {
 		position: relative;
 		padding-bottom: 56.25%; /* 16:9 */
-		height: 0;
 	}
 	@include media("<=tablet") {
 		.wp-block-embed-youtube & {
 			position: relative;
 			padding-bottom: 56.25%; /* 16:9 */
-			height: 0;
 		}
 	}	
 
