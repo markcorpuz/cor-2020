@@ -1,4 +1,4 @@
-/* COR-2020 | 1.0.3 | 201026 | assets/scss/main.scss
+/* COR-2020 | 1.0.3 | 201030 | assets/scss/main.scss
 /* SETUP-BE | 1.0.3 | 201017 | assets/scss/main.scss
 ---------------------------------------------------------------------------------------------------- */
 /*  SETUP-BE | 1.0.3 | 200420 | setup-be/type/setup-be-100/fontsize.scss
@@ -3548,7 +3548,8 @@ div.wpforms-container.one-line:after {
   padding-top: 0.25rem;
 }
 
-.capsule-large, .capsule-medium, .capsule-small, .capsule-normal,
+.module.ctamain a.item.button,
+.module.ctamain a.item.cta-button, .capsule-large, .capsule-medium, .capsule-small, .capsule-normal,
 .capsule, .padding-smaller-top, .padding-smaller {
   padding-top: 0.5rem;
 }
@@ -3593,7 +3594,8 @@ div.wpforms-container.one-line:after {
   padding-bottom: 0.25rem;
 }
 
-.capsule-large, .capsule-medium, .capsule-small, .capsule-normal,
+.module.ctamain a.item.button,
+.module.ctamain a.item.cta-button, .capsule-large, .capsule-medium, .capsule-small, .capsule-normal,
 .capsule, .padding-smaller-bottom, .padding-smaller {
   padding-bottom: 0.5rem;
 }
@@ -3643,7 +3645,8 @@ div.wpforms-container.one-line:after {
   padding-left: 0.5rem;
 }
 
-.capsule-large, .capsule-medium, .padding-normal-left, .padding-normal {
+.module.ctamain a.item.button,
+.module.ctamain a.item.cta-button, .capsule-large, .capsule-medium, .padding-normal-left, .padding-normal {
   padding-left: 1.125rem;
 }
 
@@ -3680,7 +3683,8 @@ div.wpforms-container.one-line:after {
   padding-right: 0.5rem;
 }
 
-.capsule-large, .capsule-medium, .padding-normal-right, .padding-normal {
+.module.ctamain a.item.button,
+.module.ctamain a.item.cta-button, .capsule-large, .capsule-medium, .padding-normal-right, .padding-normal {
   padding-right: 1.125rem;
 }
 
@@ -3708,7 +3712,8 @@ div.wpforms-container.one-line:after {
 ---------------------------------------------------------------------------------------------------- */
 /* SETUP-BE | 1.0.3 | 201010 | setup-be/ui/setup-be-103/capsule.scss
 ---------------------------------------------------------------------------------------------------- */
-.capsule-smaller, .capsule-tiny, .capsule-large, .capsule-medium, .capsule-small, .capsule-normal,
+.module.ctamain a.item.button,
+.module.ctamain a.item.cta-button, .capsule-smaller, .capsule-tiny, .capsule-large, .capsule-medium, .capsule-small, .capsule-normal,
 .capsule {
   display: inline-block;
   line-height: 1;
@@ -4048,6 +4053,66 @@ ul.blocks-gallery-grid {
 .module.mainfeature a.item.title:hover {
   color: white;
   background-color: rgba(0, 0, 0, 0.85);
+}
+
+/* COR | 1.0.3 | 201030 | assets/scss/items/cta.scss
+---------------------------------------------------------------------------------------------------- */
+.module.ctamain {
+  display: grid;
+  grid-column-gap: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #ddd;
+  grid-template-columns: 150px 1fr;
+}
+
+.module.ctamain.icon {
+  grid-template-columns: 40px 1fr;
+  padding-top: 0;
+  border-top: 0;
+}
+.module.ctamain.icon .items.info {
+  line-height: 1.125;
+}
+
+.module.ctamain .item.title {
+  font-size: 2.625rem;
+  font-weight: 700;
+}
+@media (min-width: 768px) {
+  .module.ctamain .item.title {
+    font-size: 3rem;
+  }
+}
+.module.ctamain.icon .item.title {
+  font-size: 1.375rem;
+}
+@media (min-width: 768px) {
+  .module.ctamain.icon .item.title {
+    font-size: 1.5rem;
+  }
+}
+
+.module.ctamain a.item.button,
+.module.ctamain a.item.cta-button {
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+  background-color: red;
+}
+
+.module.ctamain a.item.button:link,
+.module.ctamain a.item.cta-button:link {
+  cursor: pointer;
+}
+
+.module.ctamain a.item.button:hover,
+.module.ctamain a.item.cta-button:hover {
+  cursor: pointer;
+  background-color: darkred;
+}
+
+.module.ctamain.icon a.item.cta.link {
+  font-size: 0.75rem;
 }
 
 /* SETUP-LOG | 1.0.3 | 200702 | setup-be/block-custom/setup-log-103/log.scss
