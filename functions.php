@@ -104,6 +104,7 @@ function ea_child_theme_setup() {
 	include_once( get_stylesheet_directory() . '/inc/author-box.php' );
 	include_once( get_stylesheet_directory() . '/inc/template-tags.php' );
 	include_once( get_stylesheet_directory() . '/inc/items.php' );
+	include_once( get_stylesheet_directory() . '/inc/items-urc.php' );
 	include_once( get_stylesheet_directory() . '/inc/items-log.php' );
 	include_once( get_stylesheet_directory() . '/inc/site-footer-swp.php' );
 
