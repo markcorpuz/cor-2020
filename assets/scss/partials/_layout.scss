@@ -1,4 +1,4 @@
-/* COR | 1.0.2 | 201008 | assets/scss/partials/layout.scss
+/* COR | 1.0.3 | 201118 | assets/scss/partials/layout.scss
 /* SETUP-BE | 1.0.2 | 200821 | assets/scss/partials/layout.scss
 ---------------------------------------------------------------------------------------------------- */
 
@@ -45,7 +45,7 @@ body {
 	background-color: #3768A0;
 
 	.singular.content & > .wrap {
-		max-width: map-get( $breakpoints, 'content-width' );
+		//max-width: map-get( $breakpoints, 'content-width' );
 	}
 
 	.wrap {
@@ -102,6 +102,26 @@ body {
 //@include media(">=medium") {
 @include media(">=tablet") {
 
+	.content {
+
+		.site-main {
+			float: left;
+			width: 770px / 1168px * 100%;
+			//background-color: #f9f9f9;
+		}
+
+		.sidebar-primary {
+			float: right;
+			width: 382px / 1168px * 100%;
+			//background-color: #f9f9f9;
+		}
+
+		.module.subscribe {
+			float: right;
+			width: 382px / 1168px * 100%;
+		}		
+	}
+
 	.content-sidebar {
 
 		.site-main {
@@ -128,15 +148,21 @@ body {
 				float: none;
 				width: 100%;
 				//max-width: $content-width;;
+				grid-column-start: 1;
+				grid-column-end: 2;
 			}
 
 			.sidebar-primary {
 				float: none;
 				width: 100%;
+				grid-column-start: 2;
+				grid-column-end: 3;
 			}
 
 			.module.subscribe {
 				float: none;
+				grid-column-start: 1;
+				grid-column-end: 3;
 			}
 		}
 	}
@@ -184,7 +210,8 @@ body {
 }
 
 .module.subscribe {
-	padding: 1.5rem;
-	box-shadow: 1px 1px 2px 0px #bbbbbb;
-	background-color: #f9f9f9;
+	//padding: 1.5rem;
+	//box-shadow: 1px 1px 2px 0px #bbbbbb;
+	//background-color: #f9f9f9;
+	margin-bottom: 1.5rem;
 }

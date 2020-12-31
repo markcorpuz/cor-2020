@@ -69,6 +69,10 @@ function ea_clean_body_classes( $classes ) {
 		'full-width-content',
 		'content-sidebar',
 		'content',
+		'hide-hook-cswbefore',
+		'hide-modulesubscribe',
+		'hide-hook-cswbefore hide-modulesubscribe',
+		'hide-grid-cta-icon',
 	];
 
 	return array_intersect( $classes, $allowed_classes );

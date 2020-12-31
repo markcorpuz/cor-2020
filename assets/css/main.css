@@ -1,4 +1,4 @@
-/* COR-2020 | 1.0.3 | 201030 | assets/scss/main.scss
+/* COR-2020 | 1.0.3 | 201102 | assets/scss/main.scss
 /* SETUP-BE | 1.0.3 | 201017 | assets/scss/main.scss
 ---------------------------------------------------------------------------------------------------- */
 /*  SETUP-BE | 1.0.3 | 200420 | setup-be/type/setup-be-100/fontsize.scss
@@ -561,7 +561,7 @@ template {
   display: none;
 }
 
-/* COR | 1.0.2 | 201008 | assets/scss/partials/layout.scss
+/* COR | 1.0.3 | 201118 | assets/scss/partials/layout.scss
 /* SETUP-BE | 1.0.2 | 200821 | assets/scss/partials/layout.scss
 ---------------------------------------------------------------------------------------------------- */
 /* Box Sizing
@@ -608,9 +608,6 @@ body {
 .site-inner {
   background-color: #3768A0;
 }
-.singular.content .site-inner > .wrap {
-  max-width: 752px;
-}
 .site-inner .wrap {
   padding: 1rem;
   background-color: #ddd;
@@ -653,6 +650,19 @@ body {
 /* Sidebar Layouts
 --------------------------------------------- */
 @media (min-width: 768px) {
+  .content .site-main {
+    float: left;
+    width: 65.9246575342%;
+  }
+  .content .sidebar-primary {
+    float: right;
+    width: 32.7054794521%;
+  }
+  .content .module.subscribe {
+    float: right;
+    width: 32.7054794521%;
+  }
+
   .content-sidebar .site-main {
     float: left;
     width: 65.9246575342%;
@@ -670,13 +680,19 @@ body {
     .content-sidebar .site-main {
       float: none;
       width: 100%;
+      grid-column-start: 1;
+      grid-column-end: 2;
     }
     .content-sidebar .sidebar-primary {
       float: none;
       width: 100%;
+      grid-column-start: 2;
+      grid-column-end: 3;
     }
     .content-sidebar .module.subscribe {
       float: none;
+      grid-column-start: 1;
+      grid-column-end: 3;
     }
   }
 }
@@ -707,9 +723,7 @@ body {
 }
 
 .module.subscribe {
-  padding: 1.5rem;
-  box-shadow: 1px 1px 2px 0px #bbbbbb;
-  background-color: #f9f9f9;
+  margin-bottom: 1.5rem;
 }
 
 /* Forms
@@ -3548,8 +3562,7 @@ div.wpforms-container.one-line:after {
   padding-top: 0.25rem;
 }
 
-.module.ctamain a.item.button,
-.module.ctamain a.item.cta-button, .capsule-large, .capsule-medium, .capsule-small, .capsule-normal,
+a.item.cta.button, .capsule-large, .capsule-medium, .capsule-small, .capsule-normal,
 .capsule, .padding-smaller-top, .padding-smaller {
   padding-top: 0.5rem;
 }
@@ -3594,8 +3607,7 @@ div.wpforms-container.one-line:after {
   padding-bottom: 0.25rem;
 }
 
-.module.ctamain a.item.button,
-.module.ctamain a.item.cta-button, .capsule-large, .capsule-medium, .capsule-small, .capsule-normal,
+a.item.cta.button, .capsule-large, .capsule-medium, .capsule-small, .capsule-normal,
 .capsule, .padding-smaller-bottom, .padding-smaller {
   padding-bottom: 0.5rem;
 }
@@ -3645,8 +3657,7 @@ div.wpforms-container.one-line:after {
   padding-left: 0.5rem;
 }
 
-.module.ctamain a.item.button,
-.module.ctamain a.item.cta-button, .capsule-large, .capsule-medium, .padding-normal-left, .padding-normal {
+a.item.cta.button, .capsule-large, .capsule-medium, .padding-normal-left, .padding-normal {
   padding-left: 1.125rem;
 }
 
@@ -3683,8 +3694,7 @@ div.wpforms-container.one-line:after {
   padding-right: 0.5rem;
 }
 
-.module.ctamain a.item.button,
-.module.ctamain a.item.cta-button, .capsule-large, .capsule-medium, .padding-normal-right, .padding-normal {
+a.item.cta.button, .capsule-large, .capsule-medium, .padding-normal-right, .padding-normal {
   padding-right: 1.125rem;
 }
 
@@ -3712,8 +3722,7 @@ div.wpforms-container.one-line:after {
 ---------------------------------------------------------------------------------------------------- */
 /* SETUP-BE | 1.0.3 | 201010 | setup-be/ui/setup-be-103/capsule.scss
 ---------------------------------------------------------------------------------------------------- */
-.module.ctamain a.item.button,
-.module.ctamain a.item.cta-button, .capsule-smaller, .capsule-tiny, .capsule-large, .capsule-medium, .capsule-small, .capsule-normal,
+a.item.cta.button, .capsule-smaller, .capsule-tiny, .capsule-large, .capsule-medium, .capsule-small, .capsule-normal,
 .capsule {
   display: inline-block;
   line-height: 1;
@@ -4019,7 +4028,7 @@ ul.blocks-gallery-grid {
   padding: 1rem;
 }
 
-/* COR | 1.0.1 | 200905 | assets/scss/items/mainfeature.scss
+/* COR | 1.0.1 | 201127 | assets/scss/items/mainfeature.scss
 ---------------------------------------------------------------------------------------------------- */
 .module.mainfeature {
   position: relative;
@@ -4043,76 +4052,123 @@ ul.blocks-gallery-grid {
     font-size: 1.5rem;
   }
 }
-.module.mainfeature a.item.title {
+.module.mainfeature a.item.title.link {
   text-decoration: none;
   padding: 0.5rem 1.5rem;
   display: block;
   color: white;
   background-color: rgba(0, 0, 0, 0.5);
 }
-.module.mainfeature a.item.title:hover {
+.module.mainfeature a.item.title.link:hover {
   color: white;
   background-color: rgba(0, 0, 0, 0.85);
 }
 
-/* COR | 1.0.3 | 201030 | assets/scss/items/cta.scss
----------------------------------------------------------------------------------------------------- */
-.module.ctamain {
-  display: grid;
-  grid-column-gap: 1rem;
-  padding-top: 1rem;
-  border-top: 1px solid #ddd;
-  grid-template-columns: 150px 1fr;
+.item-subscribe.cta-subscribe {
+  padding: 1.5rem;
+  background-color: #fff;
+  border: 10px solid #fc0;
+  box-shadow: 2px 2px 2px 0px #bbbbbb;
+  margin-bottom: 1.5rem;
 }
 
-.module.ctamain.icon {
-  grid-template-columns: 40px 1fr;
-  padding-top: 0;
-  border-top: 0;
-}
-.module.ctamain.icon .items.info {
+/* COR | 1.0.3 | 201207 | assets/scss/items/cta.scss
+---------------------------------------------------------------------------------------------------- */
+.module.cta-icon .items.info {
   line-height: 1.125;
 }
 
-.module.ctamain .item.title {
-  font-size: 2.625rem;
-  font-weight: 700;
+.group.grid-cta-icon {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
 }
-@media (min-width: 768px) {
-  .module.ctamain .item.title {
-    font-size: 3rem;
+@media (max-width: 767px) {
+  .group.grid-cta-icon {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
-.module.ctamain.icon .item.title {
-  font-size: 1.375rem;
+@media (max-width: 424px) {
+  .group.grid-cta-icon {
+    grid-template-columns: 1fr;
+  }
 }
-@media (min-width: 768px) {
-  .module.ctamain.icon .item.title {
-    font-size: 1.5rem;
+.singular.content .group.grid-cta-icon {
+  grid-template-columns: 1fr;
+  grid-column-gap: 0;
+}
+@media (max-width: 767px) {
+  .singular.content .group.grid-cta-icon {
+    grid-template-columns: 1fr;
+  }
+}
+.module.cta-main .module-wrap {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  grid-column-gap: 1rem;
+  padding: 1.5rem;
+  padding-bottom: 0;
+}
+@media (max-width: 424px) {
+  .module.cta-main .module-wrap {
+    grid-template-columns: 50px 1fr;
   }
 }
 
-.module.ctamain a.item.button,
-.module.ctamain a.item.cta-button {
+.module.cta-icon .module-wrap {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  grid-column-gap: 1rem;
+}
+
+.module.cta-icon .item.title {
+  font-size: 1rem;
+  line-height: 1.125;
+}
+@media (min-width: 768px) {
+  .module.cta-icon .item.title {
+    font-size: 1.25rem;
+  }
+}
+
+a.item.title.link {
+  color: #333;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+a.item.title.link:link {
+  color: #333;
+}
+
+a.item.title.link:hover {
+  color: #666;
+  text-decoration: none;
+}
+
+a.item.cta.button {
   border-radius: 8px;
   text-decoration: none;
   color: white;
   background-color: red;
 }
 
-.module.ctamain a.item.button:link,
-.module.ctamain a.item.cta-button:link {
+.module.ctamain a.item.cta.button:link {
   cursor: pointer;
 }
 
-.module.ctamain a.item.button:hover,
 .module.ctamain a.item.cta-button:hover {
   cursor: pointer;
   background-color: darkred;
 }
 
-.module.ctamain.icon a.item.cta.link {
+.module.cta-icon a.item.cta.link {
   font-size: 0.75rem;
+}
+
+.hide-grid-cta-icon .group.grid-cta-icon {
+  display: none;
 }
 
 /* SETUP-LOG | 1.0.3 | 200702 | setup-be/block-custom/setup-log-103/log.scss
@@ -4853,15 +4909,8 @@ img.aligncenter, .aligncenter {
 }
 
 /* BASE_230 | LINE | 250_SETUP | DIVIDER - 2017-07-19 */
-/* BASE_230 | TYPOGRAPHY | 250_SETUP | SIZE - 2017-07-19 */
-.fontsize-default {
-  font-size: 1rem;
-}
-
-.fontsize-tiny {
-  font-size: 0.5rem;
-}
-
+/* COR-2020 | 1.0.3 | 201102 | cor-2020/assets/scss/cor/type/cor-2020-103/size.scss
+---------------------------------------------------------------------------------------------------- */
 .fontsize-xxxsml {
   font-size: 0.625rem;
 }
