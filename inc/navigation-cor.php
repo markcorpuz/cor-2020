@@ -16,28 +16,42 @@ add_action( 'genesis_after_header', 'genesis_do_nav' );
 add_action( 'genesis_after_header', 'genesis_do_subnav' );
 */
 
-// plugin_dir_path( __DIR__ )
-// plugins_url()
-//$mobile_d_file = plugins_url().'/urc-plugin-repo/mobile-detect/Mobile_Detect.php';
-$mobile_d_file = '/var/www/staging.understandingrelationships.com/www/wp-content/plugins/urc-plugin-repo/mobile-detect/Mobile_Detect.php';
+// PLUGIN TO CHECK
+$targ_file = 'urc-plugin-repo/setup-plugin-repo.php';
+// CHECK IF ACTIVE
+if( in_array( $targ_file, apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ){ 
 
-if( file_exists( $mobile_d_file ) ) {
+	//plugin is activated
 
-	// file found, include it
-	require_once( $mobile_d_file );
+	$mobile_d_file = WP_PLUGIN_DIR.'/urc-plugin-repo/mobile-detect/Mobile_Detect.php';
 
-	//INITIALIZE MOBILE DETECT PLUGIN
-	$detects = new Mobile_Detect;
-	// Any mobile device (phones or tablets).
-	if( $detects->isMobile() ) {
-		
-		remove_action( 'genesis_after_header', 'genesis_do_nav' );
-		remove_action( 'genesis_after_header', 'genesis_do_subnav' );
+	if( $mobile_d_file ) {
 
-	}/* else {
-		echo 'MYTZ - DESKTOP';
-	}*/
+		// file found, include it
+		require_once( $mobile_d_file );
 
-}/* else {
-	echo 'NOT A FILE';
-}*/
+		//INITIALIZE MOBILE DETECT PLUGIN
+		$detect = new Mobile_Detect;
+		// Any mobile device (phones or tablets).
+		//if( $detect->isMobile() ) {
+		if( $detect->isTablet()	|| !$detect->isMobile() ) {
+
+			// tablet or not mobile (desktop)
+
+		} else {
+			
+			// mobile
+
+			remove_action( 'genesis_after_header', 'genesis_do_nav' );
+			remove_action( 'genesis_after_header', 'genesis_do_subnav' );
+
+		}
+
+	}
+
+}
+
+/*
+WP_PLUGIN_URL
+WP_PLUGIN_DIR
+*/
