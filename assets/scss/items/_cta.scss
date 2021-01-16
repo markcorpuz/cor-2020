@@ -1,4 +1,4 @@
-/* COR | 1.0.3 | 201207 | assets/scss/items/cta.scss
+/* COR | 1.0.6 | 210115 | assets/scss/items/cta.scss
 ---------------------------------------------------------------------------------------------------- */
 
 .module.cta-main {
@@ -28,6 +28,10 @@
 	grid-column-gap: 1rem;
 	grid-row-gap: 1rem;
 	//padding: 1.5rem;
+
+	@include media("<large") {
+		grid-template-columns: repeat(3, 1fr);;
+	}
 
 	@include media("<tablet") {
 		grid-template-columns: repeat(2, 1fr);;
