@@ -1,4 +1,4 @@
-/* COR-2020 | 1.0.3 | 201102 | assets/scss/main.scss
+/* COR-2020 | 1.0.7 | 210119 | assets/scss/main.scss
 /* SETUP-BE | 1.0.3 | 201017 | assets/scss/main.scss
 ---------------------------------------------------------------------------------------------------- */
 /*  SETUP-BE | 1.0.3 | 200420 | setup-be/type/setup-be-100/fontsize.scss
@@ -5216,7 +5216,7 @@ img.img-60,
   padding: 3rem;
 }
 
-/* BASE_230 | GUI | 230_BASE | MEDIA - 2017-01-12 */
+/* COR-2020 | GUI | cor-2020_107 | MEDIA - 2021-01-19 */
 .media, .media-bd {
   overflow: hidden;
   _overflow: visible;
@@ -5227,6 +5227,13 @@ img.img-60,
   float: left;
   margin-right: 1rem;
 }
+@media (max-width: 425px) {
+  .media .media-img {
+    float: none;
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+}
 
 .media .media-img img {
   display: block;
@@ -5236,6 +5243,11 @@ img.img-60,
   float: right;
   margin-left: 1rem;
   margin-right: 0;
+}
+@media (max-width: 425px) {
+  .media .media-right {
+    float: none;
+  }
 }
 
 /* BASE_230 | GUI | 250_SETUP | ASPECTRATIO - 2017-07-28 */
@@ -6414,20 +6426,20 @@ body .soliloquy-fc-slider .soliloquy-caption-inside .soliloquy-fc-title-link {
   }
 }
 
-/* BASE_230 | ITEM | 2801_COR | ITEM-CTA - 2019-02-01 */
-.cta-teespring, .cta-lulu, .cta-kindle, .cta-itunes, .cta-ibooks, .cta-audible-large, .cta-audible, .cta-paypal, .cta-amazon-large, .cta-amazon, .cta-donate-paypalbutton, .cta-buy-paypalbutton, .cta-donate-icon, .cta-donate, .cta-bookuniversal, .cta-bookcombined, .cta-merchandise, .cta-bookaudio-amazon, .cta-bookaudio-icon, .cta-book2audio, .cta-bookaudio, .cta-bookebook-amazon, .cta-bookebook-icon, .cta-book2ebook, .cta-bookebook, .cta-bookpaperback-amazon, .cta-bookpaperback-icon, .cta-book2paperback, .cta-bookpaperback, .cta-coachingemail-icon, .cta-coachingemail, .cta-coachingphone-icon, .cta-coachingphone, .cta-box {
+/* BASE_230 | ITEM | 2801_COR | ITEM-CTA - /item/2801_cor/item-cta-2021.scss 2021-08-03 */
+.cta-teespring, .cta-lulu, .cta-kindle, .cta-itunes, .cta-ibooks, .cta-audible-large, .cta-audible, .cta-paypal, .cta-amazon-large, .cta-amazon, .cta-donate-paypalbutton, .cta-buy-paypalbutton, .cta-donate-icon, .cta-donate, .cta-bookuniversal, .cta-bookcombined, .cta-merchandise, .cta-bookaudio-amazon, .cta-bookaudio-icon, .cta-book3audio, .cta-book2audio, .cta-bookaudio, .cta-bookebook-amazon, .cta-bookebook-icon, .cta-book3ebook, .cta-book2ebook, .cta-bookebook, .cta-bookpaperback-amazon, .cta-bookpaperback-icon, .cta-book3paperback, .cta-book2paperback, .cta-bookpaperback, .cta-coachingemail-icon, .cta-coachingemail, .cta-coachingphone-icon, .cta-coachingphone, .cta-box {
   background-image: url(../images/sprites.png);
   background-repeat: no-repeat;
   display: block;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .cta-teespring, .cta-lulu, .cta-kindle, .cta-itunes, .cta-ibooks, .cta-audible-large, .cta-audible, .cta-paypal, .cta-amazon-large, .cta-amazon, .cta-donate-paypalbutton, .cta-buy-paypalbutton, .cta-donate-icon, .cta-donate, .cta-bookuniversal, .cta-bookcombined, .cta-merchandise, .cta-bookaudio-amazon, .cta-bookaudio-icon, .cta-book2audio, .cta-bookaudio, .cta-bookebook-amazon, .cta-bookebook-icon, .cta-book2ebook, .cta-bookebook, .cta-bookpaperback-amazon, .cta-bookpaperback-icon, .cta-book2paperback, .cta-bookpaperback, .cta-coachingemail-icon, .cta-coachingemail, .cta-coachingphone-icon, .cta-coachingphone, .cta-box {
+  .cta-teespring, .cta-lulu, .cta-kindle, .cta-itunes, .cta-ibooks, .cta-audible-large, .cta-audible, .cta-paypal, .cta-amazon-large, .cta-amazon, .cta-donate-paypalbutton, .cta-buy-paypalbutton, .cta-donate-icon, .cta-donate, .cta-bookuniversal, .cta-bookcombined, .cta-merchandise, .cta-bookaudio-amazon, .cta-bookaudio-icon, .cta-book3audio, .cta-book2audio, .cta-bookaudio, .cta-bookebook-amazon, .cta-bookebook-icon, .cta-book3ebook, .cta-book2ebook, .cta-bookebook, .cta-bookpaperback-amazon, .cta-bookpaperback-icon, .cta-book3paperback, .cta-book2paperback, .cta-bookpaperback, .cta-coachingemail-icon, .cta-coachingemail, .cta-coachingphone-icon, .cta-coachingphone, .cta-box {
     background-image: url(../images/sprites2x.png);
     background-size: 1000px;
   }
 }
 
-.cta-donate, .cta-bookuniversal, .cta-bookcombined, .cta-merchandise, .cta-book2audio, .cta-bookaudio, .cta-book2ebook, .cta-bookebook, .cta-book2paperback, .cta-bookpaperback, .cta-coachingemail, .cta-coachingphone, .cta-box {
+.cta-donate, .cta-bookuniversal, .cta-bookcombined, .cta-merchandise, .cta-book3audio, .cta-book2audio, .cta-bookaudio, .cta-book3ebook, .cta-book2ebook, .cta-bookebook, .cta-book3paperback, .cta-book2paperback, .cta-bookpaperback, .cta-coachingemail, .cta-coachingphone, .cta-box {
   width: 100px;
   height: 100px;
 }
@@ -6465,6 +6477,10 @@ body .soliloquy-fc-slider .soliloquy-caption-inside .soliloquy-fc-title-link {
   background-position: -895px -265px;
 }
 
+.cta-book3paperback {
+  background-position: -895px -640px;
+}
+
 .cta-bookpaperback-icon {
   background-position: -230px -303px;
 }
@@ -6483,6 +6499,10 @@ body .soliloquy-fc-slider .soliloquy-caption-inside .soliloquy-fc-title-link {
   background-position: -895px -390px;
 }
 
+.cta-book3ebook {
+  background-position: -785px -640px;
+}
+
 .cta-bookebook-icon {
   background-position: -275px -303px;
 }
@@ -6499,6 +6519,10 @@ body .soliloquy-fc-slider .soliloquy-caption-inside .soliloquy-fc-title-link {
 
 .cta-book2audio {
   background-position: -895px -515px;
+}
+
+.cta-book3audio {
+  background-position: -785px -515px;
 }
 
 .cta-bookaudio-icon {

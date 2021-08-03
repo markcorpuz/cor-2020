@@ -1,0 +1,54 @@
+/* COR-2020 | GUI | cor-2020_107 | MEDIA - 2021-01-19 */
+
+// Author: http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
+// Tutorial: http://codepen.io/siiron/pen/kHdlp
+
+// -------------------------------------
+// FORMULA
+
+// -------------------------------------
+// EXTEND
+
+// -------------------------------------
+// SELECTORS
+
+	.media {}
+
+	.media, .media-bd {
+	  overflow:hidden;
+	  _overflow:visible;
+	  zoom:1;
+	}
+
+	.media .media-img {
+		float:left;
+		margin-right: #{$space-default}rem;
+
+		@include media("<=smaller") {
+			float: none;
+			margin-right: 0;
+			margin-bottom: 1rem;
+		}
+	}
+
+	.media .media-img img{
+	  display:block;
+	}
+
+	.media .media-right {
+		float:right;
+		margin-left: #{$space-default}rem;
+		margin-right: 0;
+
+		@include media("<=smaller") {
+			float: none;
+		}
+	}
+
+	.media .media-img.space-right-zero {
+		@extend %spaceright-zero !optional;
+	}
+
+	.media .media-right.space-left-zero {
+		@extend %spaceleft-zero !optional;
+	}
