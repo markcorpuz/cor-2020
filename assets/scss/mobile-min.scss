@@ -1,5 +1,5 @@
-/* COR-2020 | 1.0.3 | 201102 | assets/scss/main.scss
-/* SETUP-BE | 1.0.3 | 201017 | assets/scss/main.scss
+/* COR-2021 | 1.0.8 | 210809 | assets/scss/main.scss
+// SETUP-BE | 1.0.3 | 201017 | assets/scss/main.scss
 ---------------------------------------------------------------------------------------------------- */
 
 // FONT-FAMILY
@@ -53,6 +53,7 @@
 // PLUGINS
 @import 	"block-custom/setup-log-103/log";
 @import 	"block-custom/setup-log-103/guide";
+@import 	"partials/plugin-leakypaywall";
 
 
 
@@ -133,9 +134,9 @@
 @import 	"cor/graphic/230_base/image";
 
 // CLEARED - MAIN SOURCE
-// -------------------------------------------------------------------- GUI | 2017-07-28
+// -------------------------------------------------------------------- GUI | 2021-01-19
 @import 	"cor/gui/230_cor/button";
-@import 	"cor/gui/230_base/media";
+@import 	"cor/gui/cor-2020_107/media";
 @import 	"cor/gui/250_setup/aspectratio";
 
 // -------------------------------------------------------------------- GRID | 2017-08-23
@@ -289,7 +290,7 @@
 @import 	"cor/item/227_cormain/item-product";
 @import 	"cor/item/default_2124/item-tabs";
 @import 	"cor/item/227_cormain/item-hideshow";
-@import 	"cor/item/2801_cor/item-cta-2020";
+@import 	"cor/item/2801_cor/item-cta-2021";
 @import 	"cor/item/227_cormain/item-icon";
 @import 	"cor/item/227_cormain/item-ctacontent";
 @import 	"cor/item/230_cor/item-instagram";

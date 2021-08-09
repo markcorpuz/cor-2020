@@ -1,5 +1,5 @@
-/* COR-2020 | 1.0.7 | 210119 | assets/scss/main.scss
-/* SETUP-BE | 1.0.3 | 201017 | assets/scss/main.scss
+/* COR-2021 | 1.0.8 | 210809 | assets/scss/main.scss
+// SETUP-BE | 1.0.3 | 201017 | assets/scss/main.scss
 ---------------------------------------------------------------------------------------------------- */
 
 // FONT-FAMILY
@@ -53,6 +53,7 @@
 // PLUGINS
 @import 	"block-custom/setup-log-103/log";
 @import 	"block-custom/setup-log-103/guide";
+@import 	"partials/plugin-leakypaywall";
 
 
 

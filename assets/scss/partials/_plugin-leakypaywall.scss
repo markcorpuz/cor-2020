@@ -1,0 +1,28 @@
+/* SETUP CHILD | 1.0.7 | 210807 | assets/scss/partials/plugin-leakypaywall.scss
+---------------------------------------------------------------------------------------------------- */
+
+#leaky-paywall-login-form {
+	max-width: 500px;
+}
+
+// SUBSCRIPTION INFO
+.leaky-paywall-subscription-details-wrapper {
+	display: none;
+}
+
+// CHECKOUT BUTTON
+.leaky-paywall-checkout-button {
+
+	text-align: center;
+
+	button {
+		@extend %button !optional;
+	}
+	button:hover {
+		@extend %button-hover !optional;
+	}
+	button:focus {
+		@extend %button-focus !optional;
+	}
+
+}

@@ -1,5 +1,5 @@
-/* COR-2020 | 1.0.7 | 210119 | assets/scss/main.scss
-/* SETUP-BE | 1.0.3 | 201017 | assets/scss/main.scss
+/* COR-2021 | 1.0.8 | 210809 | assets/scss/main.scss
+// SETUP-BE | 1.0.3 | 201017 | assets/scss/main.scss
 ---------------------------------------------------------------------------------------------------- */
 /*  SETUP-BE | 1.0.3 | 200420 | setup-be/type/setup-be-100/fontsize.scss
 ---------------------------------------------------------------------------------------------------- */
@@ -4354,6 +4354,19 @@ a.item.cta.button {
 .module.guide.guide-titleshadow > .item.label {
   padding: 4px 8px;
 }
+/* SETUP CHILD | 1.0.7 | 210807 | assets/scss/partials/plugin-leakypaywall.scss
+---------------------------------------------------------------------------------------------------- */
+#leaky-paywall-login-form {
+  max-width: 500px;
+}
+
+.leaky-paywall-subscription-details-wrapper {
+  display: none;
+}
+
+.leaky-paywall-checkout-button {
+  text-align: center;
+}
 /* BASE_230 | VARIABLES | 230_BASE > COR | COLOR - 2016-11-21 */
 /* BASE_230 | VARIABLES | 230_BASE | SPACE - 2017-01-12 */
 /* BASE_230 | VARIABLES | 230_BASE | LINE - 2017-01-12 */
@@ -4499,7 +4512,7 @@ img.aligncenter, .aligncenter {
   text-align: right;
 }
 
-.button, button, input[type=button], input[type=reset], input[type=submit], .textcenter {
+.button, .leaky-paywall-checkout-button button, button, input[type=button], input[type=reset], input[type=submit], .textcenter {
   text-align: center;
 }
 
@@ -4972,7 +4985,7 @@ img.aligncenter, .aligncenter {
   font-weight: 400;
 }
 
-.button, button, input[type=button], input[type=reset], input[type=submit], .fontweight-thick {
+.button, .leaky-paywall-checkout-button button, button, input[type=button], input[type=reset], input[type=submit], .fontweight-thick {
   font-weight: 500;
 }
 
@@ -4993,7 +5006,7 @@ img.aligncenter, .aligncenter {
   line-height: 0.5;
 }
 
-.button, button, input[type=button], input[type=reset], input[type=submit], .lineheight-single {
+.button, .leaky-paywall-checkout-button button, button, input[type=button], input[type=reset], input[type=submit], .lineheight-single {
   line-height: 1;
 }
 
@@ -5150,7 +5163,7 @@ img.img-60,
 }
 
 /* BASE_230 | GUI | 230_BASE | BUTTON - 2016-08-05 */
-.button, button, input[type=button], input[type=reset], input[type=submit] {
+.button, .leaky-paywall-checkout-button button, button, input[type=button], input[type=reset], input[type=submit] {
   border-width: 0;
   border-radius: 3pt;
   cursor: pointer;
@@ -5177,7 +5190,7 @@ img.img-60,
   background-image: linear-gradient(to bottom, #76d5eb 0%, #5cb9d8 50%, #007aae 51%, #016ca3 75%, #004176 100%);
 }
 
-.button:hover, button:hover, input:hover[type=button], input:hover[type=reset], input:hover[type=submit] {
+.button:hover, .leaky-paywall-checkout-button button:hover, button:hover, input:hover[type=button], input:hover[type=reset], input:hover[type=submit] {
   color: #fff;
   background-color: #279BEC;
   text-decoration: none;
