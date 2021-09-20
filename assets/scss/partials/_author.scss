@@ -1,0 +1,70 @@
+/* SETUP CHILD | 1.0.0 | 210429 | assets/scss/partials/author.scss
+---------------------------------------------------------------------------------------------------- */
+
+.entry-author {
+	font-size: 14px;
+
+	.avatar {
+		border-radius: 50%;
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 4px;
+	}
+
+	a {
+		color: $base-color;
+		text-decoration: none;
+
+		&:hover {
+			color: $highlight;
+		}
+	}
+}
+
+.author-box {
+	position: relative;
+	padding-top: 1.5rem;
+	padding-bottom: 0.5rem;
+	padding-left: 120px;
+	min-height: 148px;
+	border-top: 1px solid #333;
+	border-bottom: 1px solid #333;
+
+	@include media("<=medium") {
+		padding-left: 0;
+	}
+
+	.archive & {
+		grid-column: 1 / -1;
+		max-width: $content-width;
+		margin: 0 auto $grid-gap;
+	}
+
+	.author-box-title {
+		@extend %text-xl !optional;
+		//@include font-sizes( 1.125rem, 1.25rem );
+		
+		@include media("<=medium") {
+			text-align: center;
+		}
+	}
+
+	.author-box-content {
+		@extend %text-base !optional;
+		//@include font-sizes( 0.875rem, 1rem );
+	}
+
+	.avatar {
+		border-radius: 50%;
+		position: absolute;
+		top: 1.5rem;
+		left: 0;
+
+		@include media("<=medium") {
+			position: static;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 1rem;
+		}
+	}
+}

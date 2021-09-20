@@ -1,13 +1,13 @@
-/* COR-2021 | 1.0.8 | 210809 | assets/scss/main.scss
+/* COR-2021 | 1.0.9 | 210824 | assets/scss/main.scss
+// SETUP CHILD | 1.0.1 | 210715 | assets/scss/main.scss
 // SETUP-BE | 1.0.3 | 201017 | assets/scss/main.scss
 ---------------------------------------------------------------------------------------------------- */
 
-// FONT-FAMILY
-@import 	"type/setup-be-103/fontfamily";
+@import 	"partials/fontface";
 
-// MAIN
 @import 	"partials/base";
 @import 	"partials/reset";
+
 @import 	"partials/layout";
 @import 	"partials/form";
 @import 	"partials/blocks-base";
@@ -15,6 +15,7 @@
 @import 	"partials/blocks-plugin";
 @import 	"partials/blocks-custom";
 @import 	"partials/site-header";
+//@import 	"partials/custom-logo";
 @import 	"partials/site-inner";
 @import 	"partials/widget";
 @import 	"partials/navigation";
@@ -22,28 +23,63 @@
 @import 	"partials/post-summary";
 @import 	"partials/archive";
 @import 	"partials/singular";
+@import 	"partials/entry-content";
+@import 	"partials/author";
+@import 	"partials/site-footer";
+
 @import 	"partials/site-footer";
 @import 	"partials/items";
 @import 	"partials/modules";
 
+@import 	"block/setup-child-100/alignwide";
+@import 	"block/setup-child-100/youtube";
+@import 	"block/setup-child-100/cover";
+@import 	"block/setup-child-100/group";
+@import 	"block/setup-child-100/column";
+@import 	"block/setup-child-100/gallery";
+@import 	"block/setup-child-100/paragraph";
+@import 	"block/setup-child-100/heading";
+@import 	"block/setup-child-100/list";
+
+@import 	"selector/setup-child-100/textsize";
+@import 	"selector/setup-child-100/fontweight";
+@import 	"selector/setup-child-100/lineheight";
+@import 	"selector/setup-child-100/color";
+@import 	"selector/setup-child-100/grid";
+@import 	"selector/setup-child-100/percent";
+@import 	"selector/setup-child-100/width";
+@import 	"selector/setup-child-100/margin";
+@import 	"selector/setup-child-100/margin-all";
+@import 	"selector/setup-child-100/padding";
+@import 	"selector/setup-child-100/padding-all";
+@import 	"selector/setup-child-100/capsule";
+@import 	"selector/setup-child-100/border";
+@import 	"selector/setup-child-100/heading";
+@import 	"selector/setup-child-100/list";
+@import 	"selector/setup-child-100/shadow";
+@import 	"selector/setup-child-100/icon";
+@import 	"selector/setup-child-100/hide";
+
+@import 	"plugin/setup-child-100/gravityforms";
+
 // SELECTORS
-@import 	"type/setup-be-100/fontsize";
-@import 	"ui/setup-be-103/color";
-@import 	"ui/setup-be-100/grid";
-@import 	"ui/setup-be-100/percent";
-@import 	"ui/setup-be-100/width";
-@import 	"ui/setup-be-103/margin";
-@import 	"ui/setup-be-103/margin-all";
-@import 	"ui/setup-be-103/padding";
-@import 	"ui/setup-be-103/padding-all";
-@import 	"ui/setup-be-103/capsule";
+//@import 	"type/setup-be-100/fontsize";
+//@import 	"ui/setup-be-103/color";
+//@import 	"ui/setup-be-100/grid";
+//@import 	"ui/setup-be-100/percent";
+//@import 	"ui/setup-be-100/width";
+//@import 	"ui/setup-be-103/margin";
+//@import 	"ui/setup-be-103/margin-all";
+//@import 	"ui/setup-be-103/padding";
+//@import 	"ui/setup-be-103/padding-all";
+//@import 	"ui/setup-be-103/capsule";
 @import 	"ui/setup-be-101/spacer";
-@import 	"ui/setup-be-100/shadow";
-@import 	"ui/setup-be-101/border";
-@import 	"block/setup-be-100/alignwide";
-@import 	"block/setup-be-103/cover";
-@import 	"block/setup-be-100/group";
-@import 	"block/setup-be-100/gallery";
+//@import 	"ui/setup-be-100/shadow";
+//@import 	"ui/setup-be-101/border";
+//@import 	"block/setup-be-100/alignwide";
+//@import 	"block/setup-be-103/cover";
+//@import 	"block/setup-be-100/group";
+//@import 	"block/setup-be-100/gallery";
 
 // ITEMS
 @import 	"items/ads-urc";

@@ -1,4 +1,5 @@
-/* COR-2020 | 1.0.3 | 201026 | assets/scss/partials/base.scss
+/* COR-2021 | 1.0.9 | 210909 | assets/scss/partials/base.scss
+// SETUP CHILD | 1.0.0 | 210615 | assets/scss/partials/base.scss
 // SETUP-BE | 1.0.3 | 201016 | assets/scss/partials/base.scss
 ---------------------------------------------------------------------------------------------------- */
 
@@ -43,35 +44,57 @@ $border-color: $grey_4;
 $serif: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
 $sans-serif: "Rubik", "Roboto", "Lato", -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
 
-// Content
-$content-width: 720px;
-//$content-width: 768px;
-$block-margin: 16px;
+// BLOCK
+$block-margin:      16px;
 
-// Space
-$space-zero: 0;
-$space-px: 0.0625;     // 1px;
-$space-2px: 0.125;     // 2px;
-$space-tiny: 0.25;     // 4px;
-$space-smaller: 0.5;   // 8px;
-$space-base: 1;        // 16px;
-$space-normal: 1.125;  // 18px;
-$space-small: 1.25;    // 20px;
-$space-medium: 1.5;    // 24px;
-$space-large: 2;       // 32px;
-$space-larger: 2.5;    // 40px;
-$space-huge: 3.125;    // 50px;
-$space-large2x: 4;     // 64px;
-$space-huge2x: 6.25;   // 100px;
+// WIDTHS
+$tiny-width:        360px;
+$smaller-width:     425px;
+$small-width:       512px;
+$tablet-width:      768px;
+$medium-width:      992px;  // 1024px;
+$large-width:       1200px; // 1280px;
 
-// Grid
-$grid: grid;
-$grid-width: 1168px;
-$grid-gap: 32px;
-$base-margin: 16px;
-$wrap_edge: $base-margin;
-$margin_2x: $base-margin * 2;
-$margin_4x: $base-margin * 4;
+// WIDTHS + GAP
+$small-width-gap:   560px;
+$tablet-width-gap:  816px;
+$medium-width-gap:  1072px;
+$large-width-gap:   1328px;
+
+// GRID
+$grid:              grid;
+$grid-width:        1168px; // 1280px;
+$grid-gap:          32px;   // 24px;
+
+// MARGIN
+$gap:               24px;
+$gap2x:             48px;
+$base-margin:       16px;
+$margin_2x:         $base-margin * 2;
+$margin_4x:         $base-margin * 4;
+
+// LAYOUT
+$sidebar-width:     400px;
+$content-width:     720px;  // 768px;
+$full-width:        768px;
+$cs-width:          $large-width;
+$sc-width:          $large-width;
+
+// SPACE
+$space-zero:        0;
+$space-px:          0.0625; // 1px;
+$space-2px:         0.125;  // 2px;
+$space-tiny:        0.25;   // 4px;
+$space-smaller:     0.5;    // 8px;
+$space-base:        1;      // 16px;
+$space-normal:      1.125;  // 18px;
+$space-small:       1.25;   // 20px;
+$space-medium:      1.5;    // 24px;
+$space-large:       2;      // 32px;
+$space-larger:      2.5;    // 40px;
+$space-huge:        3.125;  // 50px;
+$space-large2x:     4;      // 64px;
+$space-huge2x:      6.25;   // 100px;
 
 // Site Header
 $logo_width: 300px;
@@ -79,19 +102,24 @@ $menu_width: $logo_width + $grid-gap;
 $persistant_mobile: false; // 49px
 $persistent_desktop: false; // 49px
 
-
-// Include Media
+// INCLUDE MEDIA
 $breakpoints: (
-  'phone'         : 360px,
-  'tiny'          : 360px,
-  'smaller'       : 425px,
-  'small'         : 512px,
-  'tablet'        : 768px, // required for include-media
-  'mobile_menu'   : 768px,
-  'medium'        : 992px,
-  'large'         : 1200px,
-  'desktop'       : $grid-width + $grid-gap, // required for include-media
-  'content-width' : $content-width + $grid-gap,
+  'phone':          $tiny-width,
+  'tiny':           $tiny-width,
+  'smaller':        $smaller-width,
+  'small':          $small-width,
+  'small-gap':      $small-width-gap,
+  'tablet':         $tablet-width, // required for include-media
+  'tablet-gap':     $tablet-width-gap,
+  'mobile-menu':    $tablet-width,
+  'mobile_menu':    $tablet-width,
+  'medium':         $medium-width,
+  'medium-gap':     $medium-width-gap,
+  'large':          $large-width,
+  'large-gap':      $large-width-gap,
+  'large-wgap':     $large-width + $grid-gap,
+  'desktop':        $grid-width + $grid-gap, // required for include-media
+  'content-width':  $content-width + $grid-gap,
 );
 
 @import "../modules/helpers";

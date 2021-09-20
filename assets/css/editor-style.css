@@ -1,4 +1,5 @@
-/* COR-2020 | 1.0.3 | 201026 | assets/scss/partials/base.scss
+/* COR-2021 | 1.0.9 | 210909 | assets/scss/partials/base.scss
+// SETUP CHILD | 1.0.0 | 210615 | assets/scss/partials/base.scss
 // SETUP-BE | 1.0.3 | 201016 | assets/scss/partials/base.scss
 ---------------------------------------------------------------------------------------------------- */
 /**
@@ -854,7 +855,7 @@ div.wpforms-container.one-line:after {
   margin-bottom: 1rem;
   background-size: cover;
   background-position: center;
-  padding-top: calc(2 / 3 * 100%);
+  padding-top: 66.6666666667%;
 }
 
 .module.post-summary .item.overline {

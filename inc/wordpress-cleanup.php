@@ -73,6 +73,7 @@ function ea_clean_body_classes( $classes ) {
 		'hide-modulesubscribe',
 		'hide-hook-cswbefore hide-modulesubscribe',
 		'hide-grid-cta-icon',
+		'login',
 	];
 
 	return array_intersect( $classes, $allowed_classes );

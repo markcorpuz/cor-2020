@@ -24,7 +24,7 @@ add_filter( 'login_headertext', '__return_empty_string' );
  */
 function ea_login_logo() {
 
-	$logo_path = '/assets/images/logo.svg';
+	$logo_path = '/assets/images/brand-corey-wayne-members.png';
 	if( ! file_exists( get_stylesheet_directory() . $logo_path ) )
 		return;
 
@@ -40,7 +40,7 @@ function ea_login_logo() {
         overflow: hidden;
         text-indent: -9999em;
         width: 312px;
-        height: 100px;
+        height: 113px;
     }
     </style>
     <?php

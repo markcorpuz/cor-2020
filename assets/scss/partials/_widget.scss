@@ -1,26 +1,28 @@
-/* COR | 1.0.1 | 200729 | assets/scss/partials/widget.scss
+/* COR | 1.0.9 | 210824 | assets/scss/partials/widget.scss
 // SETUP-BE | 1.0.0 | 200326 | assets/scss/partials/widget.scss
 ---------------------------------------------------------------------------------------------------- */
 
 .widget {
 
-	margin-bottom: 2rem;
+	//margin-bottom: 2rem;
 
 	@include media(">=tablet") {
-		margin-bottom: 2rem;
+		//margin-bottom: 2rem;
 	}
 
 	.sidebar-primary & {
-		padding: 1.5rem;
-		background-color: #fff;
-		border: 1px solid #ccc;
-		box-shadow: 2px 2px 2px 0px #bbbbbb;
+		@extend %box-floatingbox !optional;
 		margin-bottom: 1.5rem;
-		
-		//box-shadow: 1px 1px 2px 0px #bbbbbb;
-		//background-color: #f9f9f9;
-		//border-top: 1px solid #eee;
-		//border-left: 1px solid #eee;
+	}
+
+	.module.loginfo & {
+		@extend %box-floatingbox !optional;
+		margin-bottom: 1.5rem;
+	}
+
+	.module.subscribe & {
+		@extend %box-floatingbox !optional;
+		margin-bottom: 1.5rem;
 	}
 
 }
