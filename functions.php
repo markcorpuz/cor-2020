@@ -295,18 +295,6 @@ function urc_google_tag_manager_js() {
 
 	?>
 
-	<!-- Global site tag (gtag.js) - Google Ads: 1006737213 --> <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1006737213"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-1006737213'); </script>
-
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-556922-1"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-	  gtag('config', 'UA-556922-1');
-	  gtag('config', 'AW-1006737213');
-	</script>
-
 	<meta name="p:domain_verify" content="0a4ace3e1ac7c1854a32de7541879163"/>
 
 	<meta name="facebook-domain-verification" content="hk62ntn5lngv984v3f4drv4bklad5g" />
@@ -332,16 +320,6 @@ function urc_google_tag_manager_js() {
 	<!-- End Facebook Pixel Code -->
 
 	<!-- Google Tag Manager -->
-	<!--
-	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-	})(window,document,'script','dataLayer','GTM-WQFDBGR');</script>
-	-->
-	<!-- End Google Tag Manager -->
-
-	<!-- Google Tag Manager TEST ENVIRONMENT -->
 	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -376,13 +354,6 @@ function urc_google_tag_manager_no_js() {
 	<!-- End Twitter universal website tag code -->
 
 	<!-- Google Tag Manager (noscript) -->
-	<!--
-	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WQFDBGR"
-	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-	-->
-	<!-- End Google Tag Manager (noscript) -->
-
-	<!-- Google Tag Manager (noscript) TEST ENVIRONMENT -->
 	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WQFDBGR&gtm_auth=YlirT2gco74fb80hx0qzPg&gtm_preview=env-4&gtm_cookies_win=x"
 	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
