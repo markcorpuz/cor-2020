@@ -4,7 +4,7 @@
  *
  * @package      EAGenesisChild
  * @author       Bill Erickson
- * @since        1.0.0
+ * @since        1.1.0
  * @license      GPL-2.0+
 **/
 
@@ -44,7 +44,7 @@ function ea_global_enqueues() {
 
 	// css
 	wp_dequeue_style( 'child-theme' );
-	wp_enqueue_style( 'ea-fonts', setup_be_theme_fonts_url() );
+	//wp_enqueue_style( 'ea-fonts', setup_be_theme_fonts_url() );
 	wp_enqueue_style( 'ea-style', get_stylesheet_directory_uri() . '/assets/css/main.css', array(), filemtime( get_stylesheet_directory() . '/assets/css/main.css' ) );
 }
 add_action( 'wp_enqueue_scripts', 'ea_global_enqueues' );
@@ -57,7 +57,7 @@ function ea_enqueue_noncritical_css() {
 	wp_enqueue_style( 'wp-block-library' );
 	wp_enqueue_style( 'ea-critical' );
 	wp_enqueue_style( 'ea-style' );
-	wp_enqueue_style( 'ea-fonts' );
+	//wp_enqueue_style( 'ea-fonts' );
 }
 
 /**
@@ -65,7 +65,7 @@ function ea_enqueue_noncritical_css() {
  *
  */
 function ea_gutenberg_scripts() {
-	wp_enqueue_style( 'ea-fonts', setup_be_theme_fonts_url() );
+	//wp_enqueue_style( 'ea-fonts', setup_be_theme_fonts_url() );
 	wp_enqueue_script( 'ea-editor', get_stylesheet_directory_uri() . '/assets/js/editor.js', array( 'wp-blocks', 'wp-dom' ), filemtime( get_stylesheet_directory() . '/assets/js/editor.js' ), true );
 }
 add_action( 'enqueue_block_editor_assets', 'ea_gutenberg_scripts' );
@@ -301,24 +301,6 @@ function urc_google_tag_manager_js() {
 
 	<script data-ad-client="ca-pub-0947746501358966" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	                                
-	<!-- Facebook Pixel Code -->
-	<script>
-	  !function(f,b,e,v,n,t,s)
-	  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-	  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-	  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-	  n.queue=[];t=b.createElement(e);t.async=!0;
-	  t.src=v;s=b.getElementsByTagName(e)[0];
-	  s.parentNode.insertBefore(t,s)}(window, document,'script',
-	  'https://connect.facebook.net/en_US/fbevents.js');
-	  fbq('init', '342285032648063');
-	  fbq('track', 'PageView');
-	</script>
-	<noscript><img height="1" width="1" style="display:none"
-	  src="https://www.facebook.com/tr?id=342285032648063&ev=PageView&noscript=1"
-	/></noscript>
-	<!-- End Facebook Pixel Code -->
-
 	<!-- Google Tag Manager -->
 	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -370,7 +352,10 @@ function urc_google_tag_manager_no_js() {
 
 add_filter('mepr-pre-run-rule-content', 'mepr_override_redirection_protection', 11, 3);
 function mepr_override_redirection_protection($protect, $uri, $delim) {
-	$protect=0;
+
+	if (! has_tag( 'vip' ) ) {
+			$protect=0;
+		}
 
    if(is_single()){
    	global $post; 
@@ -386,7 +371,7 @@ function mepr_override_redirection_protection($protect, $uri, $delim) {
 		} else {
 			$seen_post= json_decode($_COOKIE['free_article']);
 			$len= count($seen_post);
-			if($len<10){
+			if($len<2){
 
 				if(!in_array($current_id, $seen_post)){
 
@@ -404,4 +389,15 @@ function mepr_override_redirection_protection($protect, $uri, $delim) {
 	}
     
     return $protect;
+}
+
+add_filter('display_posts_shortcode_output','new_format_for_premium',10,11);
+function new_format_for_premium($output, $original_atts, $image, $title, $date, $excerpt, $inner_wrapper, $content, $class, $author, $category_display_text){
+	if ( has_tag( 'vip' ) ) {
+			$output='<div class="border-premium"><span class="badge badge-primary">Premium</span></div>'.$output;
+		}else{
+			$output='<div class="border-premium"></div>'.$output;
+		}
+	return $output;
+
 }
