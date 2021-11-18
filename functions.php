@@ -422,6 +422,8 @@ function mepr_override_redirection_protection($protect, $uri, $delim) {
 //////////////////////////////////////////////////////////////////
 function kp_mepr_override_protection($protect, $uri, $delim)
 {
+    error_log("kp mepr:");
+
     // Check for VIP articles
     if( has_tag( 'vip' ) )
     {
@@ -432,6 +434,7 @@ function kp_mepr_override_protection($protect, $uri, $delim)
     // if it's not a single, we leave it alone
     if(!is_single())
     {
+        error_log("kp mepr: not single");
         return $protect;
     }
 
@@ -454,15 +457,21 @@ function kp_mepr_override_protection($protect, $uri, $delim)
         $seen_post = json_decode($_COOKIE['free_article']);
         $len       = count($seen_post);
 
+    error_log("kp mepr: len      =$len");
+    error_log("kp mepr: cookie seen_post=".$_COOKIE['free_article']);
+    $tmp_arr = print_r($seen_post, TRUE);
+    error_log("kp mepr: seen_post=$tmp_arr");
+
         if($len<10)
         {
-            // This user has seen less than 10 articles
-            if(!in_array($current_id, $seen_post))
-            {
-                array_push($seen_post,$current_id);
-                $time=$_COOKIE['free_article_duration'];
-                @setcookie('free_article', json_encode($seen_post),$time , "/");
-            }
+//            // This user has seen less than 10 articles
+//            if(!in_array($current_id, $seen_post))
+//            {
+//                array_push($seen_post,$current_id);
+//                $time=$_COOKIE['free_article_duration'];
+//                setcookie('free_article', json_encode($seen_post),$time , "/");
+//            }
+            $protect = 0;
         }
         else
         {
@@ -470,23 +479,99 @@ function kp_mepr_override_protection($protect, $uri, $delim)
             $protect = 1;
         }
     }
+//    else
+//    {
+//        // New cookie. First time anonymous user.
+//        $time=time() + (86400 * 7);
+//        $post_seen=array($current_id);
+//        setcookie('free_article', json_encode($post_seen),$time , "/");
+//        setcookie('free_article_duration', $time,$time , "/");
+//
+//        // This user has not seen ANY articles
+//        $protect = 0;
+//    }
+
+    // Default is to leave the protect as-is
+    error_log("kp mepr: Leaving with protect=$protect");
+
+    return $protect;
+}
+
+add_filter('mepr-pre-run-rule-content', 'kp_mepr_override_protection', 10, 3);
+
+//////////////////////////////////////////////////////////////////
+//
+// Testing function by Kervin Pierre.  Please do NOT modify
+//
+//////////////////////////////////////////////////////////////////
+function kp_mepr_override_protection_init()
+{
+    error_log('kp init');
+
+    // Check for VIP articles
+    if( has_tag( 'vip' ) )
+    {
+        // VIP article, don't change the protection
+        error_log("kp init. VIP tag.");
+        return;
+    }
+
+    // if it's not a single, we leave it alone
+    if(!is_single())
+    {
+        error_log("kp init. not single");
+        return;
+    }
+
+    // Get the current user
+    $user = MeprUtils::get_currentuserinfo();
+    if($user)
+    {
+        // We have a user, so we will let MP handle it
+        error_log("kp init. user:".print_r($user, TRUE));
+        return;
+    }
+
+    // Get the POST id
+    global $post;
+    $current_id = $post->ID;
+
+    error_log("kp init. Entering COOKIE=".print_r($_COOKIE, TRUE));
+
+    if(isset($_COOKIE['free_article']))
+    {
+
+        // We have a return user
+        $seen_post = json_decode($_COOKIE['free_article']);
+        $len       = count($seen_post);
+
+        if($len<10)
+        {
+            // This user has seen less than 10 articles
+            if(!in_array($current_id, $seen_post))
+            {
+                array_push($seen_post,$current_id);
+                $time=$_COOKIE['free_article_duration'];
+                setcookie('free_article', json_encode($seen_post),$time , "/");
+            }
+        }
+    }
     else
     {
         // New cookie. First time anonymous user.
         $time=time() + (86400 * 7);
         $post_seen=array($current_id);
-        @setcookie('free_article', json_encode($post_seen),$time , "/");
-        @setcookie('free_article_duration', $time,$time , "/");
+        setcookie('free_article', json_encode($post_seen),$time , "/");
+        setcookie('free_article_duration', $time,$time , "/");
 
         // This user has not seen ANY articles
         $protect = 0;
     }
 
-    // Default is to leave the protect as-is
-    return $protect;
+    error_log("kp init. Leaving COOKIE=".print_r($_COOKIE, TRUE));
 }
 
-add_filter('mepr-pre-run-rule-content', 'kp_mepr_override_protection', 10, 3);
+add_filter('wp', 'kp_mepr_override_protection_init', 1, 0);
 
 add_filter('display_posts_shortcode_output','new_format_for_premium',10,11);
 function new_format_for_premium($output, $original_atts, $image, $title, $date, $excerpt, $inner_wrapper, $content, $class, $author, $category_display_text){
