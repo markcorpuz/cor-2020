@@ -8,6 +8,9 @@
  * @license      GPL-2.0+
 **/
 
+global $kp_mepr_free_article;
+global $kp_mepr_free_article_duration;
+
 /*
 BEFORE MODIFYING THIS THEME:
 Please read the instructions here (private repo): https://github.com/billerickson/EA-Starter/wiki
@@ -363,66 +366,17 @@ function urc_google_tag_manager_no_js() {
 
 }
 
-
-/**
- * Memberpress related scripts added by Connor / Meera
- * 
- */
-
-function mepr_override_redirection_protection($protect, $uri, $delim) {
-
-	if (! has_tag( 'vip' ) ) {
-			$protect=0;
-		}
-
-   if(is_single()){
-   	global $post; 
-    $user = MeprUtils::get_currentuserinfo();
-    $free_article = $_SERVER['REMOTE_ADDR'];
-    if($user === false) { 
-    	$current_id = $post->ID;
-    	$free_articles = get_option("$free_article");
-    	
-    	if(!($free_articles)){
-    		$post_seen=array($current_id);
-    		update_option($free_article,$post_seen);
-    		update_option($free_article."_time",time());
-    	}else{
-    		$free_articles = get_option($free_article);
-    		$now = time(); // or your date as well
-			$your_date = get_option($free_article."_time");
-			$datediff = $now - $your_date;
-			$lmt = round($datediff / (60 * 60 * 24));
-			if($lmt >= 7){
-				delete_option($free_articles);
-				delete_option($free_article."_time");
-			}
-    		if(count($free_articles) < 10){
-    			if(!in_array($current_id, $free_articles)){
-					array_push($free_articles,$current_id);
-					update_option($free_article,$free_articles);
-
-				}
-    		}else{
-    			$protect = 1;
-    		}
-    	}
-
- 
- 		}
-	}
-    
-    return $protect;
-}
-
 //////////////////////////////////////////////////////////////////
 //
-// Testing function by Kervin Pierre.  Please do NOT modify
+// Override the memberpress rules sometimes.
 //
 //////////////////////////////////////////////////////////////////
 function kp_mepr_override_protection($protect, $uri, $delim)
 {
     error_log("kp mepr:");
+
+    global $kp_mepr_free_article;
+    global $kp_mepr_free_article_duration;
 
     // Check for VIP articles
     if( has_tag( 'vip' ) )
@@ -450,27 +404,19 @@ function kp_mepr_override_protection($protect, $uri, $delim)
     global $post;
     $current_id = $post->ID;
 
-    // Read the cookie
-    if(isset($_COOKIE['free_article']))
+    // Check the article count
+    if(is_array($kp_mepr_free_article))
     {
         // We have a return user
-        $seen_post = json_decode($_COOKIE['free_article']);
+        $seen_post = $kp_mepr_free_article;
         $len       = count($seen_post);
 
     error_log("kp mepr: len      =$len");
-    error_log("kp mepr: cookie seen_post=".$_COOKIE['free_article']);
     $tmp_arr = print_r($seen_post, TRUE);
     error_log("kp mepr: seen_post=$tmp_arr");
 
         if($len<10)
         {
-//            // This user has seen less than 10 articles
-//            if(!in_array($current_id, $seen_post))
-//            {
-//                array_push($seen_post,$current_id);
-//                $time=$_COOKIE['free_article_duration'];
-//                setcookie('free_article', json_encode($seen_post),$time , "/");
-//            }
             $protect = 0;
         }
         else
@@ -479,17 +425,11 @@ function kp_mepr_override_protection($protect, $uri, $delim)
             $protect = 1;
         }
     }
-//    else
-//    {
-//        // New cookie. First time anonymous user.
-//        $time=time() + (86400 * 7);
-//        $post_seen=array($current_id);
-//        setcookie('free_article', json_encode($post_seen),$time , "/");
-//        setcookie('free_article_duration', $time,$time , "/");
-//
-//        // This user has not seen ANY articles
-//        $protect = 0;
-//    }
+    else
+    {
+        // This user doesn't have any free article data
+        error_log('kp mepr: kp_mepr_free_article not set');
+    }
 
     // Default is to leave the protect as-is
     error_log("kp mepr: Leaving with protect=$protect");
@@ -499,14 +439,12 @@ function kp_mepr_override_protection($protect, $uri, $delim)
 
 add_filter('mepr-pre-run-rule-content', 'kp_mepr_override_protection', 10, 3);
 
-//////////////////////////////////////////////////////////////////
-//
-// Testing function by Kervin Pierre.  Please do NOT modify
-//
-//////////////////////////////////////////////////////////////////
 function kp_mepr_override_protection_init()
 {
     error_log('kp init');
+
+    global $kp_mepr_free_article;
+    global $kp_mepr_free_article_duration;
 
     // Check for VIP articles
     if( has_tag( 'vip' ) )
@@ -540,9 +478,16 @@ function kp_mepr_override_protection_init()
 
     if(isset($_COOKIE['free_article']))
     {
+        error_log("kp init. cookie is set.");
+
+        $kp_mepr_free_article  = json_decode($_COOKIE['free_article']);
+        if(isset($_COOKIE['free_article_duration']))
+        {
+            $kp_mepr_free_article_duration  = $_COOKIE['free_article_duration'];
+        }
 
         // We have a return user
-        $seen_post = json_decode($_COOKIE['free_article']);
+        $seen_post = $kp_mepr_free_article;
         $len       = count($seen_post);
 
         if($len<10)
@@ -551,7 +496,7 @@ function kp_mepr_override_protection_init()
             if(!in_array($current_id, $seen_post))
             {
                 array_push($seen_post,$current_id);
-                $time=$_COOKIE['free_article_duration'];
+                $time=$kp_mepr_free_article_duration;
                 setcookie('free_article', json_encode($seen_post),$time , "/");
             }
         }
@@ -559,13 +504,15 @@ function kp_mepr_override_protection_init()
     else
     {
         // New cookie. First time anonymous user.
+        error_log("kp init. Creating new cookie.");
         $time=time() + (86400 * 7);
         $post_seen=array($current_id);
+
+        $kp_mepr_free_article          = $post_seen;
+        $kp_mepr_free_article_duration = $time;
+
         setcookie('free_article', json_encode($post_seen),$time , "/");
         setcookie('free_article_duration', $time,$time , "/");
-
-        // This user has not seen ANY articles
-        $protect = 0;
     }
 
     error_log("kp init. Leaving COOKIE=".print_r($_COOKIE, TRUE));
