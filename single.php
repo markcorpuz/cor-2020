@@ -9,6 +9,7 @@
 **/
 
 // Entry category in header
+add_action( 'genesis_entry_header', 'setup_premium', 8 );
 add_action( 'genesis_entry_header', 'setup_be_overline', 8 );
 add_action( 'genesis_entry_header', 'setup_be_dateauthor', 12 );
 add_action( 'genesis_entry_header', 'ea_entry_header_share', 13 );
@@ -20,6 +21,14 @@ add_action( 'genesis_entry_header', 'ea_entry_header_share', 13 );
 function ea_entry_header_share() {
 	do_action( 'ea_entry_header_share' );
 }
+
+function setup_premium() {
+	if ( has_tag( 'vip' ) ) {
+			echo '<span class="badge badge-primary">Premium</span>';
+		}
+
+}
+
 
 /**
  * After Entry
@@ -41,6 +50,7 @@ function ea_single_after_entry() {
 	genesis_do_author_box_single();
 }
 add_action( 'genesis_after_entry', 'ea_single_after_entry', 8 );
+
 remove_action( 'genesis_before_loop', 'genesis_do_breadcrumbs' );
 remove_action( 'genesis_after_entry', 'genesis_do_author_box_single', 8 );
 
