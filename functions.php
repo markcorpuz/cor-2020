@@ -4,7 +4,7 @@
  *
  * @package      EAGenesisChild
  * @author       Bill Erickson
- * @since        1.1.0
+ * @since        1.0.0
  * @license      GPL-2.0+
 **/
 
@@ -20,6 +20,7 @@ Devs, contact me if you need access
  */
 if ( ! isset( $content_width ) )
     $content_width = 768;
+
 
 /**
  * Global enqueues
@@ -44,7 +45,7 @@ function ea_global_enqueues() {
 
 	// css
 	wp_dequeue_style( 'child-theme' );
-	//wp_enqueue_style( 'ea-fonts', setup_be_theme_fonts_url() );
+	wp_enqueue_style( 'ea-fonts', setup_be_theme_fonts_url() );
 	wp_enqueue_style( 'ea-style', get_stylesheet_directory_uri() . '/assets/css/main.css', array(), filemtime( get_stylesheet_directory() . '/assets/css/main.css' ) );
 }
 add_action( 'wp_enqueue_scripts', 'ea_global_enqueues' );
@@ -57,7 +58,7 @@ function ea_enqueue_noncritical_css() {
 	wp_enqueue_style( 'wp-block-library' );
 	wp_enqueue_style( 'ea-critical' );
 	wp_enqueue_style( 'ea-style' );
-	//wp_enqueue_style( 'ea-fonts' );
+	wp_enqueue_style( 'ea-fonts' );
 }
 
 /**
@@ -65,7 +66,7 @@ function ea_enqueue_noncritical_css() {
  *
  */
 function ea_gutenberg_scripts() {
-	//wp_enqueue_style( 'ea-fonts', setup_be_theme_fonts_url() );
+	wp_enqueue_style( 'ea-fonts', setup_be_theme_fonts_url() );
 	wp_enqueue_script( 'ea-editor', get_stylesheet_directory_uri() . '/assets/js/editor.js', array( 'wp-blocks', 'wp-dom' ), filemtime( get_stylesheet_directory() . '/assets/js/editor.js' ), true );
 }
 add_action( 'enqueue_block_editor_assets', 'ea_gutenberg_scripts' );
@@ -301,6 +302,24 @@ function urc_google_tag_manager_js() {
 
 	<script data-ad-client="ca-pub-0947746501358966" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	                                
+	<!-- Facebook Pixel Code -->
+	<script>
+	  !function(f,b,e,v,n,t,s)
+	  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+	  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+	  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+	  n.queue=[];t=b.createElement(e);t.async=!0;
+	  t.src=v;s=b.getElementsByTagName(e)[0];
+	  s.parentNode.insertBefore(t,s)}(window, document,'script',
+	  'https://connect.facebook.net/en_US/fbevents.js');
+	  fbq('init', '342285032648063');
+	  fbq('track', 'PageView');
+	</script>
+	<noscript><img height="1" width="1" style="display:none"
+	  src="https://www.facebook.com/tr?id=342285032648063&ev=PageView&noscript=1"
+	/></noscript>
+	<!-- End Facebook Pixel Code -->
+
 	<!-- Google Tag Manager -->
 	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -319,7 +338,7 @@ function urc_google_tag_manager_js() {
  * 
  */
 
-add_action( 'genesis_before', 'urc_google_tag_manager_no_js', 1 );
+//add_action( 'genesis_before', 'urc_google_tag_manager_no_js', 1 );
 function urc_google_tag_manager_no_js() {
 
 	?>
@@ -350,7 +369,6 @@ function urc_google_tag_manager_no_js() {
  * 
  */
 
-add_filter('mepr-pre-run-rule-content', 'mepr_override_redirection_protection', 11, 3);
 function mepr_override_redirection_protection($protect, $uri, $delim) {
 
 	if (! has_tag( 'vip' ) ) {
@@ -360,36 +378,115 @@ function mepr_override_redirection_protection($protect, $uri, $delim) {
    if(is_single()){
    	global $post; 
     $user = MeprUtils::get_currentuserinfo();
+    $free_article = $_SERVER['REMOTE_ADDR'];
     if($user === false) { 
     	$current_id = $post->ID;
-    	if(!isset($_COOKIE['free_article'])) {
-    		$time=time() + (86400 * 7);
-    		 $post_seen=array($current_id);
-    		 setcookie('free_article', json_encode($post_seen),$time , "/");
-    		 setcookie('free_article_duration', $time,$time , "/");
-    			
-		} else {
-			$seen_post= json_decode($_COOKIE['free_article']);
-			$len= count($seen_post);
-			if($len<2){
-
-				if(!in_array($current_id, $seen_post)){
-
-						array_push($seen_post,$current_id);
-						$time=$_COOKIE['free_article_duration'];
-						setcookie('free_article', json_encode($seen_post),$time , "/");
-
-					}
-
-				} else {
-					$protect=1;
-				}
+    	$free_articles = get_option("$free_article");
+    	
+    	if(!($free_articles)){
+    		$post_seen=array($current_id);
+    		update_option($free_article,$post_seen);
+    		update_option($free_article."_time",time());
+    	}else{
+    		$free_articles = get_option($free_article);
+    		$now = time(); // or your date as well
+			$your_date = get_option($free_article."_time");
+			$datediff = $now - $your_date;
+			$lmt = round($datediff / (60 * 60 * 24));
+			if($lmt >= 7){
+				delete_option($free_articles);
+				delete_option($free_article."_time");
 			}
+    		if(count($free_articles) < 10){
+    			if(!in_array($current_id, $free_articles)){
+					array_push($free_articles,$current_id);
+					update_option($free_article,$free_articles);
+
+				}
+    		}else{
+    			$protect = 1;
+    		}
+    	}
+
+ 
  		}
 	}
     
     return $protect;
 }
+
+//////////////////////////////////////////////////////////////////
+//
+// Testing function by Kervin Pierre.  Please do NOT modify
+//
+//////////////////////////////////////////////////////////////////
+function kp_mepr_override_protection($protect, $uri, $delim)
+{
+    // Check for VIP articles
+    if( has_tag( 'vip' ) )
+    {
+        // VIP article, don't change the protection
+        return $protect;
+    }
+   
+    // if it's not a single, we leave it alone
+    if(!is_single())
+    {
+        return $protect;
+    }
+
+    // Get the current user
+    $user = MeprUtils::get_currentuserinfo();
+    if($user)
+    {
+        // We have a user, so we will let MP handle it
+        return $protect;
+    }
+
+    // Get the POST id
+    global $post;
+    $current_id = $post->ID;
+
+    // Read the cookie
+    if(isset($_COOKIE['free_article']))
+    {
+        // We have a return user
+        $seen_post = json_decode($_COOKIE['free_article']);
+        $len       = count($seen_post);
+
+        if($len<10)
+        {
+            // This user has seen less than 10 articles
+            if(!in_array($current_id, $seen_post))
+            {
+                array_push($seen_post,$current_id);
+                $time=$_COOKIE['free_article_duration'];
+                @setcookie('free_article', json_encode($seen_post),$time , "/");
+            }
+        }
+        else
+        {
+            // This user has seen 10 articles
+            $protect = 1;
+        }
+    }
+    else
+    {
+        // New cookie. First time anonymous user.
+        $time=time() + (86400 * 7);
+        $post_seen=array($current_id);
+        @setcookie('free_article', json_encode($post_seen),$time , "/");
+        @setcookie('free_article_duration', $time,$time , "/");
+
+        // This user has not seen ANY articles
+        $protect = 0;
+    }
+
+    // Default is to leave the protect as-is
+    return $protect;
+}
+
+add_filter('mepr-pre-run-rule-content', 'kp_mepr_override_protection', 10, 3);
 
 add_filter('display_posts_shortcode_output','new_format_for_premium',10,11);
 function new_format_for_premium($output, $original_atts, $image, $title, $date, $excerpt, $inner_wrapper, $content, $class, $author, $category_display_text){
