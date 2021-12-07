@@ -14,12 +14,3 @@ remove_action( 'genesis_before_loop', 'genesis_do_breadcrumbs' );
 
 
 genesis();
-if(get_the_ID()=="57452"){ ?>
-<script type="text/javascript">
-	jQuery( document ).ready(function() {
-		jQuery('.module').css('display','none');
-   
-});
-</script>
-<?php
-}
