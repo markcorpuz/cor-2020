@@ -24,7 +24,6 @@ Devs, contact me if you need access
 if ( ! isset( $content_width ) )
     $content_width = 768;
 
-
 /**
  * Global enqueues
  *
@@ -295,14 +294,14 @@ add_filter( 'template_include', 'ea_template_hierarchy' );
  */
 
 // Add Google Tag Manager code in <head>
-add_action( 'wp_head', 'google_tag_manager_head' );
+add_action( 'wp_head', 'google_tag_manager_head', -1000 );
 function google_tag_manager_head() { ?>
 	
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+'https://www.googletagmanager.com/gtm.js?id='+i+dl+ '<?php echo UNDREL_GTM_VAR;?>';f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-WQFDBGR');</script>
 <!-- End Google Tag Manager -->
 
@@ -313,7 +312,7 @@ add_action( 'genesis_before', 'google_tag_manager_body' );
 function google_tag_manager_body() { ?>
 	
 <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WQFDBGR"
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WQFDBGR<?php echo UNDREL_GTM_VAR;?>"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
@@ -327,7 +326,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 //////////////////////////////////////////////////////////////////
 function kp_mepr_override_protection($protect, $uri, $delim)
 {
-    error_log("kp mepr:");
+    //error_log("kp mepr:");
 
     global $kp_mepr_free_article;
     global $kp_mepr_free_article_duration;
@@ -342,7 +341,7 @@ function kp_mepr_override_protection($protect, $uri, $delim)
     // if it's not a single, we leave it alone
     if(!is_single())
     {
-        error_log("kp mepr: not single");
+        //error_log("kp mepr: not single");
         return $protect;
     }
 
@@ -365,9 +364,9 @@ function kp_mepr_override_protection($protect, $uri, $delim)
         $seen_post = $kp_mepr_free_article;
         $len       = count($seen_post);
 
-    error_log("kp mepr: len      =$len");
-    $tmp_arr = print_r($seen_post, TRUE);
-    error_log("kp mepr: seen_post=$tmp_arr");
+    //error_log("kp mepr: len      =$len");
+    //$tmp_arr = print_r($seen_post, TRUE);
+    //error_log("kp mepr: seen_post=$tmp_arr");
 
         if($len<10)
         {
@@ -382,11 +381,11 @@ function kp_mepr_override_protection($protect, $uri, $delim)
     else
     {
         // This user doesn't have any free article data
-        error_log('kp mepr: kp_mepr_free_article not set');
+        //error_log('kp mepr: kp_mepr_free_article not set');
     }
 
     // Default is to leave the protect as-is
-    error_log("kp mepr: Leaving with protect=$protect");
+    //error_log("kp mepr: Leaving with protect=$protect");
 
     return $protect;
 }
@@ -395,7 +394,7 @@ add_filter('mepr-pre-run-rule-content', 'kp_mepr_override_protection', 10, 3);
 
 function kp_mepr_override_protection_init()
 {
-    error_log('kp init');
+    //error_log('kp init');
 
     global $kp_mepr_free_article;
     global $kp_mepr_free_article_duration;
@@ -404,14 +403,14 @@ function kp_mepr_override_protection_init()
     if( has_tag( 'vip' ) )
     {
         // VIP article, don't change the protection
-        error_log("kp init. VIP tag.");
+        //error_log("kp init. VIP tag.");
         return;
     }
 
     // if it's not a single, we leave it alone
     if(!is_single())
     {
-        error_log("kp init. not single");
+        //error_log("kp init. not single");
         return;
     }
 
@@ -420,7 +419,7 @@ function kp_mepr_override_protection_init()
     if($user)
     {
         // We have a user, so we will let MP handle it
-        error_log("kp init. user:".print_r($user, TRUE));
+        //error_log("kp init. user:".print_r($user, TRUE));
         return;
     }
 
@@ -428,11 +427,11 @@ function kp_mepr_override_protection_init()
     global $post;
     $current_id = $post->ID;
 
-    error_log("kp init. Entering COOKIE=".print_r($_COOKIE, TRUE));
+    //error_log("kp init. Entering COOKIE=".print_r($_COOKIE, TRUE));
 
     if(isset($_COOKIE['free_article']))
     {
-        error_log("kp init. cookie is set.");
+        //error_log("kp init. cookie is set.");
 
         $kp_mepr_free_article  = json_decode($_COOKIE['free_article']);
         if(isset($_COOKIE['free_article_duration']))
@@ -458,7 +457,7 @@ function kp_mepr_override_protection_init()
     else
     {
         // New cookie. First time anonymous user.
-        error_log("kp init. Creating new cookie.");
+        //error_log("kp init. Creating new cookie.");
         $time=time() + (86400 * 7);
         $post_seen=array($current_id);
 
@@ -469,7 +468,7 @@ function kp_mepr_override_protection_init()
         setcookie('free_article_duration', $time,$time , "/");
     }
 
-    error_log("kp init. Leaving COOKIE=".print_r($_COOKIE, TRUE));
+    //error_log("kp init. Leaving COOKIE=".print_r($_COOKIE, TRUE));
 }
 
 add_filter('wp', 'kp_mepr_override_protection_init', 1, 0);

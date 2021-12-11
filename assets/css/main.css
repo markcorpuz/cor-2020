@@ -1449,7 +1449,7 @@ div.wpforms-container.one-line:after {
   background-color: #3768A0;
 }
 .site-header .wrap {
-  background-image: url(../images/siteheader2x.jpg);
+  background-image: url(../images/siteheader2x.jpg.webp);
   background-size: 1200px;
   background-position: top;
   min-height: 199px;
@@ -1497,7 +1497,7 @@ div.wpforms-container.one-line:after {
 }
 .title-area h1.site-title a,
 .title-area p.site-title a {
-  background: url(../images/sprites2x.png) no-repeat -20px -18px;
+  background: url(../images/sprites2x.webp) no-repeat -20px -18px;
   background-size: 1000px;
   width: 291px;
   height: 75px;
@@ -6130,7 +6130,7 @@ ul.twelve-grid, ul.eight-grid, ul.sixth-grid, ul.fifth-grid, ul.fourth-grid, ul.
 }
 
 .st_desktop_donate_pop .item-pic {
-  background-image: url(../images/sprites.png);
+  background-image: url(../images/sprites.webp);
   background-position: -236px -157px;
   background-repeat: no-repeat;
   width: 200px;
@@ -6139,7 +6139,7 @@ ul.twelve-grid, ul.eight-grid, ul.sixth-grid, ul.fifth-grid, ul.fourth-grid, ul.
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .st_desktop_donate_pop .item-pic {
-    background-image: url(../images/sprites2x.png);
+    background-image: url(../images/sprites2x.webp);
     background-size: 1000px;
   }
 }
@@ -6147,13 +6147,13 @@ ul.twelve-grid, ul.eight-grid, ul.sixth-grid, ul.fifth-grid, ul.fourth-grid, ul.
 .st-desktop-cta-donate,
 .st-desktop-cta-book,
 .st-desktop-cta-product {
-  background-image: url(../images/sprites.png);
+  background-image: url(../images/sprites.webp);
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .st-desktop-cta-donate,
 .st-desktop-cta-book,
 .st-desktop-cta-product {
-    background-image: url(../images/sprites2x.png);
+    background-image: url(../images/sprites2x.webp);
     background-size: 1000px;
   }
 }
@@ -6321,7 +6321,7 @@ ul.twelve-grid, ul.eight-grid, ul.sixth-grid, ul.fifth-grid, ul.fourth-grid, ul.
 }
 
 .item-pic.pic-paypal {
-  background-image: url(../images/sprites.png);
+  background-image: url(../images/sprites.webp);
   background-position: -238px -154px;
   background-repeat: no-repeat;
   width: 197px;
@@ -6330,13 +6330,13 @@ ul.twelve-grid, ul.eight-grid, ul.sixth-grid, ul.fifth-grid, ul.fourth-grid, ul.
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .item-pic.pic-paypal {
-    background-image: url(../images/sprites2x.png);
+    background-image: url(../images/sprites2x.webp);
     background-size: 1000px;
   }
 }
 
 .item-pic.pic-ebook {
-  background-image: url(../images/sprites.png);
+  background-image: url(../images/sprites.webp);
   background-position: -22px -699px;
   background-repeat: no-repeat;
   width: 102px;
@@ -6345,7 +6345,7 @@ ul.twelve-grid, ul.eight-grid, ul.sixth-grid, ul.fifth-grid, ul.fourth-grid, ul.
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .item-pic.pic-ebook {
-    background-image: url(../images/sprites2x.png);
+    background-image: url(../images/sprites2x.webp);
     background-size: 1000px;
   }
 }
@@ -6356,7 +6356,7 @@ ul.twelve-grid, ul.eight-grid, ul.sixth-grid, ul.fifth-grid, ul.fourth-grid, ul.
 }
 
 .item-icon {
-  background-image: url(../images/sprites.png);
+  background-image: url(../images/sprites.webp);
   background-repeat: no-repeat;
   width: 32px;
   height: 32px;
@@ -6364,7 +6364,7 @@ ul.twelve-grid, ul.eight-grid, ul.sixth-grid, ul.fifth-grid, ul.fourth-grid, ul.
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .item-icon {
-    background-image: url(../images/sprites2x.png);
+    background-image: url(../images/sprites2x.webp);
     background-size: 1000px;
   }
 }
@@ -6426,13 +6426,13 @@ ul.twelve-grid, ul.eight-grid, ul.sixth-grid, ul.fifth-grid, ul.fourth-grid, ul.
 }
 
 .item-icon-bar {
-  background-image: url(../images/sprites.png);
+  background-image: url(../images/sprites.webp);
   background-repeat: no-repeat;
   display: block;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .item-icon-bar {
-    background-image: url(../images/sprites2x.png);
+    background-image: url(../images/sprites2x.webp);
     background-size: 1000px;
   }
 }
@@ -6530,7 +6530,7 @@ body .soliloquy-fc-slider .soliloquy-caption-inside .soliloquy-fc-title-link {
 }
 
 .ui-icon-triangle-1-e, .ui-icon-triangle-1-s {
-  background-image: url(../images/sprites.png);
+  background-image: url(../images/sprites.webp);
   background-repeat: no-repeat;
   display: inline-block;
   margin-right: 5px;
@@ -6628,7 +6628,7 @@ body .soliloquy-fc-slider .soliloquy-caption-inside .soliloquy-fc-title-link {
 }
 
 .item-subscribe .photo {
-  background-image: url(../images/pic-subscribe-180303.png);
+  background-image: url(../images/pic-subscribe-180303.png.webp);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -7051,13 +7051,13 @@ body .soliloquy-fc-slider .soliloquy-caption-inside .soliloquy-fc-title-link {
 
 /* BASE_230 | ITEM | 2801_COR | ITEM-CTA - /item/2801_cor/item-cta-2021.scss 2021-08-03 */
 .cta-teespring, .cta-lulu, .cta-kindle, .cta-itunes, .cta-ibooks, .cta-audible-large, .cta-audible, .cta-paypal, .cta-amazon-large, .cta-amazon, .cta-donate-paypalbutton, .cta-buy-paypalbutton, .cta-donate-icon, .cta-donate, .cta-bookuniversal, .cta-bookcombined, .cta-merchandise, .cta-bookaudio-amazon, .cta-bookaudio-icon, .cta-book3audio, .cta-book2audio, .cta-bookaudio, .cta-bookebook-amazon, .cta-bookebook-icon, .cta-book3ebook, .cta-book2ebook, .cta-bookebook, .cta-bookpaperback-amazon, .cta-bookpaperback-icon, .cta-book3paperback, .cta-book2paperback, .cta-bookpaperback, .cta-coachingemail-icon, .cta-coachingemail, .cta-coachingphone-icon, .cta-coachingphone, .cta-box {
-  background-image: url(../images/sprites.png);
+  background-image: url(../images/sprites.web);
   background-repeat: no-repeat;
   display: block;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .cta-teespring, .cta-lulu, .cta-kindle, .cta-itunes, .cta-ibooks, .cta-audible-large, .cta-audible, .cta-paypal, .cta-amazon-large, .cta-amazon, .cta-donate-paypalbutton, .cta-buy-paypalbutton, .cta-donate-icon, .cta-donate, .cta-bookuniversal, .cta-bookcombined, .cta-merchandise, .cta-bookaudio-amazon, .cta-bookaudio-icon, .cta-book3audio, .cta-book2audio, .cta-bookaudio, .cta-bookebook-amazon, .cta-bookebook-icon, .cta-book3ebook, .cta-book2ebook, .cta-bookebook, .cta-bookpaperback-amazon, .cta-bookpaperback-icon, .cta-book3paperback, .cta-book2paperback, .cta-bookpaperback, .cta-coachingemail-icon, .cta-coachingemail, .cta-coachingphone-icon, .cta-coachingphone, .cta-box {
-    background-image: url(../images/sprites2x.png);
+    background-image: url(../images/sprites2x.webp);
     background-size: 1000px;
   }
 }
@@ -7267,13 +7267,13 @@ body .soliloquy-fc-slider .soliloquy-caption-inside .soliloquy-fc-title-link {
 
 /* BASE_227 | ITEM | 227_CORMAIN | ITEM-ICON - 2016-06-09 */
 .icon-arrowright {
-  background-image: url(../images/sprites.png);
+  background-image: url(../images/sprites.webp);
   background-repeat: no-repeat;
   display: block;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .icon-arrowright {
-    background-image: url(../images/sprites2x.png);
+    background-image: url(../images/sprites2x.webp);
     background-size: 1000px;
   }
 }
