@@ -1,5 +1,143 @@
 <?php
-/**
+
+
+	// ++++++++++++++++++++++++++++ OTEC ================================
+
+	// remove trash from wp_head
+
+	add_filter( 'wp_default_scripts', 'remove_jquery_migrate' );
+	function remove_jquery_migrate( &$scripts){
+		if(!is_admin()){
+			$scripts->remove( 'jquery' );
+//			$scripts->add( 'jquery', false, array( 'jquery-core' ), '1.2.1' );
+		}
+	}
+
+	remove_action( 'wp_head', 'wp_generator' );
+	remove_action( 'wp_head', 'wlwmanifest_link' );
+	remove_action( 'wp_head', 'rsd_link' );
+	remove_action('wp_head', 'wp_shortlink_wp_head');
+	remove_action('wp_head','adjacent_posts_rel_link_wp_head');
+	remove_action('wp_head','feed_links_extra', 3);
+	remove_action('xmlrpc_rsd_apis', 'rest_output_rsd');
+	remove_action( 'wp_head', 'wp_oembed_add_discovery_links' );
+	remove_action( 'wp_head', 'wp_oembed_add_host_js');
+	remove_action('wp_head', 'print_emoji_detection_script', 7);
+	remove_action('wp_print_styles', 'print_emoji_styles');
+	remove_action( 'wp_head', 'wp_resource_hints', 2 );
+
+
+	if( 'Disable REST API' ){
+//		add_filter( 'rest_enabled', '__return_false' );
+		remove_action( 'xmlrpc_rsd_apis', 'rest_output_rsd' );
+		remove_action( 'wp_head', 'rest_output_link_wp_head', 10 );
+		remove_action( 'template_redirect', 'rest_output_link_header', 11 );
+		remove_action( 'auth_cookie_malformed', 'rest_cookie_collect_status' );
+		remove_action( 'auth_cookie_expired', 'rest_cookie_collect_status' );
+		remove_action( 'auth_cookie_bad_username', 'rest_cookie_collect_status' );
+		remove_action( 'auth_cookie_bad_hash', 'rest_cookie_collect_status' );
+		remove_action( 'auth_cookie_valid', 'rest_cookie_collect_status' );
+		remove_filter( 'rest_authentication_errors', 'rest_cookie_check_errors', 100 );
+
+		// if enable yoast master not work
+//		remove_action( 'init', 'rest_api_init' );
+//		remove_action( 'parse_request', 'rest_api_loaded' );
+
+		remove_action( 'rest_api_init', 'rest_api_default_filters', 10 );
+		remove_action( 'rest_api_init', 'wp_oembed_register_route'              );
+		remove_filter( 'rest_pre_serve_request', '_oembed_rest_pre_serve_request', 10 );
+		remove_action( 'wp_head', 'wp_oembed_add_discovery_links' );
+		remove_action( 'wp_head', 'wp_oembed_add_host_js' );
+	}
+
+	add_filter( 'term_description', 'shortcode_unautop');
+	add_filter( 'term_description', 'do_shortcode' );
+
+	function wpassist_remove_block_library_css(){
+		wp_dequeue_style( 'wp-block-library' );
+	}
+	add_action( 'wp_enqueue_scripts', 'wpassist_remove_block_library_css' );
+
+// end of remove trash from wp_head
+
+
+	function remove_unused_styles (){
+//		if ( is_page(17284) ){
+		if ( is_front_page() ){
+			wp_dequeue_style( 'mp-theme' );
+			wp_dequeue_style( 'mp-login-css' );
+			wp_dequeue_style( 'mp-account-css' );
+			wp_deregister_style('mepr-jquery-ui-smoothness');
+			wp_dequeue_style('mepr-jquery-ui-smoothness');
+			wp_deregister_style( 'dashicons' );
+			wp_deregister_style('mp-account-css');
+			wp_dequeue_style( 'mp-signup' );
+			wp_dequeue_style( 'mepr-zxcvbn-css' );
+			wp_dequeue_style( 'mp-plans-css' );
+//			echo 'remove_unused_styles8';
+		}
+	}
+//	add_action( 'wp_enqueue_scripts', 'remove_unused_styles');
+
+
+
+
+//	add_action( 'wp_print_scripts', 'de_script', 100 );
+	function de_script() {
+		wp_dequeue_script( 'jquery' );
+		wp_deregister_script( 'jquery' );
+	}
+
+
+//	wp_enqueue_script( 'my-script', get_template_directory_uri() . '/js/my-script.js' );
+//	add_filter( 'script_loader_tag', 'defer_my_script', 10, 3 );
+	function defer_my_script( $tag, $handle, $src ) {
+		if ( 'my-script' === $handle ) {
+			return str_replace( ' src', ' defer src', $tag );
+		}
+		return $tag;
+	}
+
+
+
+
+//	add_filter( 'script_loader_tag', 'wsds_defer_scripts', 10, 3 );
+	function wsds_defer_scripts( $tag, $handle, $src ) {
+		// The handles of the enqueued scripts we want to defer
+		$defer_scripts = array(
+			'jquery',
+			'underscore',
+			'regenerator-runtime',
+			'wp-polyfill',
+			'hooks',
+//			'et_monarch-custom-js',
+//			'wpshout-js-cookie-demo',
+//			'cookie',
+//			'wpshout-no-broken-image',
+//			'goodbye-captcha-public-script',
+//			'devicepx',
+//			'search-box-value',
+//			'page-min-height',
+//			'kamn-js-widget-easy-twitter-feed-widget',
+//			'__ytprefs__',
+//			'__ytprefsfitvids__',
+//			'jquery-migrate',
+//			'icegram',
+//			'disqus',
+		);
+		if ( in_array( $handle, $defer_scripts ) ) {
+			return '<script src="' . $src . '" defer="defer" type="text/javascript"></script>' . "\n";
+		}
+		return $tag;
+	}
+
+
+
+	// ++++++++++++++++++++++++++++ end OTEC ================================
+
+
+
+	/**
  * Functions
  *
  * @package      EAGenesisChild

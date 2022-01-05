@@ -23,8 +23,8 @@ function setup_be_site_footer() {
 
 	echo '<div class="module credit">';
 	echo '<div class="item info">Site Design by <a href="https://smarterwebpackages.com/">SmarterWebPackages.com</a></div>';
-	echo '<div class="item logo"><a href="https://smarterwebpackages.com/"><img src="' . get_stylesheet_directory_uri() . '/assets/images/brand-smarterwebpackages.png.webp" alt="SmarterWebPackages.com" width="130px" height="33px"></a>';
-	echo '</div>';
+ //  echo '<div class="item logo"><a href="https://smarterwebpackages.com/"><img src="' . get_stylesheet_directory_uri() . '/assets/images/brand-smarterwebpackages.png.webp" alt="SmarterWebPackages.com" width="130px" height="33px" loading="lazy"></a>';
+	//echo '</div>';
 
 }
 add_action( 'genesis_footer', 'setup_be_site_footer' );
