@@ -1,4 +1,4 @@
-/* COR-2021 | 1.0.10 | 211118 | assets/scss/main.scss
+/* COR-2021 | 1.0.11 | 220104 | assets/scss/main.scss
 // SETUP CHILD | 1.0.1 | 210715 | assets/scss/main.scss
 // SETUP-BE | 1.0.3 | 201017 | assets/scss/main.scss
 ---------------------------------------------------------------------------------------------------- */
@@ -1465,15 +1465,15 @@ div.wpforms-container.one-line:after {
 
 .title-area {
   /*
-  	.site-title a {
-  	  	background: url(../icons/logo.svg) no-repeat center;
-  	  	background-size: contain;
-  		display: block;
-  		text-indent: -9999em;
-  		width: 100%;
-  		height: 0;
-  		padding-bottom: 139px / 623px * 100%;
-  	}
+    .site-title a {
+        background: url(../icons/logo.svg) no-repeat center;
+        background-size: contain;
+      display: block;
+      text-indent: -9999em;
+      width: 100%;
+      height: 0;
+      padding-bottom: 139px / 623px * 100%;
+    }
   */
 }
 .title-area h1.site-title,
@@ -1497,8 +1497,11 @@ div.wpforms-container.one-line:after {
 }
 .title-area h1.site-title a,
 .title-area p.site-title a {
-  background: url(../images/sprites2x.png) no-repeat -20px -18px;
-  background-size: 1000px;
+  background: url(../images/brand-coreywayne-lifeisrelationships.png) no-repeat;
+  /*
+  background: url(../images/sprites2xred.png) no-repeat -20px -18px;
+  */
+  background-size: 291px;
   width: 291px;
   height: 75px;
   display: block;
@@ -2944,11 +2947,11 @@ ul.wp-block-gallery li, ol.wp-block-gallery li {
 .full-width-content .block-area > *,
 .content .block-area > * {
   /*
-  		&.alignfull {
-  			margin: calc( 2 * 16px ) calc(50% - 50vw);
-  			max-width: 100vw;
-  			width: 100vw;
-  		}
+      &.alignfull {
+        margin: calc( 2 * 16px ) calc(50% - 50vw);
+        max-width: 100vw;
+        width: 100vw;
+      }
   */
 }
 @media (max-width: 1071px) {
@@ -6130,7 +6133,9 @@ ul.twelve-grid, ul.eight-grid, ul.sixth-grid, ul.fifth-grid, ul.fourth-grid, ul.
 }
 
 .st_desktop_donate_pop .item-pic {
-  background-image: url(../images/sprites.png);
+  /*
+  background-image: url(../images/spritesred.png);
+  */
   background-position: -236px -157px;
   background-repeat: no-repeat;
   width: 200px;
@@ -6139,7 +6144,9 @@ ul.twelve-grid, ul.eight-grid, ul.sixth-grid, ul.fifth-grid, ul.fourth-grid, ul.
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .st_desktop_donate_pop .item-pic {
-    background-image: url(../images/sprites2x.png);
+    /*
+    background-image: url(../images/sprites2xred.png);
+    */
     background-size: 1000px;
   }
 }
@@ -6147,13 +6154,17 @@ ul.twelve-grid, ul.eight-grid, ul.sixth-grid, ul.fifth-grid, ul.fourth-grid, ul.
 .st-desktop-cta-donate,
 .st-desktop-cta-book,
 .st-desktop-cta-product {
-  background-image: url(../images/sprites.png);
+  /*
+  background-image: url(../images/spritesred.png);
+  */
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .st-desktop-cta-donate,
 .st-desktop-cta-book,
 .st-desktop-cta-product {
-    background-image: url(../images/sprites2x.png);
+    /*
+    background-image: url(../images/sprites2xred.png);
+    */
     background-size: 1000px;
   }
 }
@@ -6321,7 +6332,9 @@ ul.twelve-grid, ul.eight-grid, ul.sixth-grid, ul.fifth-grid, ul.fourth-grid, ul.
 }
 
 .item-pic.pic-paypal {
-  background-image: url(../images/sprites.png);
+  /*
+  background-image: url(../images/spritesred.png);
+  */
   background-position: -238px -154px;
   background-repeat: no-repeat;
   width: 197px;
@@ -6330,13 +6343,17 @@ ul.twelve-grid, ul.eight-grid, ul.sixth-grid, ul.fifth-grid, ul.fourth-grid, ul.
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .item-pic.pic-paypal {
-    background-image: url(../images/sprites2x.png);
+    /*
+    background-image: url(../images/sprites2xred.png);
+    */
     background-size: 1000px;
   }
 }
 
 .item-pic.pic-ebook {
-  background-image: url(../images/sprites.png);
+  /*
+  background-image: url(../images/spritesred.png);
+  */
   background-position: -22px -699px;
   background-repeat: no-repeat;
   width: 102px;
@@ -6345,7 +6362,9 @@ ul.twelve-grid, ul.eight-grid, ul.sixth-grid, ul.fifth-grid, ul.fourth-grid, ul.
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .item-pic.pic-ebook {
-    background-image: url(../images/sprites2x.png);
+    /*
+    background-image: url(../images/sprites2xred.png);
+    */
     background-size: 1000px;
   }
 }
@@ -6356,7 +6375,9 @@ ul.twelve-grid, ul.eight-grid, ul.sixth-grid, ul.fifth-grid, ul.fourth-grid, ul.
 }
 
 .item-icon {
-  background-image: url(../images/sprites.png);
+  /*
+  background-image: url(../images/spritesred.png);
+  */
   background-repeat: no-repeat;
   width: 32px;
   height: 32px;
@@ -6364,7 +6385,9 @@ ul.twelve-grid, ul.eight-grid, ul.sixth-grid, ul.fifth-grid, ul.fourth-grid, ul.
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .item-icon {
-    background-image: url(../images/sprites2x.png);
+    /*
+    background-image: url(../images/sprites2xred.png);
+    */
     background-size: 1000px;
   }
 }
@@ -6426,13 +6449,17 @@ ul.twelve-grid, ul.eight-grid, ul.sixth-grid, ul.fifth-grid, ul.fourth-grid, ul.
 }
 
 .item-icon-bar {
-  background-image: url(../images/sprites.png);
+  /*
+  background-image: url(../images/spritesred.png);
+  */
   background-repeat: no-repeat;
   display: block;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .item-icon-bar {
-    background-image: url(../images/sprites2x.png);
+    /*
+    background-image: url(../images/sprites2xred.png);
+    */
     background-size: 1000px;
   }
 }
@@ -6530,7 +6557,9 @@ body .soliloquy-fc-slider .soliloquy-caption-inside .soliloquy-fc-title-link {
 }
 
 .ui-icon-triangle-1-e, .ui-icon-triangle-1-s {
-  background-image: url(../images/sprites.png);
+  /*
+  background-image: url(../images/spritesred.png);
+  */
   background-repeat: no-repeat;
   display: inline-block;
   margin-right: 5px;
@@ -7051,13 +7080,17 @@ body .soliloquy-fc-slider .soliloquy-caption-inside .soliloquy-fc-title-link {
 
 /* BASE_230 | ITEM | 2801_COR | ITEM-CTA - /item/2801_cor/item-cta-2021.scss 2021-08-03 */
 .cta-teespring, .cta-lulu, .cta-kindle, .cta-itunes, .cta-ibooks, .cta-audible-large, .cta-audible, .cta-paypal, .cta-amazon-large, .cta-amazon, .cta-donate-paypalbutton, .cta-buy-paypalbutton, .cta-donate-icon, .cta-donate, .cta-bookuniversal, .cta-bookcombined, .cta-merchandise, .cta-bookaudio-amazon, .cta-bookaudio-icon, .cta-book3audio, .cta-book2audio, .cta-bookaudio, .cta-bookebook-amazon, .cta-bookebook-icon, .cta-book3ebook, .cta-book2ebook, .cta-bookebook, .cta-bookpaperback-amazon, .cta-bookpaperback-icon, .cta-book3paperback, .cta-book2paperback, .cta-bookpaperback, .cta-coachingemail-icon, .cta-coachingemail, .cta-coachingphone-icon, .cta-coachingphone, .cta-box {
-  background-image: url(../images/sprites.png);
+  /*
+  background-image: url(../images/spritesred.png);
+  */
   background-repeat: no-repeat;
   display: block;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .cta-teespring, .cta-lulu, .cta-kindle, .cta-itunes, .cta-ibooks, .cta-audible-large, .cta-audible, .cta-paypal, .cta-amazon-large, .cta-amazon, .cta-donate-paypalbutton, .cta-buy-paypalbutton, .cta-donate-icon, .cta-donate, .cta-bookuniversal, .cta-bookcombined, .cta-merchandise, .cta-bookaudio-amazon, .cta-bookaudio-icon, .cta-book3audio, .cta-book2audio, .cta-bookaudio, .cta-bookebook-amazon, .cta-bookebook-icon, .cta-book3ebook, .cta-book2ebook, .cta-bookebook, .cta-bookpaperback-amazon, .cta-bookpaperback-icon, .cta-book3paperback, .cta-book2paperback, .cta-bookpaperback, .cta-coachingemail-icon, .cta-coachingemail, .cta-coachingphone-icon, .cta-coachingphone, .cta-box {
-    background-image: url(../images/sprites2x.png);
+    /*
+    background-image: url(../images/sprites2xred.png);
+    */
     background-size: 1000px;
   }
 }
@@ -7267,13 +7300,17 @@ body .soliloquy-fc-slider .soliloquy-caption-inside .soliloquy-fc-title-link {
 
 /* BASE_227 | ITEM | 227_CORMAIN | ITEM-ICON - 2016-06-09 */
 .icon-arrowright {
-  background-image: url(../images/sprites.png);
+  /*
+  background-image: url(../images/spritesred.png);
+  */
   background-repeat: no-repeat;
   display: block;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .icon-arrowright {
-    background-image: url(../images/sprites2x.png);
+    /*
+    background-image: url(../images/sprites2xred.png);
+    */
     background-size: 1000px;
   }
 }
