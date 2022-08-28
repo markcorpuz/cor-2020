@@ -5,7 +5,7 @@
 
 	// remove trash from wp_head
 
-	add_filter( 'wp_default_scripts', 'remove_jquery_migrate' );
+	//add_filter( 'wp_default_scripts', 'remove_jquery_migrate' );
 	function remove_jquery_migrate( &$scripts){
 		if(!is_admin()){
 			$scripts->remove( 'jquery' );
@@ -13,21 +13,22 @@
 		}
 	}
 
-	remove_action( 'wp_head', 'wp_generator' );
-	remove_action( 'wp_head', 'wlwmanifest_link' );
-	remove_action( 'wp_head', 'rsd_link' );
-	remove_action('wp_head', 'wp_shortlink_wp_head');
-	remove_action('wp_head','adjacent_posts_rel_link_wp_head');
-	remove_action('wp_head','feed_links_extra', 3);
-	remove_action('xmlrpc_rsd_apis', 'rest_output_rsd');
-	remove_action( 'wp_head', 'wp_oembed_add_discovery_links' );
-	remove_action( 'wp_head', 'wp_oembed_add_host_js');
-	remove_action('wp_head', 'print_emoji_detection_script', 7);
-	remove_action('wp_print_styles', 'print_emoji_styles');
-	remove_action( 'wp_head', 'wp_resource_hints', 2 );
+//	remove_action( 'wp_head', 'wp_generator' );
+//	remove_action( 'wp_head', 'wlwmanifest_link' );
+//	remove_action( 'wp_head', 'rsd_link' );
+//	remove_action('wp_head', 'wp_shortlink_wp_head');
+//	remove_action('wp_head','adjacent_posts_rel_link_wp_head');
+//	remove_action('wp_head','feed_links_extra', 3);
+//	remove_action('xmlrpc_rsd_apis', 'rest_output_rsd');
+//	remove_action( 'wp_head', 'wp_oembed_add_discovery_links' );
+//	remove_action( 'wp_head', 'wp_oembed_add_host_js');
+//	remove_action('wp_head', 'print_emoji_detection_script', 7);
+//	remove_action('wp_print_styles', 'print_emoji_styles');
+//	remove_action( 'wp_head', 'wp_resource_hints', 2 );
 
 
-	if( 'Disable REST API' ){
+	if( 0 ){ //KP debuging adds
+	//if( 'Disable REST API' ){
 //		add_filter( 'rest_enabled', '__return_false' );
 		remove_action( 'xmlrpc_rsd_apis', 'rest_output_rsd' );
 		remove_action( 'wp_head', 'rest_output_link_wp_head', 10 );
@@ -56,7 +57,7 @@
 	function wpassist_remove_block_library_css(){
 		wp_dequeue_style( 'wp-block-library' );
 	}
-	add_action( 'wp_enqueue_scripts', 'wpassist_remove_block_library_css' );
+//	add_action( 'wp_enqueue_scripts', 'wpassist_remove_block_library_css' );
 
 // end of remove trash from wp_head
 
@@ -137,7 +138,7 @@
 
 
 
-	/**
+/**
  * Functions
  *
  * @package      EAGenesisChild
@@ -265,7 +266,7 @@ function ea_child_theme_setup() {
 	include_once( get_stylesheet_directory() . '/inc/wpforms.php' );
 
 	// ADS
-	//include_once( get_stylesheet_directory() . '/inc/custom-ads-cor.php' );
+	include_once( get_stylesheet_directory() . '/inc/ads.php' );
 
 	// Editor Styles
 	add_theme_support( 'editor-styles' );
@@ -611,6 +612,29 @@ function kp_mepr_override_protection_init()
 
 add_filter('wp', 'kp_mepr_override_protection_init', 1, 0);
 
+
+function kp_undrel_init()
+{
+    $cookie1="unrel10233";
+    $cookie2="io89";
+
+    $user = wp_get_current_user();
+
+    if (!$user instanceof WP_User)
+        return;
+
+    $allowed_roles = array('editor', 'administrator', 'author');
+    if( array_intersect($allowed_roles, $user->roles ) )
+    {
+        if(!isset($_COOKIE[$cookie1]))
+        {
+            $time=time() + (86400 * 7);
+            setcookie($cookie1, $cookie2, $time, "/");
+        }
+    }
+}
+add_action('init', 'kp_undrel_init');
+
 add_filter('display_posts_shortcode_output','new_format_for_premium',10,11);
 function new_format_for_premium($output, $original_atts, $image, $title, $date, $excerpt, $inner_wrapper, $content, $class, $author, $category_display_text){
 	if ( has_tag( 'vip' ) ) {
@@ -621,3 +645,18 @@ function new_format_for_premium($output, $original_atts, $image, $title, $date, 
 	return $output;
 
 }
+
+// KP: Register an analytics event.
+function mepr_capture_new_member_signup_completed($event) {
+  $user = $event->get_data();
+  $txn_data = json_decode($event->args);
+
+  wp_register_script( 'dummy-handle-footer', '', [], '', true );
+  wp_enqueue_script( 'dummy-handle-footer'  );
+  wp_add_inline_script( 'dummy-handle-footer', "gtag('event', 'sign_up', {
+  'event_category' : 'engagement',
+  'event_label' : 'method'
+});" );
+  
+}
+add_action('mepr-event-member-signup-completed', 'mepr_capture_new_member_signup_completed');
